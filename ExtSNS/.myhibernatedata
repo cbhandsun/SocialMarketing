@@ -1,0 +1,25 @@
+#MyEclipse Hibernate Properties
+#Thu Feb 14 00:18:35 CST 2013
+sessionFactoryName=com.socialmarketing.commons.HibernateSessionFactory
+genBasicCompId=false
+profile=
+daoSFId=
+version=4.1
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=
+addLibs2Project=false
+genVersionTag=false
+sessionFactoryId=sessionFactory
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/ExtSNS/<No configs found>
+createConfigFile=false
+addLibs2Classpath=false
+baseDaoClass=
