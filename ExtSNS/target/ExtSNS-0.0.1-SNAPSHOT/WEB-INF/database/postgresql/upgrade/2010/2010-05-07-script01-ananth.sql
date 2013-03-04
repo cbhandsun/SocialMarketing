@@ -1,1 +1,0 @@
-ALTER TABLE project_calendar_meeting ADD is_webcast BOOLEAN DEFAULT false;

@@ -43,9 +43,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="container">
 
 		<div id="two-column">
-			<div id="column-left"><sitemesh:write property='body'/></div>
-			<div id="column-right"></div>
-
+			<!--  <div id="column-left">
+			<div id="column-right"></div>-->
+<sitemesh:write property='body'/></div>
 		</div>
 		<footer>
 			<div id="foot-sections" class="clearfix">

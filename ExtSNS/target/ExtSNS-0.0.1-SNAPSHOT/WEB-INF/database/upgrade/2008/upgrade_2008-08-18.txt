@@ -1,4 +1,0 @@
-# 2008-08-18.txt
-# This script upgrades the 3.3 production database to 4.0
-
-2008-08-18-script01-kailash.sql

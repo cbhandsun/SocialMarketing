@@ -1,3 +1,0 @@
-2008-09-08-script03-mr.sql
-2008-09-08-script01-mr.bsh
-2008-09-08-script02-mr.bsh

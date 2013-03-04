@@ -1,4 +1,0 @@
-# 2008-07-28.txt
-# This script upgrades the 3.3 production database to 4.0 (tags)
-
-2008-07-28-script01-mr.sql
