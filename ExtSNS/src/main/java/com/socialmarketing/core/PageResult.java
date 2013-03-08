@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-
+ 
 public class PageResult<T> implements Serializable {
 
 	private static final long serialVersionUID = 9142640042556747848L;

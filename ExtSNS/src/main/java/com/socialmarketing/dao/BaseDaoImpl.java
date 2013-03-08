@@ -1,16 +1,4 @@
-/**********************************************************************
- * FILE : WSBaseServiceImpl.java
- * CREATE DATE : 2008-12-10
- * DESCRIPTION :
- *		
- *      
- * CHANGE HISTORY LOG
- *---------------------------------------------------------------------
- * NO.|    DATE    |     NAME     |     REASON     | DESCRIPTION
- *---------------------------------------------------------------------
- * 1  | 2008-12-10 |  ZhangGuojie  |    创建草稿版本
- *---------------------------------------------------------------------              
- ******************************************************************************/
+
 package com.socialmarketing.dao;
 
 import java.lang.reflect.ParameterizedType;
@@ -29,6 +17,7 @@ import java.util.Set;
 
 import javax.sql.DataSource;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
@@ -54,7 +43,6 @@ import com.socialmarketing.core.QueryCriteria;
 import com.socialmarketing.core.exception.ApplicationException;
 import com.socialmarketing.dao.model.EntityBase;
 import com.socialmarketing.dao.util.UpdateTimeUtil;
-import com.socialmarketing.util.StringUtil;
 
 /**
  * 数据库访问的基础DAO工具类
@@ -127,7 +115,7 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	}
 
 	/**
-	 * 将update的HQL语句进行PID和lastupdateuser，和lastupdatetime的更新替换
+	 * 将update的HQL语句进行PID和lastupdateuser，和lastupdatetime的更新替换,增加审计属性
 	 * 
 	 * @param hql
 	 *            更新语句
@@ -477,7 +465,7 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		hql.append(" where ent.id in (:IDS) ");
 		if (params != null) {
 			for (Map.Entry entry : params.entrySet()) {
-				if (StringUtil.isNullOrBlank((String) entry.getKey()) == false) {
+				if (StringUtils.isBlank((String) entry.getKey()) == false) {
 					String key = "Key_" + (String) entry.getKey();
 					hql.append(" and ent.").append((String) entry.getKey())
 							.append("= :").append(key);

@@ -1,6 +1,10 @@
+
+package com.socialmarketing.dao;
+
+
 /**********************************************************************
  * FILE : DaoUtil.java
- * CREATE DATE : 2008-12-10
+ * CREATE DATE : 2013-3-8
  * DESCRIPTION :
  *		
  *      
@@ -8,15 +12,9 @@
  *---------------------------------------------------------------------
  * NO.|    DATE    |     NAME     |     REASON     | DESCRIPTION
  *---------------------------------------------------------------------
- * 1  | 2008-12-10 |  ZhangGuojie  |    �����ݸ�汾
+ * 1  | 2013-3-8 |  Administrator  |    创建草稿版本
  *---------------------------------------------------------------------              
  ******************************************************************************/
-package com.socialmarketing.dao;
-
-/**
- * @author Administrator dao util is utility class, this class keep the hql key
- *         workd.
- */
 public class DaoUtil {
 
 	/**

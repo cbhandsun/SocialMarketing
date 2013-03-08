@@ -20,6 +20,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class DateUtil {
 	/** Default locale is CHINA */
 	public static final Locale DEFAULT_LOCALE = Locale.CHINA;
@@ -485,7 +487,7 @@ public class DateUtil {
 	 * @throws ParseException when String doesn't match the expected format
 	 */
 	public static Date parseDate(String strDate) {
-		if (StringUtil.isNullOrBlank(strDate)) {
+		if (StringUtils.isBlank(strDate)) {
 			return null;
 		}
 		return parse(strDate, FORMAT_DATE_DEFAULT);
@@ -499,7 +501,7 @@ public class DateUtil {
 	 * @throws ParseException when String doesn't match the expected format
 	 */
 	public static Date parseDateStart(String strDate) {
-		if (StringUtil.isNullOrBlank(strDate)) {
+		if (StringUtils.isBlank(strDate)) {
 			return null;
 		}
 		return getDateStart(parseDate(strDate));
@@ -513,7 +515,7 @@ public class DateUtil {
 	 * @throws ParseException when String doesn't match the expected format
 	 */
 	public static Date parseDateEnd(String strDate) {
-		if (StringUtil.isNullOrBlank(strDate)) {
+		if (StringUtils.isBlank(strDate)) {
 			return null;
 		}
 		return getDateEnd(parseDate(strDate));

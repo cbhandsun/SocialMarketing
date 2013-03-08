@@ -4,7 +4,7 @@ package com.socialmarketing.core;
  * This class defines constants for organizing System, Object, ServletContext,
  * Request, Session, and Cookie values; it should have no dependencies
  */
-public class Constants {
+public class Constants { 
 
 	public static final int UNDEFINED = -1;
 	public static final int TRUE = 1;

@@ -18,12 +18,12 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.criterion.Order;
 
-import org.apache.commons.lang3.time.DateUtils;
 import com.socialmarketing.util.Assert;
 /**
  * Hibernate HQL语句组织及相关处理的辅助类，通常用于组织完整的HQL语句以传递给DAO对象进行数据存取操作。

@@ -8,7 +8,7 @@
  *---------------------------------------------------------------------
  * NO.|    DATE    |     NAME     |     REASON     | DESCRIPTION
  *---------------------------------------------------------------------
- * 1  | 2008-06-06 |  ZhangGuojie  |    创建草稿版本
+ * 1  | 2013-03-08 |    |    创建草稿版本
  *---------------------------------------------------------------------              
  ******************************************************************************/
 package com.socialmarketing.dao.util;
@@ -94,7 +94,7 @@ public class UpdateTimeUtil {
 						setWordOffset = i;
 						break;
 					}
-				}
+				} 
 				setWordOffset = setWordOffset + 1;
 				if (aliasName != null && !"".equals(aliasName)) {
 					list.add(setWordOffset, aliasName + "."
