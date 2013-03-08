@@ -1,4 +1,4 @@
-package com.socialmarketing;
+package com.socialmarketing.core;
 
 /**
  * This class defines constants for organizing System, Object, ServletContext,
@@ -9,7 +9,7 @@ public class Constants {
 	public static final int UNDEFINED = -1;
 	public static final int TRUE = 1;
 	public static final int FALSE = 0;
- 
+	public final static int PAGE_SIZE = 20;
 	public static final String LF = System.getProperty("line.separator");
 
 	// FileLibrary LinkModuleId Constants

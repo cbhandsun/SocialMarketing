@@ -70,9 +70,9 @@ import org.apache.commons.logging.LogFactory;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import com.socialmarketing.Constants;
 import com.socialmarketing.commons.jsp.JspUtils;
 import com.socialmarketing.commons.xml.XMLUtils;
+import com.socialmarketing.core.Constants;
 
 import freemarker.cache.FileTemplateLoader;
 import freemarker.cache.MultiTemplateLoader;
