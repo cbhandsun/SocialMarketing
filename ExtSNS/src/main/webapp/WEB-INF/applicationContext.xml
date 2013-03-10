@@ -132,7 +132,7 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
 
-
+<!-- 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
 		<property name="persistenceUnitName" value="ExtSNS" />
@@ -147,5 +147,5 @@
 	</bean>
 	<bean
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor">
-	</bean>
+	</bean> -->
 </beans>  
