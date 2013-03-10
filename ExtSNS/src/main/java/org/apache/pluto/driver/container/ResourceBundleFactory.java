@@ -22,16 +22,16 @@ import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.apache.pluto.container.om.portlet.PortletDefinition;
 import org.apache.pluto.container.om.portlet.PortletInfo;
 import org.apache.pluto.container.util.StringManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Factory object used to create Portlet Resource Bundles.
  *
- *
+ * 
  */
 class ResourceBundleFactory {
 

@@ -7,9 +7,9 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>&lt;No configs found&gt;</config>
+		<config>src/main/webapp/WEB-INF/applicationContext.xml</config>
 	</configs>
 	<configSets>
 	</configSets>
-	<springVersion>1.2</springVersion>
+	<springVersion>3.1</springVersion>
 </beansProjectDescription>

@@ -213,7 +213,7 @@ public class XMLUtils {
 	  {
 	    if (paramNode == null)
 	      return null;
-	    String str = paramNode.getTextContent();
+	    String str = paramNode.getNodeValue();
 	    if ("null".equals(str))
 	      return null;
 	    return str;

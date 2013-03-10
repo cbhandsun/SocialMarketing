@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
@@ -41,7 +40,6 @@
 	</bean>
 
 
-
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<property name="driverClass" value="${connection.driver_class}"></property>
@@ -65,17 +63,14 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>hibernate.config.xml.Account</value>
 			</list>
 		</property>
 		<property name="mappingResources">
 			<list>
-				
 			</list>
 		</property>
 		<property name="mappingDirectoryLocations">
 			<list>
-				<value></value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -136,4 +131,21 @@
 			expression="execution(* com.socialmarketing..service..*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
+
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="ExtSNS" />
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor">
+	</bean>
+	<bean
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor">
+	</bean>
 </beans>  

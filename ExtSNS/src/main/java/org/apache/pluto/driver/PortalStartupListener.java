@@ -18,19 +18,16 @@ package org.apache.pluto.driver;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 
 import org.apache.pluto.container.PortletContainer;
 import org.apache.pluto.container.PortletContainerException;
-import org.apache.pluto.container.driver.PortalDriverServices;
-import org.apache.pluto.container.impl.PortletContainerFactory;
 import org.apache.pluto.driver.config.AdminConfiguration;
 import org.apache.pluto.driver.config.DriverConfiguration;
 import org.apache.pluto.driver.config.DriverConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.context.WebApplicationContext;
 
 /**
  * Listener used to start up / shut down the Pluto Portal Driver upon startup /

@@ -23,10 +23,10 @@ import java.util.ResourceBundle;
 import junit.framework.Assert;
 
 import org.apache.pluto.container.om.portlet.PortletDefinition;
-import org.apache.pluto.container.om.portlet.PortletInfo;
+import org.apache.pluto.container.om.portlet.PortletInfo; 
 import org.apache.pluto.container.om.portlet.impl.PortletType;
 import org.apache.pluto.driver.container.ResourceBundleFactory;
-
+ 
 /**
  * Unit test for the resource bundle factory.
  * @since Jul 30, 2005
