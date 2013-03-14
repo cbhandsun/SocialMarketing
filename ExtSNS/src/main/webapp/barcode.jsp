@@ -3,7 +3,7 @@
 <jsp:setProperty name="bcrequest" property="*"/>
 <%@page import="java.util.Collection"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="org.krysalis.barcode4j.BarcodeUtil"%>  
+<%@page import="org.krysalis.barcode4j.BarcodeUtil"%>   
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>Barcode4J Servlet</title>

@@ -15,6 +15,9 @@ package com.socialmarketing.dao.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+
 /**
  * 这个是所有entity的基类，该类描述了获取用户id，设置用户id，判断是否删除标记。
  * 
@@ -29,6 +32,7 @@ public abstract class EntityBase implements Serializable {
 	 * 
 	 * @return id.
 	 */
+	 
 	public abstract Long getId();
 
 	/**

@@ -41,12 +41,17 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>com.genuitec.eclipse.springframework.springbuilder</name>
+			<name>com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder</name>
+			<name>org.jboss.tools.common.verification.verifybuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.genuitec.eclipse.springframework.springbuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -56,15 +61,16 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.jboss.tools.common.verification.verifybuilder</name>
+			<name>com.genuitec.eclipse.hibernate.HibernateBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.genuitec.eclipse.hibernate.hibernatenature</nature>
+		<nature>com.genuitec.eclipse.springframework.springnature</nature>
 		<nature>com.genuitec.eclipse.portlet.portletnature</nature>
 		<nature>com.genuitec.eclipse.ast.deploy.core.deploymentnature</nature>
-		<nature>com.genuitec.eclipse.springframework.springnature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
 		<nature>com.genuitec.eclipse.j2eedt.core.webnature</nature>

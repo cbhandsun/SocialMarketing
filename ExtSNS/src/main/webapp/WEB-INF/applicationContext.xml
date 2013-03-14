@@ -20,7 +20,7 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:hibernate.properties</value>
+				<value>classpath:DBConn.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -39,23 +39,8 @@
 		<property name="cacheSeconds" value="60" />
 	</bean>
 
-
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-		destroy-method="close">
-		<property name="driverClass" value="${connection.driver_class}"></property>
-		<property name="jdbcUrl" value="${connection.url}"></property>
-		<property name="user" value="${connection.username}"></property>
-		<property name="password" value="${connection.password}"></property>
-		<property name="maxPoolSize" value="${c3p0.maximum.connection.count}"></property>
-		<property name="minPoolSize" value="${c3p0.minimum.connection.count}"></property>
-		<property name="initialPoolSize" value="${c3p0.initialPoolSize}"></property>
-		<property name="maxIdleTime" value="${c3p0.maxIdleTime}"></property>
-		<property name="acquireRetryAttempts" value="${c3p0.acquireRetryAttempts}"></property>
-		<property name="checkoutTimeout" value="${c3p0.checkoutTimeout}"></property>
-	</bean>
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan">
 			<list>
 				<value>com.socialmarketing</value>
@@ -73,24 +58,11 @@
 			<list>
 			</list>
 		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
-				<prop key="hibernate.format_sql">true</prop>
-				<prop key="hibernate.query.substitutions">${hibernate.query.substitutions}</prop>
-				<prop key="hibernate.default_batch_fetch_size">${hibernate.default_batch_fetch_size}</prop>
-				<prop key="hibernate.max_fetch_depth">${hibernate.max_fetch_depth}</prop>
-				<prop key="hibernate.generate_statistics">${hibernate.generate_statistics}</prop>
-				<prop key="hibernate.bytecode.use_reflection_optimizer">${hibernate.bytecode.use_reflection_optimizer}</prop>
-				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
-				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
-				<prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
-				<prop key="net.sf.ehcache.configurationResourceName">${net.sf.ehcache.configurationResourceName}</prop>
-				<prop key="hibernate.cache.use_structured_entries">${hibernate.cache.use_structured_entries}</prop>
-				<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
-			</props>
+		
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
 		</property>
+		
 	</bean>
 
 
@@ -128,7 +100,7 @@
 	<aop:config expose-proxy="true">
 		<!-- 只对业务逻辑层实施事务 -->
 		<aop:pointcut id="txPointcut"
-			expression="execution(* com.socialmarketing..service..*.*(..))" />
+			expression="execution(* com.socialmarketing.web.modules.*.services.*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
 
@@ -148,4 +120,4 @@
 	<bean
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor">
 	</bean> -->
-</beans>  
+	</beans>  

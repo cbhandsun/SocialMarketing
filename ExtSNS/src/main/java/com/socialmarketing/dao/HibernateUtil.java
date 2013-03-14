@@ -6,11 +6,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.orm.hibernate3.SessionHolder;
+import org.springframework.orm.hibernate4.SessionHolder;
 import org.springframework.orm.hibernate4.SessionFactoryUtils;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.util.Assert;
-
+@Service("hibernateUtil")
 public class HibernateUtil {
 
 	private boolean cacheQueries = false;
@@ -112,4 +113,5 @@ public class HibernateUtil {
 			criteria.setTimeout(sessionHolder.getTimeToLiveInSeconds());
 		}
 	}
+	
 }

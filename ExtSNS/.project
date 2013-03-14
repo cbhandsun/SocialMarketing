@@ -51,6 +51,11 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+			<name>com.genuitec.eclipse.hibernate.HibernateBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>com.genuitec.eclipse.springframework.springbuilder</name>
 			<arguments>
 			</arguments>
@@ -63,6 +68,7 @@
 	</buildSpec>
 	<natures>
 		<nature>com.genuitec.eclipse.springframework.springnature</nature>
+		<nature>com.genuitec.eclipse.hibernate.hibernatenature</nature>
 		<nature>com.genuitec.eclipse.portlet.portletnature</nature>
 		<nature>com.genuitec.eclipse.ast.deploy.core.deploymentnature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>

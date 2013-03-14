@@ -2,11 +2,9 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-	<table name="cfgBar" schema="public" class="CfgBar">
-		<primary-key>
-			
-
-		</primary-key>
-		<column name="type"></column>
-	</table>
+<table name="city" catalog="world" class="city">
+	<primary-key>
+		<generator class="assigned"></generator>
+	</primary-key>
+</table>
 </hibernate-reverse-engineering>

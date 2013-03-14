@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 import org.apache.commons.lang3.StringUtils;
@@ -58,6 +59,7 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * 实体对象类
 	 */
 	private Class<T> entityClass;
+	 @Resource(name="hibernateUtil")
 	HibernateUtil  util;
 
 	/**
@@ -76,7 +78,7 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 			entityClass = (Class<T>) ((ParameterizedType) getClass()
 					.getGenericSuperclass()).getActualTypeArguments()[0];
 		}
-		util = new HibernateUtil();
+		//util = new HibernateUtil();
 	}
 
 	/**
