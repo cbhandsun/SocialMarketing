@@ -7,13 +7,8 @@
                 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd  
                 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd 
                 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
-	<context:component-scan base-package="com.socialmarketing"
-		use-default-filters="false">
-		<!-- 扫描符合@Service @Repository的类 -->
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Service" />
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Repository" />
+	<context:component-scan base-package="com.socialmarketing">
+		<context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/> 
 	</context:component-scan>
 
 	<bean id="propertyConfigurer"
@@ -41,37 +36,17 @@
 
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="packagesToScan">
-			<list>
-				<value>com.socialmarketing</value>
-			</list>
+		<property name="configLocation" value="classpath:hibernate.cfg.xml">
 		</property>
-		<property name="annotatedClasses">
-			<list>
-			</list>
-		</property>
-		<property name="mappingResources">
-			<list>
-			</list>
-		</property>
-		<property name="mappingDirectoryLocations">
-			<list>
-			</list>
-		</property>
-		
-		<property name="configLocation"
-			value="classpath:hibernate.cfg.xml">
-		</property>
-		
 	</bean>
 
-
 	<!-- 开启AOP监听 只对当前配置文件有效 -->
-	<aop:aspectj-autoproxy expose-proxy="true" />
+	<aop:aspectj-autoproxy expose-proxy="true"
+		proxy-target-class="true" />
 
-	<!-- 开启注解事务 只对当前配置文件有效 -->
-	<tx:annotation-driven transaction-manager="txManager" />
-
+	<!-- 开启注解事务 只对当前配置文件有效 
+	 <tx:annotation-driven transaction-manager="txManager" 
+		/>-->
 	<bean id="txManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
@@ -97,27 +72,12 @@
 			<tx:method name="*" read-only="true" />
 		</tx:attributes>
 	</tx:advice>
-	<aop:config expose-proxy="true">
+	<!--  -->
+	<aop:config expose-proxy="true" proxy-target-class="true">
 		<!-- 只对业务逻辑层实施事务 -->
 		<aop:pointcut id="txPointcut"
-			expression="execution(* com.socialmarketing.web.modules.*.services.*.*(..))" />
+			expression="execution(* com.socialmarketing..services..*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
 
-<!-- 
-	<bean id="entityManagerFactory"
-		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="ExtSNS" />
-	</bean>
-	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-		<property name="entityManagerFactory" ref="entityManagerFactory" />
-	</bean>
-
-	<tx:annotation-driven transaction-manager="transactionManager" />
-	<bean
-		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor">
-	</bean>
-	<bean
-		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor">
-	</bean> -->
-	</beans>  
+</beans>  

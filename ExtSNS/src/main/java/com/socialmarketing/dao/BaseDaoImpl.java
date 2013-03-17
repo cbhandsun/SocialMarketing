@@ -444,10 +444,10 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * @seesolution.auto.framework.dao.IDao#findSpecFieldsValueByIds(java.util.
 	 * Collection, java.util.Collection, java.util.Map)
 	 */
-	public Map<Long, T> findSpecFieldsValueByIds(
+	public Map<String, T> findSpecFieldsValueByIds(
 			Collection<String> fieldsNames, Collection<Long> ids,
 			Map<String, Object> params) {
-		Map<Long, T> result = new HashMap<Long, T>();
+		Map<String, T> result = new HashMap<String, T>();
 		if ((fieldsNames == null) || (fieldsNames.size() == 0) || (ids == null)
 				|| (ids.size() == 0)) {
 			return result;
@@ -486,7 +486,7 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 			return result;
 		}
 		for (T ent : entities) {
-			result.put(ent.getId(), ent);
+			result.put(ent.getUuid(), ent);
 		}
 		return result;
 	}

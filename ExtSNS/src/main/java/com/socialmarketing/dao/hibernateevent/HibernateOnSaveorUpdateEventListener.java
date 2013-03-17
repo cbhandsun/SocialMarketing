@@ -59,11 +59,11 @@ public class HibernateOnSaveorUpdateEventListener extends
 		if ((object instanceof DataAuditEntityBase)) {
 			Date currentDate = new Date();
 			DataAuditEntityBase auditEntityBase = (DataAuditEntityBase) object;
-			Long id = auditEntityBase.getId();
+			/*Integer id = auditEntityBase.getUuid();
 			if (id != null && id.longValue() <= 0) {
 				// 修正Entity中id值为0时存在的问题(id值):
 				auditEntityBase.setId(null);
-			}
+			}*/
 			auditEntityBase.setLastUpdateTime(currentDate);
 			auditEntityBase.setLastUpdateUsername(LoginUserUtil.getLoginUser());
 		}

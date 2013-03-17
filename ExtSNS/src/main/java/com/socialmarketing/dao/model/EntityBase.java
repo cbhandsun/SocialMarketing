@@ -33,7 +33,7 @@ public abstract class EntityBase implements Serializable {
 	 * @return id.
 	 */
 	 
-	public abstract Long getId();
+	public abstract String getUuid();
 
 	/**
 	 * set entity id.
@@ -41,7 +41,7 @@ public abstract class EntityBase implements Serializable {
 	 * @param id
 	 *            entity id.
 	 */
-	public abstract void setId(Long id);
+	public abstract void setUuid(String uuid);
 
 	/** flag indicates whether data is tend to be deleted physically. */
 	private boolean deleted;
@@ -72,8 +72,7 @@ public abstract class EntityBase implements Serializable {
 	 */
 	@Override
 	public int hashCode() {
-		return this.getId() == null ? super.hashCode() : this.getId()
-				.intValue();
+		return this.getUuid() == null ? super.hashCode() : this.getUuid().hashCode();
 	}
 
 	/*
@@ -85,8 +84,8 @@ public abstract class EntityBase implements Serializable {
 	public boolean equals(Object obj) {
 		// TODO: CAUSION,DONT REMOVE THIS OVERRIDE METHOD.
 		if (obj instanceof EntityBase)
-			return this.getId() == null ? super.equals(obj) : this.getId()
-					.equals(((EntityBase) obj).getId());
+			return this.getUuid() == null ? super.equals(obj) : this.getUuid()
+					.equals(((EntityBase) obj).getUuid());
 		return super.equals(obj);
 	}
 }

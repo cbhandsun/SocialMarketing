@@ -252,7 +252,7 @@ public interface IDao<T> {
 	 * @param params
 	 * @return
 	 */
-	public Map<Long, T> findSpecFieldsValueByIds(
+	public Map<String, T> findSpecFieldsValueByIds(
 			Collection<String> fieldsNames, Collection<Long> ids,
 			Map<String, Object> params);
 

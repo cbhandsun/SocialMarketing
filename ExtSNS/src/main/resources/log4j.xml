@@ -27,7 +27,7 @@
 		</layout>
 	</appender>
 	<logger name="org.springframework">
-		<level value="warn" />
+		<level value="debug" />
 	</logger>
 	<root>
 		<!-- root 整体设置过滤优先级，如果appender 没有设置filter或Threshold 默认采用该级别，定义的logger不在其中（即不会被过滤掉）。 -->

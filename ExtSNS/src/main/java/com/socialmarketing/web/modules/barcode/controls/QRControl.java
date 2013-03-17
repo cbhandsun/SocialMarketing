@@ -5,8 +5,11 @@ package com.socialmarketing.web.modules.barcode.controls;
 
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,8 +17,9 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import com.socialmarketing.commons.control.GenericControl;
-import com.socialmarketing.web.modules.barcode.model.City;
-import com.socialmarketing.web.modules.barcode.services.CityService;
+import com.socialmarketing.util.SpringContextUtil;
+import com.socialmarketing.web.modules.barcode.model.QRConfig;
+import com.socialmarketing.web.modules.barcode.services.QRService;
 
 /**********************************************************************
  * FILE : CityControl.java
@@ -31,13 +35,16 @@ import com.socialmarketing.web.modules.barcode.services.CityService;
  *---------------------------------------------------------------------              
  ******************************************************************************/
 @Controller
-@RequestMapping(method = RequestMethod.GET, value = "/test")
-public class CityControl extends GenericControl {
-	@RequestMapping(method = RequestMethod.GET, value = "/testCityDao")
+@RequestMapping(method = RequestMethod.GET, value = "/QR")
+public class QRControl extends GenericControl {
+	@Autowired
+    @Qualifier("qrService")
+	QRService service ;
+	@RequestMapping(method = RequestMethod.GET, value = "/addQRConfig")
 	public String findCityDao(HttpServletRequest req) {
-		WebApplicationContext appContext = WebApplicationContextUtils.getWebApplicationContext(req.getSession().getServletContext());
-		CityService service = (CityService) appContext.getBean("cityService");
-		List<City> cityList = service.findCityDao();
+	//	WebApplicationContext appContext = WebApplicationContextUtils.getWebApplicationContext(req.getSession().getServletContext());
+	//	QRService service = (QRService) SpringContextUtil.getBean("qrService");
+		List<QRConfig> findList = service.findConfigDao();
 		return "";
 	}
 }

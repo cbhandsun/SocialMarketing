@@ -6,7 +6,7 @@ package com.socialmarketing.web.modules.barcode.dao;
 import org.springframework.stereotype.Repository;
 
 import com.socialmarketing.dao.BaseDaoImpl;
-import com.socialmarketing.web.modules.barcode.model.City;
+import com.socialmarketing.web.modules.barcode.model.QRConfig;
 
 /**********************************************************************
  * FILE : CityDao.java
@@ -21,15 +21,9 @@ import com.socialmarketing.web.modules.barcode.model.City;
  * 1  | 2013-3-13 |  Administrator  |    创建草稿版本
  *---------------------------------------------------------------------              
  ******************************************************************************/
-@Repository(value="cityDao")
-public class CityDao extends BaseDaoImpl<City> {
+@Repository(value="qrConfigDao")
+public class QRConfigDao extends BaseDaoImpl<QRConfig> {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }
