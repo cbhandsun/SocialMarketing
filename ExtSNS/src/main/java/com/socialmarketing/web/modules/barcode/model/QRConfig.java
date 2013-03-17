@@ -3,11 +3,8 @@ package com.socialmarketing.web.modules.barcode.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
 
 
 /**
@@ -17,7 +14,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Table(name="qrconfig"
     ,catalog="extsns"
 )
-public class QRConfig extends com.socialmarketing.dao.model.DataAuditEntityBase implements java.io.Serializable {
+public class QRConfig extends com.socialmarketing.core.model.DataAuditEntityBase implements java.io.Serializable {
 
 
     // Fields    

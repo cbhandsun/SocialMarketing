@@ -5,7 +5,6 @@ package com.socialmarketing.web.modules.barcode.controls;
 
 import java.util.List;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +12,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.socialmarketing.commons.control.GenericControl;
-import com.socialmarketing.util.SpringContextUtil;
+import com.socialmarketing.core.control.GenericControl;
 import com.socialmarketing.web.modules.barcode.model.QRConfig;
 import com.socialmarketing.web.modules.barcode.services.QRService;
 

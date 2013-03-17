@@ -5,7 +5,7 @@ package com.socialmarketing.web.modules.barcode.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.socialmarketing.dao.BaseDaoImpl;
+import com.socialmarketing.core.dao.BaseDaoImpl;
 import com.socialmarketing.web.modules.barcode.model.QRConfig;
 
 /**********************************************************************
