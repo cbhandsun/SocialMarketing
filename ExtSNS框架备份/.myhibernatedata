@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Fri Mar 15 14:22:12 CST 2013
+sessionFactoryName=
+genBasicCompId=true
+profile=
+daoSFId=
+version=4.1
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=false
+keyGenerator=assigned
+libInstallFolder=src/main/webapp/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=com.socialmarketing.dao.model.DataAuditEntityBase
+genAnnotations=true
+reSettingsFile=/ExtSNS/hibernate.reveng.xml
+configFile=/ExtSNS/src/main/resources/hibernate.cfg.xml
+createConfigFile=false
+addLibs2Classpath=true
