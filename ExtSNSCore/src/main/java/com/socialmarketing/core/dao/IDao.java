@@ -109,8 +109,7 @@ public interface IDao<T extends EntityBase> {
 	public List<T> find(final String hql, final Map<String, ?> params,
 			final int offsetIndex, final int pageSize);
 
-	@Deprecated
-	public List<T> find(String hql, Object... paramValues);
+	
 
 	/**
 	 * query specified objects
@@ -128,6 +127,8 @@ public interface IDao<T extends EntityBase> {
 	 * @return all data objects.
 	 */
 	public List<T> findAll();
+	
+	public <T> int countAll();
 
 	/**
 	 * 支持通过DetachedCriteria来查询

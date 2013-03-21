@@ -243,6 +243,11 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		util.prepareCriteria(criteria);
 		return criteria.list();
 	}
+	public <T> int countAll() {
+        Criteria criteria = util.getSession().createCriteria(entityClass);
+        criteria.setProjection(Projections.rowCount());
+        return ((Long) criteria.uniqueResult()).intValue();
+    }
 
 	public List findByCriteria(DetachedCriteria criteria) {
 		return findByCriteria(criteria, -1, -1);
@@ -1402,11 +1407,6 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		q.setProperties(params);
 		q.addScalar(alias, mappingType);
 		return q.uniqueResult();
-	}
-
-	public List<T> find(String hql, Object... paramValues) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.socialmarketing.core.control.GenericControl;
+import com.socialmarketing.core.services.impl.CommonService;
+import com.socialmarketing.util.SpringContextUtil;
 import com.socialmarketing.web.modules.barcode.model.QRConfig;
 import com.socialmarketing.web.modules.barcode.services.QRService;
 
@@ -23,7 +25,7 @@ import com.socialmarketing.web.modules.barcode.services.QRService;
  * DESCRIPTION :
  *		
  *      
- * CHANGE HISTORY LOG
+ * CHANGE HISTORY LOG 
  *---------------------------------------------------------------------
  * NO.|    DATE    |     NAME     |     REASON     | DESCRIPTION
  *---------------------------------------------------------------------
@@ -40,7 +42,9 @@ public class QRControl extends GenericControl {
 	public String findCityDao(HttpServletRequest req) {
 	//	WebApplicationContext appContext = WebApplicationContextUtils.getWebApplicationContext(req.getSession().getServletContext());
 	//	QRService service = (QRService) SpringContextUtil.getBean("qrService");
-		List<QRConfig> findList = service.findConfigDao();
+		List<QRConfig> findList = service.listAll();
+		
 		return "";
+		
 	}
 }

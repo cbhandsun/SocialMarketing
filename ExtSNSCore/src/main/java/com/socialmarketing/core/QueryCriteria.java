@@ -13,6 +13,10 @@ public class QueryCriteria implements java.io.Serializable {
 	public static final String SORT_DIRECTION_ASC = "ASC";
 
 	public static final String SORT_DIRECTION_DESC = "DESC";
+	
+	 private boolean hasPre;//是否首页
+	 private boolean hasNext;//是否尾页
+	 private int currPage;
 
 	/**
 	 * The start index of results to get, starts with 0.
@@ -38,6 +42,31 @@ public class QueryCriteria implements java.io.Serializable {
 	 * Query condition by specific business object in a pair of Key and Value.
 	 */
 	private HashMap<String, Object> queryCondition = new HashMap<String, Object>();
+
+	public boolean isHasPre() {
+		return hasPre;
+	}
+
+	public void setHasPre(boolean hasPre) {
+		this.hasPre = hasPre;
+	}
+
+	public boolean isHasNext() {
+		return hasNext;
+	}
+
+	public void setHasNext(boolean hasNext) {
+		this.hasNext = hasNext;
+	}
+
+	public int getCurrPage() {
+		return currPage;
+	}
+
+	public void setCurrPage(int currPage) {
+		this.currPage = currPage;
+		this.startIndex = (currPage - 1) * pageSize;
+	}
 
 	public void addQueryCondition(String key, Object value) {
 		this.queryCondition.put(key, value);
