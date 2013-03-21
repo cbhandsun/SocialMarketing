@@ -1,6 +1,6 @@
-
 package com.socialmarketing.core.dao;
 
+import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -36,7 +36,6 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.type.Type;
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
-import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 
 import com.socialmarketing.core.PageResult;
@@ -52,15 +51,15 @@ import com.socialmarketing.core.model.EntityBase;
  * 
  * @param <T>
  */
-@Repository("baseDao")
-public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
+
+public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 
 	/**
 	 * 实体对象类
 	 */
 	private Class<T> entityClass;
-	 @Resource(name="hibernateUtil")
-	HibernateUtil  util;
+	@Resource(name = "hibernateUtil")
+	HibernateUtil util;
 
 	/**
 	 * 日志
@@ -78,7 +77,12 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 			entityClass = (Class<T>) ((ParameterizedType) getClass()
 					.getGenericSuperclass()).getActualTypeArguments()[0];
 		}
-		//util = new HibernateUtil();
+		// util = new HibernateUtil();
+	}
+
+	public void setEntityClass(Class cls) {
+		if (entityClass == null)
+			entityClass = cls;
 	}
 
 	/**
@@ -223,7 +227,7 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<T> find(T example) {
-		return findByExample(null,example,-1,-1);
+		return findByExample(null, example, -1, -1);
 	}
 
 	/**
@@ -239,9 +243,11 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		util.prepareCriteria(criteria);
 		return criteria.list();
 	}
+
 	public List findByCriteria(DetachedCriteria criteria) {
-		return findByCriteria(criteria,-1,-1);
+		return findByCriteria(criteria, -1, -1);
 	}
+
 	/**
 	 * 支持通过DetachedCriteria来分页查询
 	 * 
@@ -256,8 +262,8 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 
 		Assert.notNull(criteria, "DetachedCriteria must not be null");
 
-		Criteria executableCriteria = criteria
-				.getExecutableCriteria(util.getSession());
+		Criteria executableCriteria = criteria.getExecutableCriteria(util
+				.getSession());
 
 		if (firstResult >= 0) {
 			executableCriteria.setFirstResult(firstResult);
@@ -269,24 +275,26 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 
 	}
 
-	public List findByExample(
-			final String entityName, final Object exampleEntity, final int firstResult, final int maxResults)
-			throws DataAccessException {
+	public List findByExample(final String entityName,
+			final Object exampleEntity, final int firstResult,
+			final int maxResults) throws DataAccessException {
 
 		Assert.notNull(exampleEntity, "Example entity must not be null");
-		
-				Criteria executableCriteria = (entityName != null ?
-						util.getSession().createCriteria(entityName) : util.getSession().createCriteria(exampleEntity.getClass()));
-				executableCriteria.add(Example.create(exampleEntity));
-				if (firstResult >= 0) {
-					executableCriteria.setFirstResult(firstResult);
-				}
-				if (maxResults > 0) {
-					executableCriteria.setMaxResults(maxResults);
-				}
-				return (List)  executableCriteria.list();
-		
+
+		Criteria executableCriteria = (entityName != null ? util.getSession()
+				.createCriteria(entityName) : util.getSession().createCriteria(
+				exampleEntity.getClass()));
+		executableCriteria.add(Example.create(exampleEntity));
+		if (firstResult >= 0) {
+			executableCriteria.setFirstResult(firstResult);
+		}
+		if (maxResults > 0) {
+			executableCriteria.setMaxResults(maxResults);
+		}
+		return (List) executableCriteria.list();
+
 	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -308,8 +316,8 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	public int queryCountByCriteria(final DetachedCriteria detachedCriteria,
 			final String distinct) {
 
-		Criteria criteria = detachedCriteria
-				.getExecutableCriteria(util.getSession());
+		Criteria criteria = detachedCriteria.getExecutableCriteria(util
+				.getSession());
 		if (distinct != null && !"".equals(distinct.trim())) {
 			criteria.setProjection(Projections.countDistinct(distinct));
 		} else {
@@ -379,8 +387,9 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * 
 	 * @see solution.auto.framework.dao.IDao#findById(java.lang.Long)
 	 */
-	@SuppressWarnings("unchecked")
-	public T findById(Long id) {
+
+	@Override
+	public <PK extends Serializable> T findById(PK id) {
 		Object entity = util.getSession().load(this.entityClass, id);
 		// fire actually query.
 		return (T) (entity);
@@ -888,7 +897,8 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		queryBuffer.append(offsetIndex);
 		queryBuffer.append(" and main.rn <=");
 		queryBuffer.append(offsetIndex + pageSize);
-		SQLQuery sqlQuery = util.getSession().createSQLQuery(queryBuffer.toString());
+		SQLQuery sqlQuery = util.getSession().createSQLQuery(
+				queryBuffer.toString());
 		sqlQuery.setProperties(params);
 		addTypeMapping(sqlQuery, typeMapping);
 		return (List) sqlQuery.list();
@@ -1210,7 +1220,10 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * @param id
 	 *            要删除的id数据
 	 */
-	public void removeById(Long id) {
+
+	@SuppressWarnings("hiding")
+	@Override
+	public <PK extends Serializable> void removeById(PK id) {
 		util.getSession().delete(this.findById(id));
 	}
 
@@ -1395,6 +1408,5 @@ public class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 
 }

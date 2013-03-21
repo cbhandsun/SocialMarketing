@@ -13,6 +13,7 @@
  ******************************************************************************/
 package com.socialmarketing.core.dao;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -25,8 +26,9 @@ import org.hibernate.type.Type;
 
 import com.socialmarketing.core.PageResult;
 import com.socialmarketing.core.QueryCriteria;
+import com.socialmarketing.core.model.EntityBase;
 
-public interface IDao<T> {
+public interface IDao<T extends EntityBase> {
 
 	/**
 	 * 系统序列当前值定义常量
@@ -201,7 +203,7 @@ public interface IDao<T> {
 	 *            primary id of data object.
 	 * @return data object.
 	 */
-	public T findById(Long id);
+	public <PK extends Serializable>  T findById(PK id);
 
 	/**
 	 * Execute a named query. A named query is defined in a Hibernate mapping
@@ -593,7 +595,7 @@ public interface IDao<T> {
 	 * @param id
 	 *            要删除的id数据
 	 */
-	public void removeById(Long id);
+	public <PK extends Serializable> void removeById(PK id);
 
 	/**
 	 * 删除集合数据
@@ -606,9 +608,9 @@ public interface IDao<T> {
 	/**
 	 * 插入操作
 	 * 
-	 * @param o
+	 * @param model
 	 */
-	public void save(T o);
+	public void save(T model);
 
 	/**
 	 * 插入操作
