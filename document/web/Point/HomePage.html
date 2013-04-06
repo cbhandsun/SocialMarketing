@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-mac ua-webkit"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>
+搜索: 乔布斯
+</title>
+    
+
+    
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <script type="text/javascript" src="./HomePage_files/packed_ad3738113870.js" async></script><script>var _head_start = new Date();</script>
+    <script src="./HomePage_files/packed_jquery.min6301986802.js"></script>
+    <script src="./HomePage_files/packed_douban2310601091.js"></script>
+    <link href="./HomePage_files/packed_douban7781657537.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    
+        a:link { color: #259; }
+        a:visited { color: #769; }
+        a:hover { color: #fff; }
+        a:active { color: #fff; }
+        
+h1{display:none}.mod-search{position:relative;overflow:hidden;zoom:1;margin-bottom:28px;background-color:#f7f7f8;padding:7px}.mod-search input{-webkit-appearance:none;border:0;background:transparent}.mod-search label{position:absolute;left:12px;top:10px;line-height:30px;cursor:text;color:#bbb}.mod-search legend{display:none}.mod-search fieldset{border:0;padding:0;margin:0}.mod-search .inp{height:30px;cursor:text;border:1px solid #dcdcdc;background-color:#fff}.mod-search .inp input{background:#fff;width:94%;margin:0;text-align:left;height:30px;padding-left:6px;height:28px\9;line-height:28px\9;outline:0}.mod-search .inp-btn{position:absolute;top:6px;right:6px;width:30px;height:30px;zoom:1;overflow:hidden}.mod-search .inp-btn input{width:100%;height:100%;font-size:0;padding:35px 0 0 0;overflow:hidden;background:url(http://img3.douban.com/pics/icon/bn_srh_1.png) no-repeat 45% 45%;color:transparent;cursor:pointer}.search-cate{float:left;margin-right:35px;width:65px;font-size:0}.search-cate li{width:65px;display:inline-block;*display:inline;zoom:1;margin-bottom:12px;line-height:1.2;font-size:12px}.search-cate li a{display:block;padding:3px 0;text-align:center}.search-cate li a:link,.search-cate li a:visited{color:#111}.search-cate li a:hover{color:#fff;background-color:#8cd379;border-radius:3px}.search-cate .on a:active,.search-cate .on a:hover,.search-cate .on a:link,.search-cate .on a:visited{background:#7fc06e;color:#fff;border-radius:3px}.search-result{overflow:hidden;zoom:1}.search-result .no-result{font-size:12px}.no-result{margin-bottom:40px;font-size:14px;color:#999}.frm-find{margin-bottom:30px}.frm-find .item{position:relative;margin-bottom:10px;color:#666}.frm-find .item label{position:absolute;top:2px;left:2px;line-height:20px;color:#999;cursor:text}.frm-find .item input{padding:5px;border:1px solid #ccc}.frm-find .item-accounts{border:1px solid #ccc}.frm-find .item-accounts input{width:60%;border:0}.frm-find .item-accounts .mail-domain{position:absolute;top:0;right:2px}.frm-find .item-accounts .mail-domain select{padding:2px;border:0;font-size:13px;background:transparent;-webkit-appearance:none}.frm-find .item-password input{width:98%}
+.search_report { float:right; margin-top:15px; margin-right:10px;}
+.search_report a:link,
+.search_report a:hover,
+.search_report a:visited,
+.search_report a:active { color:#bbb; }
+.search_report a:hover { color:#fff; background-color:#bbb; }
+.search-list-item a{color:#666} 
+.search-list-item a:hover{color:#fff}
+
+    </style>
+    
+    <link rel="stylesheet" href="Resource/5a772723b481eecf.css">
+    <script>
+var o={},PEOPLE_ID="",currTagId="",totallen=16,newGroupNum=0,groupNameArr=[],isDuplicate=false,mlist=$(".menu-list"),olist=$(".group-opts-list"),sglist=$(".set-group-list"),sgarrow=$(".user-group-arrow"),addGroup=$("#add-new-group"),TEMPL_NEW_TAG='<li><a href="?tag={ID}">{NAME}</a></li>',TEMPL_MENU_LIST='<li><a href="?tag=0">全部</a></li>{CUSTOM_TAGS}<li class="last"><a href="?tag=2">未分组</a></li>',TEMPL_NEW_GROUP_ITEM='<li><input type="checkbox" id="{GID}" value="{GID}" {CHECKED}><label for="{GID}">{GNAME}</label></li>',TEMPL_SET_LIST_ITEMS='{CUSTOM_ITEMS}<li class="last"><span class="create-new">新分组</span></li>',TEMPL_GROUP_OPTS='<ul class="group-opts-list"><li id="del-group">删除分组</li><li id="rename-group">改组名</li></ul>',TEMPL_FRIEND_TIPS='<span class="tips">(可看仅朋友可见内容)</span>',TEMPL_EDIT_ICON='&nbsp;<em class="icon-edit"></em>',TEMPL_TIPS='<span class="tips tlimit">{TIPS}</span>',CSS_LAST_ITEM=".set-group-list .last",CSS_INPUT_CREATE=".input-create",CSS_ARROW_SELECT="arrow-select",CSS_LOADER=".gray-loader",CSS_SET_GROUP_LIST=".set-group-list",CSS_EM_TIPS=".tlimit",TXT_DUP_NAME="已有同名分组",TXT_NULL_NAME="请输入分组名",TXT_BAN_WORDS="分组名称含有被禁止的内容",isIE6=($.browser.msie&&$.browser.version==="6.0")?true:false,collectGroupName=function(){var a=$("#db-timeline-hd a").toArray();$.each(a,function(c,b){groupNameArr[c]=$.trim($(b).text())})},countNum=function(){var a=$("input[type=checkbox]:checked").length;if(a>0){$(".sel-wrapper .user-rs").html("加入"+a+"个分组")}else{$(".sel-wrapper .user-rs").html("加入分组")}},changeGroupShow=function(f){var c=f.parents(".user-group-arrow").prev(".user-rs"),b=f.closest(CSS_SET_GROUP_LIST).children().children(":checked"),a=b.length,e=b.toArray(),d=$.map(e,function(g){return $(g).next().text().escapeHTML()});if(a>0){c.html(d.join(", ").substring(0,totallen)).show();if(d.join(", ").length>=totallen){c.append("...")}}else{c.text("未分组")}},createNewGroup=function(d,b,c,a){$.each(groupNameArr,function(f,e){if(c===e||c==="全部"||c==="未分组"){isDuplicate=true;if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_DUP_NAME))}else{$(CSS_EM_TIPS,d).text(TXT_DUP_NAME)}return false}else{isDuplicate=false}});if(c&&!isDuplicate){$(CSS_EM_TIPS).remove();$.post_withck("/j/contact/newtag",{name:c,people:b},function(k){if(k.result){var h=[],i=[],m="",g="",l="",j=k.data.newtag.id,f=k.data.newtag.name;if(mlist.length){$.each(k.data.all,function(p,n){h[p]=TEMPL_NEW_TAG.replace("{ID}",n.id).replace("{NAME}",n.name.escapeHTML())});mlist.html(TEMPL_MENU_LIST.replace("{CUSTOM_TAGS}",h.join("")));m=$(".menu-list a:contains("+currGroupName+")");m.parent().addClass("on");if(currGroupName!=="全部"&&currGroupName!=="朋友"&&currGroupName!=="未分组"){m.append(TEMPL_EDIT_ICON).after(TEMPL_GROUP_OPTS)}}$.each(k.data.all,function(p,n){i[p]=TEMPL_NEW_GROUP_ITEM.replace(/{GID}/g,n.id).replace("{GNAME}",n.name.escapeHTML()).replace("{CHECKED}",n.status?'checked="checked"':"")});$(CSS_SET_GROUP_LIST,d).html(TEMPL_SET_LIST_ITEMS.replace("{CUSTOM_ITEMS}",i.join("")));$(CSS_SET_GROUP_LIST+" li:first",d).append(TEMPL_FRIEND_TIPS);if($(CSS_SET_GROUP_LIST).length>1){l=$("#"+j).parent().next().children("label").text()||"";g=TEMPL_NEW_GROUP_ITEM.replace(/{GID}/g,j).replace(/{GNAME}/g,f.escapeHTML()).replace("{CHECKED}","");if(l){$(CSS_SET_GROUP_LIST+' li:contains("'+l+'")').before(g)}else{$(CSS_LAST_ITEM).before(g)}$(CSS_SET_GROUP_LIST+" input[id="+j+"]",d).eq(1).parent().remove()}newGroupNum=$(CSS_SET_GROUP_LIST+" input[type=checkbox]",d).length;if(newGroupNum>=a){$(CSS_LAST_ITEM).remove()}var e=$(d).children().children("li:first");if($(".custom-popwin").length){countNum(e)}else{changeGroupShow(e)}collectGroupName()}else{if(k.msg==="ban"){if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_BAN_WORDS))}else{$(CSS_EM_TIPS,d).text(TXT_BAN_WORDS)}}}},"json")}else{if(!c){if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_NULL_NAME))}else{$(CSS_EM_TIPS,d).text(TXT_NULL_NAME)}}}};collectGroupName();if(isIE6){$(CSS_SET_GROUP_LIST+' li:not(".last")').hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")})};
+
+</script>
+
+    <link rel="shortcut icon" href="http://img3.douban.com/favicon.ico" type="image/x-icon">
+<script src="./HomePage_files/ga.js" async></script></head>
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav global-nav-a">
+  <div class="bd">
+    
+
+
+
+
+
+
+<div class="top-nav-info">
+    
+    <a href="http://www.douban.com/accounts/login" rel="nofollow">登录</a>
+    <a href="http://www.douban.com/accounts/register">注册</a>
+</div>
+
+
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+            <li class="on">
+              <a href="HomePage.html">积分</a>
+            </li>
+          
+            
+            
+            <li>
+              <a href="../Event/hosts_explore.html">活动</a>
+            </li>
+          
+            
+            <li>
+              <a href="../Group/MygroupTopic.html">小组</a>
+            </li>
+          
+            
+            <li>
+              <a href="../attention/hosts_explore.html">关注企业</a>
+            </li>
+          
+            
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+    
+
+
+
+
+
+
+
+<div id="db-nav-sns" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+
+    <div class="nav-search">
+      <form action="http://www.douban.com/search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+           <label for="inp-query">促销、小组、活动、成员</label>
+          <div class="inp"><input id="inp-query" name="q" size="22" title="搜索促销、小组、活动、成员" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="nav-logo">
+      <a href="HomePage.html">积分平台</a>
+    </div>
+
+    <div class="nav-items">
+     <ul>
+     <li><a href="HomePage.html">首页</a></li>
+          <li><a href="MyPage.html">我的帐户</a></li>
+          <li><a href="online_List.html">线上活动</a></li>
+     </ul>
+     </div>
+
+  </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    <h1>搜索: 乔布斯</h1>
+        
+        
+        <div class="article">
+	  
+
+
+<script>
+    Do(function(){
+        if ($.browser.msie && ($.browser.version|0) === 6) {
+            return;
+        }
+        $(window).scroll((function(){var g=$(document);var d=$(".search-cate");var f=d.find("ul");var e=parseInt($("body").css("padding-top"))+5;var c=d.offset().top-e;var b=d.width();var a;return function(h){if(a){window.clearTimeout(a)}a=window.setTimeout(function(){if(g.scrollTop()>=c){d.css({height:1});f.css({position:"fixed",width:b,top:e})}else{d.css({height:"auto"});f.css({position:"static",width:"auto"})}},0)}})());
+    });
+</script>
+
+<div class="search-result">
+    
+
+
+        
+    <h2>
+        相关促销资讯:
+            
+    </h2>
+
+
+            <div class="result-list">
+			
+                    
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://www.douban.com/group/StevePaulJobs/" onclick="moreurl(this,{i:&#39;0&#39;})" title="诺基亚电池"><img src="./HomePage_files/product1.jpg" alt="诺基亚电池"></a>
+    </div>
+    <div class="content">
+    <div class="title">
+		<h3><span>[XX公司] </span>&nbsp;<a href="http://www.douban.com/group/StevePaulJobs/" onclick="moreurl(this,{i:&#39;0&#39;})">诺基亚(NOKIA)手机原装电池BL-5C
+</a><span>200积分</span></h3>
+    <div class="info">
+        230人兑换 剩余170个
+    </div>
+    </div>
+    <p>诺基亚手机电池BL-5C结构紧凑轻巧，适合日常用途。 ⊙轻巧封装的1020mAh锂电池可提供强劲的电力 ⊙诺基亚手机电池BL-5C可反复充电
+</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://book.douban.com/subject/6798611/" onclick="moreurl(this,{i:&#39;1&#39;})" title="史蒂夫·乔布斯传"><img src="./HomePage_files/s6974202.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>
+             <span>[书籍]</span>&nbsp;<a href="http://book.douban.com/subject/6798611/" onclick="moreurl(this,{i:&#39;1&#39;})">史蒂夫·乔布斯传 </a>
+            </h3>
+
+        <div class="rating-info">
+            <span class="allstar45"></span>
+            <span class="rating_nums">8.7</span>
+            <span>(13932评价)</span>
+        <span class="subject-cast">[美] 沃尔特·艾萨克森 / 管延圻 / 中信出版社 / 2011</span>
+        </div> 
+        </div>
+
+        <p>这本乔布斯唯一授权的官方传记，在2011年上半年由美国出版商西蒙舒斯特对外发布出版消息以来，备受全球媒体和业界瞩目，这本书的全球出版日期最终确定为2011年11月21日...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://book.douban.com/subject/10591870/" onclick="moreurl(this,{i:&#39;2&#39;})" title="乔布斯"><img src="./HomePage_files/s10189225.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>
+             <span>[书籍]</span>&nbsp;<a href="http://book.douban.com/subject/10591870/" onclick="moreurl(this,{i:&#39;2&#39;})">乔布斯 </a>
+            </h3>
+
+        <div class="rating-info">
+            <span class="allstar35"></span>
+            <span class="rating_nums">6.9</span>
+            <span>(144评价)</span>
+        <span class="subject-cast">卡勒布·梅尔比 / 孙芳 / 海南出版社 / 2012</span>
+        </div> 
+        </div>
+
+        <p>卡勒布·梅尔比编著的《乔布斯——苹果禅(精)》详尽讲述了史蒂夫·乔布斯和他的禅修导师乙川千野弘文之间的故事。弘文在乔布斯生命中的作用在他的传记中没有被充分揭示...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://book.douban.com/subject/6723066/" onclick="moreurl(this,{i:&#39;3&#39;})" title="乔布斯传"><img src="./HomePage_files/s6783948.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>
+             <span>[书籍]</span>&nbsp;<a href="http://book.douban.com/subject/6723066/" onclick="moreurl(this,{i:&#39;3&#39;})">乔布斯传 </a>
+             <span class="ic-mark ic-book-mark">可试读</span>
+            </h3>
+
+        <div class="rating-info">
+            <span class="allstar35"></span>
+            <span class="rating_nums">7.0</span>
+            <span>(2090评价)</span>
+        <span class="subject-cast">王咏刚 / 上海财经大学出版社 / 2011</span>
+        </div> 
+        </div>
+
+        <p>李开复亲自联系，深度访谈苹果公司最早的风险投资者、苹果公司前董事会成员、前副总裁、高级经理、资深工程师，以及熟悉乔布斯的其他朋友。这些“独家爆料”式的第一手...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://movie.douban.com/subject/10439840/" onclick="moreurl(this,{i:&#39;4&#39;})" title="iGenius: How Steve Jobs Changed the World"><img src="./HomePage_files/s6990128.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+        <h3>
+            <span>[电影]</span> 
+            &nbsp;<a href="http://movie.douban.com/subject/10439840/" onclick="moreurl(this,{i:&#39;4&#39;})">iGenius：史蒂夫·乔布斯是如何改变世界的 </a>
+        </h3>
+        <div class="rating-info">
+            <span class="allstar40"></span><span class="rating_nums">7.9</span>
+            <span>(2522评价)</span>
+        <span class="subject-cast">Colleen Halpin / Adam Savage / 2011</span>
+        </div>
+        </div> 
+        <p>With in-depth and detailed interviews, the influence Apple co-founder and CEO Steve Jobs had on modern society is examined, from helping to develop the perso...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://movie.douban.com/subject/6877703/" onclick="moreurl(this,{i:&#39;5&#39;})" title="JOBS"><img src="./HomePage_files/s11160414.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+        <h3>
+            <span>[电影]</span> 
+            &nbsp;<a href="http://movie.douban.com/subject/6877703/" onclick="moreurl(this,{i:&#39;5&#39;})">乔布斯传 </a>
+        </h3>
+        <div class="rating-info">
+            <span>(少于10评价)</span>
+        <span class="subject-cast">乔舒亚·迈克尔·斯坦 / 阿什顿·库彻 / 2013</span>
+        </div>
+        </div> 
+        <p>"JOBS" is the incredibly powerful and true story of the visionary who set out to change the world, and did.
+The film chronicles Steve Jobs' (ASHTON KUTCHER) ...</p>
+    </div>
+</div>
+
+					
+                    
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://www.douban.com/group/iPhone/" onclick="moreurl(this,{i:&#39;6&#39;})" title="iPhone.App"><img src="./HomePage_files/g35896-4.jpg" alt="iPhone.App"></a>
+    </div>
+    <div class="content">
+    <div class="title">
+		<h3><span>[小组] </span>&nbsp;<a href="http://www.douban.com/group/iPhone/" onclick="moreurl(this,{i:&#39;6&#39;})">iPhone.App</a></h3>
+    <div class="info">
+        28033 成员
+    </div>
+    </div>
+    <p>Touch your music,pictures,maps,even your life in iPhone.
+
+【VIDA—最好用的拍照App】 www.vida.fm
+
+【风险提示】谨慎网络购买iPhone5，避免各种上当。
+</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+        <a class="nbg" href="http://www.douban.com/location/drama/20152498/" onclick="moreurl(this,{i:&#39;7&#39;})" title="乔布斯的美丽与哀愁"><img src="./HomePage_files/611e7c6529a2904.jpg"></a>
+    </div>
+
+    <div class="content">
+        <div class="title">
+            <h3>
+                <span>[舞台剧]</span>&nbsp;
+                <a href="http://www.douban.com/location/drama/20152498/" onclick="moreurl(this,{i:&#39;7&#39;})">乔布斯的美丽与哀愁 </a>
+            </h3>
+
+            <div class="rating-info">
+                    <span class="allstar35"></span>
+                    <span class="rating_nums">7.2</span>
+                    <span>(12评价)</span>
+            </div> 
+        </div>
+
+        <p>出品人：王少剑
+总策划：赵梓伊
+制作人：赵梓伊、李逸
+舞美设计：李逸
+主演：黄澄澄
+
+出品公司：东方熔盛（北京）文化艺术股份有限公司
+制作公司：北京谷天文化...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://book.douban.com/subject/4860526/" onclick="moreurl(this,{i:&#39;8&#39;})" title="乔布斯的魔力演讲"><img src="./HomePage_files/s4403156.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>
+             <span>[书籍]</span>&nbsp;<a href="http://book.douban.com/subject/4860526/" onclick="moreurl(this,{i:&#39;8&#39;})">乔布斯的魔力演讲 </a>
+            </h3>
+
+        <div class="rating-info">
+            <span class="allstar40"></span>
+            <span class="rating_nums">7.7</span>
+            <span>(1030评价)</span>
+        <span class="subject-cast">[美]卡迈恩·加洛 / 徐臻真 / 中信出版社 / 2010</span>
+        </div> 
+        </div>
+
+        <p>神秘莫测的不只是他的苹果，还有他的口才！
+他用怎样的PPT贩卖iPhone、iMac和iPod？
+用哪些“超酷”的词挑战IBM？
+你能像他一样在台上“掳获人心”吗？
+史蒂夫•乔布...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://movie.douban.com/subject/10727745/" onclick="moreurl(this,{i:&#39;9&#39;})" title="Piedra, Papel o Tijera"><img src="./HomePage_files/s15415787.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+        <h3>
+            <span>[电影]</span> 
+            &nbsp;<a href="http://movie.douban.com/subject/10727745/" onclick="moreurl(this,{i:&#39;9&#39;})">石头剪刀布 </a>
+        </h3>
+        <div class="rating-info">
+            <span>(目前无评价)</span>
+        <span class="subject-cast">赫森·乔布斯 / Xavier Abreu</span>
+        </div>
+        </div> 
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://movie.douban.com/subject/6974319/" onclick="moreurl(this,{i:&#39;10&#39;})" title="Steve Jobs: The Lost Interview"><img src="./HomePage_files/s6996434.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+        <h3>
+            <span>[电影]</span> 
+            &nbsp;<a href="http://movie.douban.com/subject/6974319/" onclick="moreurl(this,{i:&#39;10&#39;})">史蒂夫·乔布斯：遗失的访谈 </a>
+        </h3>
+        <div class="rating-info">
+            <span class="allstar45"></span><span class="rating_nums">8.4</span>
+            <span>(41评价)</span>
+        <span class="subject-cast">Paul Sen / 史蒂夫·乔布斯</span>
+        </div>
+        </div> 
+        <p>In 1995, during the making of his TV series Triumph of the Nerds about the birth of the PC, Bob Cringely did a memorable hour-long interview with Steve Jobs....</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://movie.douban.com/subject/2223463/" onclick="moreurl(this,{i:&#39;11&#39;})" title="The Pixar Story"><img src="./HomePage_files/s2750237.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+        <h3>
+            <span>[电影]</span> 
+            &nbsp;<a href="http://movie.douban.com/subject/2223463/" onclick="moreurl(this,{i:&#39;11&#39;})">皮克斯的故事 </a>
+        </h3>
+        <div class="rating-info">
+            <span class="allstar45"></span><span class="rating_nums">8.9</span>
+            <span>(2428评价)</span>
+        <span class="subject-cast">Leslie Iwerks / 斯泰西·基齐 / 2007</span>
+        </div>
+        </div> 
+        <p>这部花费6年时间制作而成的纪录片，聚焦了动画业巨头皮克斯的发展史。片中主要采取的是面对面采访的形式，还穿插了皮克斯创作的一些顽皮形象的短片，其中更包括拉塞特获...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://book.douban.com/subject/5384060/" onclick="moreurl(this,{i:&#39;12&#39;})" title="乔布斯"><img src="./HomePage_files/s6257338.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>
+             <span>[书籍]</span>&nbsp;<a href="http://book.douban.com/subject/5384060/" onclick="moreurl(this,{i:&#39;12&#39;})">乔布斯 </a>
+            </h3>
+
+        <div class="rating-info">
+             <span>(少于10评价)</span>
+        <span class="subject-cast">正子 编 / 中国人民大学出版社 / 2010</span>
+        </div> 
+        </div>
+
+        <p>《乔布斯:苹果的滋味》史蒂夫·乔布斯是一个传奇。他是苹果公司的CEO，一个永远无法被击垮的生命体。他不仅仅是一个商业界的奇葩，更是一个妙语连珠的演讲家。乔布斯是...</p>
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://book.douban.com/subject/20475277/" onclick="moreurl(this,{i:&#39;13&#39;})" title="乔布斯"><img src="./HomePage_files/s24575638.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>
+             <span>[书籍]</span>&nbsp;<a href="http://book.douban.com/subject/20475277/" onclick="moreurl(this,{i:&#39;13&#39;})">乔布斯 </a>
+            </h3>
+
+        <div class="rating-info">
+             <span>(少于10评价)</span>
+        <span class="subject-cast">郭文正 / 2013</span>
+        </div> 
+        </div>
+
+    </div>
+</div>
+
+					
+                    
+
+<div class="result">
+    <div class="pic">
+		<a class="nbg" href="http://book.douban.com/subject/4139280/" onclick="moreurl(this,{i:&#39;14&#39;})" title="乔布斯的秘密日记"><img src="./HomePage_files/s4113036.jpg"></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>
+             <span>[书籍]</span>&nbsp;<a href="http://book.douban.com/subject/4139280/" onclick="moreurl(this,{i:&#39;14&#39;})">乔布斯的秘密日记 </a>
+             <span class="ic-mark ic-book-mark">可试读</span>
+            </h3>
+
+        <div class="rating-info">
+            <span class="allstar35"></span>
+            <span class="rating_nums">7.1</span>
+            <span>(688评价)</span>
+        <span class="subject-cast">[美] 丹尼尔·莱昂斯 / 刘宁 / 中信出版社 / 2010</span>
+        </div> 
+        </div>
+
+        <p>美国《福布斯》杂志资深编辑丹尼尔·莱昂斯，假冒苹果公司总裁史蒂夫·乔布斯，通过多年来对高科技业的深刻了解，以及风趣幽默的文笔，把近年来高科技业的酸甜苦辣，都...</p>
+    </div>
+</div>
+
+					
+            <div class="result-list-ft">
+                <a href="http://www.douban.com/search?q=%E4%B9%94%E5%B8%83%E6%96%AF#more" class="j a_search_more" data-q="乔布斯" data-start="15" data-subtype="item">显示更多</a>
+            </div>
+            </div>
+
+        
+    <h2>
+        相关豆瓣用户:
+            
+    </h2>
+
+        <div class="result-list">
+            
+<div class="result">
+<div class="pic">
+	<a class="nbg user-pic" href="http://www.douban.com/people/3838469/" onclick="moreurl(this,{user_pos:&#39;0&#39;})" title="乔布斯"><img src="./HomePage_files/u3838469-2.jpg" alt="乔布斯"></a>
+</div>
+<div class="content">
+<div class="title">
+	<h3><a href="http://www.douban.com/people/3838469/" onclick="moreurl(this,{user_pos:&#39;0&#39;})">乔布斯</a></h3>
+<div class="info">
+
+58人关注/上海
+</div>
+</div>
+<p>豆瓣垃圾回收站。</p>
+</div>
+</div>
+
+            
+<div class="result">
+<div class="pic">
+	<a class="nbg user-pic" href="http://www.douban.com/people/luwei1989/" onclick="moreurl(this,{user_pos:&#39;1&#39;})" title="布鲁乔布斯"><img src="./HomePage_files/u34703296-13.jpg" alt="布鲁乔布斯"></a>
+</div>
+<div class="content">
+<div class="title">
+	<h3><a href="http://www.douban.com/people/luwei1989/" onclick="moreurl(this,{user_pos:&#39;1&#39;})">布鲁乔布斯</a></h3>
+<div class="info">
+
+298人关注/London, United Kingdom
+</div>
+</div>
+<p>微博：http://weibo.com/1801320765/profile
+                                 
+
+农夫下岗了。进城当IT民工去了。
+
+
+如果大家都什么问题，下面先回了你们。
+
+
+“爱过！...</p>
+</div>
+</div>
+
+            
+<div class="result">
+<div class="pic">
+	<a class="nbg user-pic" href="http://www.douban.com/people/StevenJobs/" onclick="moreurl(this,{user_pos:&#39;2&#39;})" title="乔布斯"><img src="./HomePage_files/u4220777-21.jpg" alt="乔布斯"></a>
+</div>
+<div class="content">
+<div class="title">
+	<h3><a href="http://www.douban.com/people/StevenJobs/" onclick="moreurl(this,{user_pos:&#39;2&#39;})">乔布斯</a></h3>
+<div class="info">
+
+8人关注/湖北武汉
+</div>
+</div>
+<p>我们的征途是星辰大海。用果壳的话说虽然我们大多数人都是社会稳定的C原子，但你显然忘记了你也来自激烈的宇宙深处，早期也曾见证过波澜壮阔的诞生与消亡，偶尔不妨也45...</p>
+</div>
+</div>
+
+            
+<div class="result">
+<div class="pic">
+	<a class="nbg user-pic" href="http://www.douban.com/people/sonicsung/" onclick="moreurl(this,{user_pos:&#39;3&#39;})" title="乔布斯·大林"><img src="./HomePage_files/u1629069-8.jpg" alt="乔布斯·大林"></a>
+</div>
+<div class="content">
+<div class="title">
+	<h3><a href="http://www.douban.com/people/sonicsung/" onclick="moreurl(this,{user_pos:&#39;3&#39;})">乔布斯·大林</a></h3>
+<div class="info">
+
+19人关注
+</div>
+</div>
+<p>blog地址：blog.sina.com.cn/weedwarm
+    一条苏醒在三月的鱼.双鱼之尾 偏执 理性 迁就.喜欢美好 热爱残缺.
+    横冲直撞 对生活虔诚 逆来顺受.但又不远受其左右 几欲...</p>
+</div>
+</div>
+
+            
+<div class="result">
+<div class="pic">
+	<a class="nbg user-pic" href="http://www.douban.com/people/3804056/" onclick="moreurl(this,{user_pos:&#39;4&#39;})" title="乔布斯"><img src="./HomePage_files/user_normal.jpg" alt="乔布斯"></a>
+</div>
+<div class="content">
+<div class="title">
+	<h3><a href="http://www.douban.com/people/3804056/" onclick="moreurl(this,{user_pos:&#39;4&#39;})">乔布斯</a></h3>
+<div class="info">
+
+2人关注
+</div>
+</div>
+</div>
+</div>
+
+
+        <div class="result-list-ft">
+            <a href="http://www.douban.com/search?q=%E4%B9%94%E5%B8%83%E6%96%AF#more" class="j a_search_more" data-q="乔布斯" data-start="5" data-subtype="user">显示更多</a>
+        </div>
+        </div>
+
+
+</div>
+
+
+
+<div class="back-to-top" style="left: 720px;">
+<a href="http://www.douban.com/search?q=%E4%B9%94%E5%B8%83%E6%96%AF#">↑回顶部</a>
+</div>
+<script>
+Do(function() {
+$("html").delegate(".a_search_more","click",function(c){c.preventDefault();var b=$(this);if(b.hasClass("processing")){return}var a=b.data();b.attr("title",b.text()).text("加载中...");b.addClass("processing");$.get("/j/search",a,function(d){if(d.r){b.text("加载失败...");return}b.removeClass("processing");b.text(b.attr("title"));b.data("start",parseInt(b.data("start"),10)+d.limit);$(d.items.join("")).insertBefore(b.parent());if(!d.more){b.hide()}})});
+(function(){var h=$(window);var k=$(document);var l;var a=$(".back-to-top");var b=$("#content").find(".article");var g;var i=$("#content").find(".search-result");var d=$.browser.msie&&$.browser.version==="6.0";var f=function(n){if(!f.cache){f.cache=[]}if(f.cache[n]){return}var m=new Date;(new Image()).src="/stat.html?source=group&action=back_top&iden="+n+"&month="+(m.getMonth()+1)+"&day="+m.getDate()+"&timestamp="+(+new Date);f.cache[n]=1};var e=function(){return i.offset().top+i.outerHeight()};var c=function(m){if(m+g>=e()){a.css({position:"absolute",bottom:"",top:e()-a.outerHeight()})}else{if(!d){a.css({position:"fixed",top:"",bottom:0})}}a.show().find("a").stop().animate({top:0})};var j=function(){a.hide().find("a").css("top",40)};h.resize(function(){g=h.height();a.css("left",b.offset().left+b.width()+80);l=k.height()/g>3?Math.max(2*g,$(".side").height()):0});h.trigger("resize");h.scroll((function(){var m;return function(){if(m){clearTimeout(m)}setTimeout(function(){if(l===0){return}var n=k.scrollTop();if(n>l){c(n)}else{j()}},100)}})());a.find("a").click(function(m){m.preventDefault();k.scrollTop(0)});if(d){h.scroll(function(){if(k.scrollTop()+g>=e()){return}a.css("top",k.scrollTop()+g-a.height())})}})();
+});
+</script>
+
+	</div>
+        <div class="extra">
+          
+        </div>
+    </div>
+    </div>
+
+        
+    <div id="footer">
+        
+
+<span id="icp" class="fleft gray-link">
+    © 2013－2013 point.com, all rights reserved
+</span>
+
+<span class="fright">
+    <a href="http://www.douban.com/about">关于积分平台</a>
+    · <a href="http://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="http://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="http://www.douban.com/help/">帮助中心</a>
+</span>
+
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="./HomePage_files/d9e01b81ced4783.js"></script>
+    
+<!-- douban ad begin -->
+
+
+
+
+
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = 'http://erebor.douban.com/',
+            userId = '',
+            browserId = '7Lrqcr6MMPs',
+            ipAddress = '116.76.5.67',
+            criteria = '3:/search?q=%E4%B9%94%E5%B8%83%E6%96%AF',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_subject_search_top_right'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, ip: ipAddress, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', 'http://img3.douban.com/js/packed_ad3738113870.js');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+<script type="text/javascript">
+$(function () {
+$("div.result div h3 a:contains('反GUCCI')").parent().parent().parent().remove();
+});
+</script>
+
+
+<!-- douban ad end -->
+
+    
+    
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7019765-1']);
+_gaq.push(['_addOrganic', 'baidu', 'word']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', '3721', 'name']);
+_gaq.push(['_addOrganic', 'youdao', 'q']);
+_gaq.push(['_addOrganic', 'so.360.cn', 'q']);
+_gaq.push(['_addOrganic', 'vnet', 'kw']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣']);
+_gaq.push(['_addIgnoredOrganic', 'douban']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣网']);
+_gaq.push(['_addIgnoredOrganic', 'www.douban.com']);
+_gaq.push(['_setDomainName', '.douban.com']);
+
+
+    _gaq.push(['_setCustomVar', 1, 'responsive_view_mode', 'desktop', 3]); 
+
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+
+
+window._ga_init = function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+};
+if (window.addEventListener) {
+    window.addEventListener('load', _ga_init, false);
+} else {
+    window.attachEvent('onload', _ga_init);
+}
+</script>
+
+
+
+
+
+
+
+
+    <!-- dis9-->
+
+<script>var _check_hijack = function () {
+            var _sig = "7Lrqcr6M", _login = false, bid = get_cookie('bid');
+            if (location.protocol != "file:" && (typeof(bid) != "string" && _login || typeof(bid) == "string" && bid.substring(0,8) != _sig)) {
+                location.href+=(/\?/.test(location.href)?"&":"?") + "_r=" + Math.random().toString(16).substring(2);
+            }};
+            if (typeof(Do) != 'undefined') Do(_check_hijack);
+            else if (typeof(get_cookie) != 'undefined') _check_hijack();
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
