@@ -443,7 +443,11 @@ public class PortalURLParserImpl implements PortalURLParser {
         for (int i = 0; i < ENCODINGS.length; i++) {
             string = string.replace(ENCODINGS[i][0], ENCODINGS[i][1]);
         }
-        return string;
+        try {
+			return URLEncoder.encode(string,"utf-8");
+		} catch (UnsupportedEncodingException e) {
+			return string;
+		}
     }
 
 

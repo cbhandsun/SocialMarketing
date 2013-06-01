@@ -42,7 +42,7 @@ import org.xml.sax.helpers.AttributesImpl;
  * @author Jeremias Maerki
  * @version $Id: BarcodeErrorServlet.java,v 1.3 2010/10/25 09:28:47 jmaerki Exp $
  */
-public class BarcodeErrorServlet extends HttpServlet {
+public class BarcodeErrorServlet extends HttpServlet {  
 
     private static final long serialVersionUID = 6515981491896593768L;
 
