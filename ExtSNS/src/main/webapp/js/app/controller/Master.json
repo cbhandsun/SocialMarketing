@@ -1,0 +1,137 @@
+Ext.define('SNS.controller.master.${modelID}',{
+	extend : "Ext.app.Controller",
+	views : ['master.${modelID}.Column', 'master.${modelID}.List', 'master.${modelID}.Edit'],
+	stores : ["master.${modelID}"],
+	models : ["master.${modelID}"],
+	refs : [{
+				ref : 'masterList',
+				selector : '${modelID}list'
+			}, {
+				ref : 'masterEditForm',
+				selector : '${modelID}edit form'
+			}, {
+				ref : 'masterEditWindow',
+				selector : '${modelID}edit'
+			}],
+
+	init : function() {
+		this.control({
+					'${modelID}list' : {
+						itemdblclick : this.editMaster,
+						itemclick : this.enableDelete
+					},
+					'${modelID}edit button[action=save]' : {
+						click : this.updateMaster
+					},
+					'${modelID}list button[action=add]' : {
+						click : this.createMaster
+					},
+					'${modelID}list button[action=delete]' : {
+						click : this.deleteMaster
+					},
+					'${modelID}list button[action=save]' : {
+						click : this.saveMaster
+					}
+				});
+	},
+
+	editMaster : function(grid, record) {
+		var view = Ext.widget('${modelID}edit');
+		view.down('form').loadRecord(record);
+	},
+
+	createMaster : function() {
+		Ext.widget('${modelID}edit');
+	},
+
+	deleteMaster : function(button) {
+		var record = this.getMasterList().getSelectionModel().getSelection()[0];
+
+		if (record) {
+			this.get${modelID}Store().remove(record);
+			// this.doGridRefresh();
+			this.toggleDeleteButton(false);
+		}
+	},
+
+	enableDelete : function(button, record) {
+		this.toggleDeleteButton(true);
+	},
+
+	toggleDeleteButton : function(enable) {
+		var button = this.getMasterList().down('button[action=delete]');
+		if (enable) {
+			button.enable();
+		} else {
+			button.disable();
+		}
+	},
+
+	updateMaster : function(button) {
+		var form = this.getMasterEditForm();
+		var record = form.getRecord();
+		var values = form.getValues();
+
+		if (form.getForm().isValid()) {
+			if (record) {
+				record.set(values);
+				// record.save();
+			} else {
+				var newMaster = this.getCompanyModel().create(values);
+				// newMaster.save();
+				this.getCompanyStore().add(newMaster);
+				// this.doGridRefresh();
+			}
+			this.getMasterEditWindow().close();
+		}
+	},
+	saveMaster : function(button) {
+
+		var sd = this.get${modelID}Store();
+		var objsModif = sd.getModifiedRecords();
+		var objsDel = sd.getRemovedRecords();
+
+		var objData = {modifyRecords:[],removeRecords:[]};
+		var modData = new Array();
+		var newData = new Array();
+		var delData = new Array();
+
+		var model = null;
+		if (objsModif.length == 0 && objsDel.length == 0) {
+			Ext.Msg.show({
+						title : '提醒',
+						msg : '没有要保存的数据',
+						buttons : Ext.Msg.YES,
+						icon : Ext.Msg.INFO
+					});
+			return;
+		} else {
+			
+			// 处理新增或修改数据
+			objsModif.forEach(function prossModel(model) {
+						modData.push(model.getData());
+					});
+			// 处理删除数据
+			objData.modifyRecords = modData;
+			objsDel.forEach(function prossModel(model) {
+						delData.push(model.getData());
+					});
+			objData.removeRecords = delData;
+			var params = {
+				masterID : "Company",
+				data : objData
+			}
+
+			masterControl.saveMasters(params, callback);
+			var callback = function(result, e) {
+				// do something with the result
+				this.doGridRefresh();
+			};
+
+		}
+
+	},
+	doGridRefresh : function() {
+		this.getMasterList().down('pagingtoolbar').doRefresh();
+	}
+});

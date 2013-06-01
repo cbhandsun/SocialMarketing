@@ -1,0 +1,38 @@
+Ext.define('SNS.view.master.List', {
+	extend : 'Ext.grid.Panel',
+	alias : 'widget.${modelID}list',
+	store : "Master",
+	border:false,
+	//title : '主数据',
+
+	columns : Ext.create("SNS.view.grid.Column").columns,
+
+	dockedItems : [ {
+		xtype : 'toolbar',
+		dock : 'top',
+		items : [ {
+			text : '新增',
+			disabled : false,
+			action : 'add',
+			iconCls : 'icon-add'
+		}, {
+			text : '删除',
+			disabled : true,
+			action : 'delete',
+			iconCls : 'icon-delete'
+		} , {
+			text : '保存',
+			disabled : false,
+			action : 'save',
+			iconCls : 'icon-save'
+		} ]
+	}, {
+		xtype : 'pagingtoolbar',
+		dock : 'bottom',
+		store : "Master",
+		displayInfo : true,
+		displayMsg : 'Displaying Users {0} - {1} of {2}',
+		emptyMsg : '没有数据显示'
+	} ]
+
+});

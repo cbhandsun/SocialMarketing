@@ -26,6 +26,10 @@
   <servlet>
     <servlet-name>plutoPortalDriver</servlet-name>
     <servlet-class>org.apache.pluto.driver.PortalDriverServlet</servlet-class>
+     <init-param>
+     <param-name>charset</param-name>
+     <param-value>utf-8</param-value>
+     </init-param>
   </servlet>
   <servlet>
     <servlet-name>plutoPortalDriverLogout</servlet-name>
@@ -39,33 +43,7 @@
     <servlet-name>tckDriver</servlet-name>
     <servlet-class>org.apache.pluto.driver.TCKDriverServlet</servlet-class>
   </servlet>
-  <servlet>
-    <servlet-name>AboutPortlet</servlet-name>
-    <servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
-    <init-param>
-      <param-name>portlet-name</param-name>
-      <param-value>AboutPortlet</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet>
-    <servlet-name>AdminPortlet</servlet-name>
-    <servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
-    <init-param>
-      <param-name>portlet-name</param-name>
-      <param-value>AdminPortlet</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet>
-    <servlet-name>PlutoPageAdmin</servlet-name>
-    <servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
-    <init-param>
-      <param-name>portlet-name</param-name>
-      <param-value>PlutoPageAdmin</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
+ 
   <servlet-mapping>
     <servlet-name>plutoPortalDriver</servlet-name>
     <url-pattern>/portal/*</url-pattern>
@@ -82,22 +60,10 @@
     <servlet-name>tckDriver</servlet-name>
     <url-pattern>/tck/*</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>AboutPortlet</servlet-name>
-    <url-pattern>/PlutoInvoker/AboutPortlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>AdminPortlet</servlet-name>
-    <url-pattern>/PlutoInvoker/AdminPortlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>PlutoPageAdmin</servlet-name>
-    <url-pattern>/PlutoInvoker/PlutoPageAdmin</url-pattern>
-  </servlet-mapping>
   <jsp-config>
     <taglib>
-      <taglib-uri>http://portals.apache.org/pluto</taglib-uri>
-      <taglib-location>/WEB-INF/tld/pluto.tld</taglib-location>
+      <taglib-uri>http://java.sun.com/portlet_2_0</taglib-uri>
+      <taglib-location>/WEB-INF/tld/portlet_2_0.tld</taglib-location>
     </taglib>
   </jsp-config>
   <security-constraint>
@@ -116,8 +82,8 @@
   <login-config>
     <auth-method>FORM</auth-method>
     <form-login-config>
-      <form-login-page>/login.jsp</form-login-page>
-      <form-error-page>/login.jsp?error=1</form-error-page>
+      <form-login-page>/login1.jsp</form-login-page>
+      <form-error-page>/login1.jsp?error=1</form-error-page>
     </form-login-config>
   </login-config>
   <security-role>
@@ -159,15 +125,32 @@
     <exception-type>org.krysalis.barcode4j.BarcodeException</exception-type>
     <location>/errsvg</location>
   </error-page>
+  <!-- spring mvc 配置 -->
   <servlet>
     <servlet-name>springMVC</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
-  <servlet-mapping>
+ <!----> <servlet-mapping>
     <servlet-name>springMVC</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <url-pattern>/js/</url-pattern>
+  </servlet-mapping>
+  <!-- spring mvc portlet 配置 -->
+  <servlet>
+		<servlet-name>view-servlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.ViewRendererServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+
+	<servlet-mapping>
+		<servlet-name>view-servlet</servlet-name>
+		<url-pattern>/WEB-INF/servlet/view</url-pattern>
+	</servlet-mapping>
   <filter>
     <filter-name>SpringCharacterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -205,7 +188,7 @@
   </filter>
   <filter-mapping>
     <filter-name>HiddenHttpMethodFilter</filter-name>
-    <servlet-name>spring</servlet-name>
+    <servlet-name>springMVC</servlet-name>
   </filter-mapping>
   <filter>
     <filter-name>sitemesh</filter-name>

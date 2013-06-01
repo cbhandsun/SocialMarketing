@@ -1,0 +1,580 @@
+@CHARSET "UTF-8";
+
+.global-nav .bn-more span {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.global-nav .arrow {
+    border-color: #D5D5D5 transparent transparent;
+    border-style: solid dashed dashed;
+    border-width: 3px 3px 0;
+    font-size: 0;
+    height: 0;
+    left: 2px;
+    line-height: 0;
+    position: relative;
+    top: -2px;
+    width: 0;
+}
+.global-nav a:hover .arrow {
+    border-color: #FFFFFF transparent transparent;
+}
+.global-nav .more-active {
+    position: relative;
+    z-index: 10;
+}
+.global-nav .more-active .bn-more:link, .global-nav .more-active .bn-more:visited {
+    color: #FFFFFF;
+}
+.global-nav .more-active a:link, .global-nav .more-active a:visited {
+    color: #336699;
+}
+.global-nav .more-active .arrow {
+    border-color: #FFFFFF transparent transparent;
+}
+.global-nav .more-active .more-items {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    display: block;
+    padding: 10px 0;
+    top: 28px;
+    white-space: nowrap;
+}
+.global-nav .more-active .more-items table, .global-nav .more-active .more-items td {
+    border-collapse: collapse;
+    white-space: nowrap;
+    width: 100%;
+}
+.global-nav .more-active .more-items li {
+    display: block;
+}
+.global-nav .more-active .more-items a {
+    display: block;
+    line-height: 28px;
+    padding: 0 20px;
+}
+.global-nav .more-active .more-items a:link, .global-nav .more-active .more-items a:visited {
+    color: #3D3D3D;
+}
+.global-nav .more-active .more-items a:hover {
+    background-color: #F6F6F6;
+    color: #3D3D3D;
+}
+.global-nav .more-items {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+.global-nav {
+    background-color: #545652;
+    color: #D5D5D5;
+    height: 28px;
+    min-width: 950px;
+    padding: 0 12px 0 0;
+}
+.global-nav a:active, .global-nav a:hover, .global-nav a:link, .global-nav a:visited {
+    color: #D5D5D5;
+}
+.global-nav a:active, .global-nav a:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+.global-nav .global-nav-items {
+    font-size: 0;
+}
+.global-nav .global-nav-items li {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 28px;
+    vertical-align: baseline;
+}
+.global-nav .global-nav-items a {
+    display: inline-block;
+    height: 28px;
+    padding: 0 12px;
+}
+.global-nav .top-nav-info {
+    float: right;
+    line-height: 28px;
+    margin: 0;
+}
+.global-nav .top-nav-info li, .global-nav .top-nav-info ul {
+    display: inline-block;
+}
+.global-nav .top-nav-info a {
+    display: inline-block;
+    height: 28px;
+    margin: 0;
+    padding: 0 12px;
+}
+.global-nav .nav-user-account .more-items {
+    left: auto;
+    right: 6px;
+}
+.global-nav .more-active .lnk-remind:active, .global-nav .more-active .lnk-remind:hover, .global-nav .more-active .lnk-remind:link, .global-nav .more-active .lnk-remind:visited {
+    color: #FFFFFF;
+}
+.global-nav-a .bd {
+    margin: 0 auto;
+    max-width: 1600px;
+}
+.global-nav-b .bd {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.global-nav .top-nav-reminder {
+    float: right;
+    line-height: 28px;
+    margin-right: 5px;
+    position: relative;
+}
+.global-nav .top-nav-reminder a {
+    position: relative;
+}
+.global-nav .top-nav-reminder .lnk-remind {
+    display: inline-block;
+    height: 28px;
+    padding: 0 12px;
+}
+.global-nav .top-nav-reminder .num {
+    background-color: #F7996D;
+    color: #FFFFFF;
+    left: 3em;
+    line-height: 1.5;
+    margin-left: 5px;
+    padding: 0 3px;
+    position: absolute;
+    top: 4px;
+}
+.global-nav .top-nav-reminder .num i {
+    border-color: transparent #F7996D transparent transparent;
+    border-style: dashed solid dashed dashed;
+    border-width: 6px 6px 3px 5px;
+    height: 0;
+    left: -9px;
+    line-height: 0;
+    margin-top: -6px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+.global-nav .top-nav-reminder .more-items {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    left: -125px;
+    padding: 0;
+    position: absolute;
+    top: 28px;
+    white-space: normal;
+    width: 280px;
+    word-wrap: break-word;
+    z-index: 999;
+}
+.global-nav .top-nav-reminder .more-items a {
+    display: inline;
+    line-height: inherit;
+    padding: 0;
+}
+.global-nav .top-nav-reminder .more-items a:link {
+    color: #336699;
+}
+.global-nav .top-nav-reminder .more-items a:visited {
+    color: #666699;
+}
+.global-nav .top-nav-reminder .more-items a:hover {
+    background-color: #003399;
+    color: #FFFFFF;
+}
+.global-nav .top-nav-reminder .more-items a:active {
+    background-color: #FF9933;
+    color: #FFFFFF;
+}
+.global-nav .top-nav-reminder .more-items .bd {
+    color: #3E3E3E;
+    line-height: 1.5;
+    padding-top: 16px;
+}
+.global-nav .top-nav-reminder .more-items .bd p {
+    border-bottom: 1px solid #F0F0F0;
+    padding: 0 15px 13px;
+}
+.global-nav .top-nav-reminder .more-items .ft a {
+    background-color: #FAFAFA;
+    display: block;
+    padding: 4px 0;
+    text-align: center;
+    width: 100%;
+}
+.global-nav .top-nav-reminder .more-items .ft a:active, .global-nav .top-nav-reminder .more-items .ft a:hover {
+    background-color: #F5F5F5;
+    color: #336699;
+}
+.global-nav .top-nav-reminder .more-items p {
+    color: #999999;
+    margin: 0;
+}
+.global-nav .top-nav-reminder .more-items li {
+    border-bottom: 1px solid #F0F0F0;
+    overflow: hidden;
+    padding: 13px 15px;
+}
+.global-nav .top-nav-reminder .more-items li .pic {
+    float: left;
+    margin-right: 8px;
+}
+.global-nav .top-nav-reminder .more-items li .content {
+    line-height: 1.4;
+    overflow: hidden;
+    width: auto;
+}
+.global-nav .top-nav-reminder .more-items li .item-req {
+    border: 0 none;
+    padding: 0;
+}
+.global-nav .top-nav-reminder .more-items li .item-req .ops {
+    color: #AAAAAA;
+    float: right;
+    overflow: hidden;
+    position: static;
+    width: 49px;
+}
+.global-nav .top-nav-reminder .more-items li .item-req .ops a:active, .global-nav .top-nav-reminder .more-items li .item-req .ops a:hover, .global-nav .top-nav-reminder .more-items li .item-req .ops a:link, .global-nav .top-nav-reminder .more-items li .item-req .ops a:visited {
+    color: #AAAAAA;
+}
+.global-nav .top-nav-reminder .more-items li .item-req .ops a:active, .global-nav .top-nav-reminder .more-items li .item-req .ops a:hover {
+    background-color: #AAAAAA;
+    color: #FFFFFF;
+}
+.global-nav .top-nav-reminder .more-items li .unread {
+    background-color: transparent;
+}
+.global-nav .top-nav-reminder .more-items li .new-reply-item {
+    overflow: hidden;
+}
+.global-nav .top-nav-reminder .more-items li .new-reply-item .content {
+    float: left;
+    width: 186px;
+}
+.top-nav-reminder.more-active {
+    color: #FFFFFF;
+}
+.top-nav-reminder.more-active .num {
+    z-index: 1000;
+}
+.top-nav-reminder.more-active .more-items {
+    display: block;
+    z-index: 999;
+}
+body #db-pay-tips {
+    top: 136px;
+}
+.perf-metric {
+    margin-left: -200px;
+    position: absolute;
+}
+.nav {
+    margin-bottom: 40px;
+    overflow: hidden;
+    width: 100%;
+}
+.nav .nav-wrap {
+    border-bottom: 1px solid #E5EBE4;
+}
+.nav .nav-primary, .nav .nav-secondary {
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 0;
+    width: 950px;
+}
+.nav .nav-primary {
+    overflow: hidden;
+    padding: 10px 0 5px;
+    position: relative;
+}
+.nav .nav-logo {
+    background: url("http://img3.douban.com/pics/nav/lg_main_a11_1.png") no-repeat scroll 0 12px transparent;
+    float: left;
+    height: 56px;
+    margin: 0 13px 0 0;
+    width: 145px;
+}
+.nav .nav-logo a {
+    display: block;
+    height: 100%;
+    line-height: 100em;
+    overflow: hidden;
+    width: 100%;
+}
+.nav .nav-logo a:active, .nav .nav-logo a:hover {
+    background: none repeat scroll 0 0 transparent !important;
+}
+.ua-iphone .nav {
+}
+.nav-search {
+    overflow: hidden;
+    padding: 10px 0 15px;
+    position: relative;
+}
+.nav-search input {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+}
+.nav-search label {
+    color: #BBBBBB;
+    cursor: text;
+    left: 12px;
+    line-height: 30px;
+    position: absolute;
+    top: 10px;
+}
+.nav-search legend {
+    display: none;
+}
+.nav-search fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+.nav-search .inp {
+    background: url("http://img3.douban.com/pics/nav1/nav_bg_a1.png") no-repeat scroll 0 0 transparent;
+    cursor: text;
+    float: left;
+    height: 34px;
+    text-align: center;
+    width: 470px;
+}
+.nav-search .inp input {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 30px;
+    margin: 0;
+    outline: 0 none;
+    padding-left: 6px;
+    text-align: left;
+    width: 96%;
+}
+.nav-search .inp-btn {
+    height: 34px;
+    left: -1px;
+    overflow: hidden;
+    position: relative;
+    width: 37px;
+}
+.nav-search .inp-btn input {
+    background: url("http://img3.douban.com/pics/nav1/nav_bg_a1.png") no-repeat scroll 0 -40px transparent;
+    color: transparent;
+    cursor: pointer;
+    font-size: 0;
+    height: 100%;
+    overflow: hidden;
+    padding: 35px 0 0;
+    width: 100%;
+}
+.nav-search .inp-btn input:hover {
+    background-position: -40px -40px;
+}
+.nav-search .inp-btn input:active {
+    background-position: 0 -40px;
+}
+.nav-secondary {
+    width: 100%;
+}
+.nav-secondary:after {
+    clear: both;
+    display: block;
+}
+.nav-secondary img {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.nav-secondary ul {
+    margin: 9px 0;
+}
+.nav-secondary li {
+    display: inline;
+    margin-right: 30px;
+}
+.nav-secondary .nav-items {
+    float: none;
+    font-size: 13px;
+}
+.nav-secondary .nav-items li {
+}
+#db-nav-book .nav-search .inp {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_bg_a1.png");
+}
+#db-nav-book .nav-search .inp-btn input {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_bg_a1.png");
+}
+#db-nav-movie .nav-search .inp {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_mv_bg.png");
+}
+#db-nav-movie .nav-search .inp-btn input {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_mv_bg.png");
+}
+#db-nav-group .nav-search .inp {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_mv_bg.png");
+}
+#db-nav-group .nav-search .inp-btn input {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_mv_bg.png");
+}
+#db-nav-music .nav-search .inp {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_mu_bg.png");
+}
+#db-nav-music .nav-search .inp-btn input {
+    background-image: url("http://img3.douban.com/pics/nav1/nav_mu_bg.png");
+}
+#db-nav-sns {
+    background: none repeat scroll 0 0 #EDF4ED;
+    position: relative;
+}
+#db-nav-sns .nav-wrap {
+    border: 0 none;
+}
+#db-nav-sns .nav-primary {
+    overflow: hidden;
+    padding-top: 12px;
+}
+#db-nav-sns .nav-search {
+    position: absolute;
+    right: 0;
+}
+#db-nav-sns .nav-logo {
+    background-position: 0 10px;
+    height: 57px;
+    width: 184px;
+}
+#db-nav-sns label {
+    line-height: 28px;
+    top: 11px;
+}
+#db-nav-sns .inp {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E1E9E1;
+    border-radius: 0 0 0 0;
+    height: 28px;
+    text-align: left;
+    width: 278px;
+}
+#db-nav-sns .inp input {
+    height: 28px;
+    margin: 0;
+    width: 242px;
+}
+#db-nav-sns .inp-btn {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-color: #E1E9E1 #E1E9E1 #E1E9E1 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    font-size: 0;
+    height: 28px;
+    left: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 30px;
+}
+#db-nav-sns .inp-btn input {
+    background: url("http://img3.douban.com/pics/icon/bn_srh_1.png") no-repeat scroll 50% 50% transparent;
+    height: 28px;
+    line-height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+}
+#db-nav-sns a:link, #db-nav-sns a:visited {
+    color: #007722;
+}
+#db-nav-sns a:active, #db-nav-sns a:hover {
+    background-color: #007722;
+    color: #FFFFFF;
+}
+#db-nav-sns li {
+    display: inline;
+}
+#db-nav-sns .nav-items {
+    float: left;
+    margin-top: 15px;
+}
+#db-nav-sns .nav-items li {
+    font-size: 15px;
+    margin-right: 30px;
+}
+#db-nav-sns .nav-items1 li {
+    margin-right: 22px;
+}
+.suggest-overlay {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C5C7D2;
+    border-radius: 3px 3px 3px 3px;
+    position: absolute;
+    width: auto;
+    z-index: 10001;
+}
+.suggest-overlay .bd {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border-radius: 3px 3px 3px 3px;
+    color: #B3B3B3;
+    line-height: 1;
+    min-width: 220px;
+    padding: 5px;
+}
+.suggest-overlay ul {
+    color: #333333;
+    min-width: 214px;
+    padding: 3px 0;
+}
+.suggest-overlay li {
+    margin: 0;
+    padding: 0;
+}
+.suggest-overlay li b {
+    font-weight: bold;
+}
+.suggest-overlay li span {
+    color: #999999;
+}
+.suggest-overlay img {
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 20px;
+}
+.suggest-overlay li.on {
+    background: none repeat scroll 0 0 #E9F0F8;
+}
+.suggest-overlay li a {
+    color: #333333;
+    display: block;
+    padding: 3px 7px;
+}
+.suggest-overlay li a:hover, .suggest-overlay li a:focus, .suggest-overlay li a:active {
+    background: none repeat scroll 0 0 #E9F0F8;
+    color: #333333;
+    outline: 0 none;
+}
+.back-to-top {
+    display: none;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    width: 100px;
+}
+.back-to-top a {
+    left: 0;
+    position: absolute;
+    top: 40px;
+}
+.back-to-top {
+    margin-top: 22px;
+}
+.search_report {
+    float: none;
+}

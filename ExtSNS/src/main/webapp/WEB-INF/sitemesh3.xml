@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemesh>
-  <mapping path="/*" decorator="/decorators/decorator.jsp"/>
-<!-- 此处用来定义不需要过滤的页面 -->  
-    <excludes>  
-    </excludes>  
+	<mapping path="/Portal/*" decorator="/decorators/portal-decorator.jsp" />
+	<!-- 此处用来定义不需要过滤的页面 -->
+	<excludes>
+	</excludes>
+	<mapping path="/admin/*" decorator="/admin-decorator.jsp" />
+	<mapping path="/js/*" exclue="true" />
 </sitemesh>  

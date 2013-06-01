@@ -42,7 +42,7 @@ limitations under the License.
 
 
   <!-- Render configuration which defines the portal pages. -->
-  <render-config default="About Apache Pluto">
+  <render-config default="促销">
     <page name="About Apache Pluto" uri="/WEB-INF/themes/pluto-default-theme.jsp">
       <portlet context="/ExtSNS" name="AboutPortlet"/>
       <portlet context="/testsuite" name="TestPortlet1"/>
@@ -57,6 +57,10 @@ limitations under the License.
     </page>
     <page name="Pluto Admin" uri="/WEB-INF/themes/pluto-default-theme.jsp">
       <portlet context="/ExtSNS" name="PlutoPageAdmin"/>
+      <portlet context="/ExtSNS" name="AboutPortlet"/>
+    </page>
+    <page name="促销" uri="/WEB-INF/themes/promo-theme.jsp">
+      <portlet context="/ExtSNS" name="Promotion"/>
       <portlet context="/ExtSNS" name="AboutPortlet"/>
     </page>
   </render-config>

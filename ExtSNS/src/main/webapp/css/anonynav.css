@@ -1,0 +1,366 @@
+@CHARSET "UTF-8";
+
+.anony-nav {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.anony-nav .hd {
+    height: 74px;
+}
+.anony-nav .hd a:active, .anony-nav .hd a:hover, .anony-nav .hd a:link, .anony-nav .hd a:visited {
+    background-color: transparent;
+}
+.anony-nav .bd, .anony-nav .hd {
+    clear: both;
+    margin: 0 auto;
+    width: 950px;
+}
+.anony-nav .logo {
+    float: left;
+    margin-top: 23px;
+}
+.anony-nav .logo a {
+    background: url("../Resource/ui_nav_logo_5.png") no-repeat scroll 0 -3px transparent;
+    display: block;
+    height: 1.4cm;
+    line-height: 10em;
+    overflow: hidden;
+    width: 7cm;
+}
+.anony-nav .top-nav-items {
+    float: right;
+    margin: 33px 5px 0 0;
+}
+.anony-nav .top-nav-items li {
+    margin: 0 0 0 26px;
+}
+.anony-nav .top-nav-items li a {
+    background: url("../Resource/anony_nav_logo2.png") no-repeat scroll 100% 100% transparent;
+    display: inline-block;
+    height: 20px;
+    line-height: 20em;
+    margin: 0;
+    outline: 0 none;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 40px;
+}
+.anony-nav .top-nav-items li .lnk-book {
+    background-position: 0 0;
+}
+.anony-nav .top-nav-items li .lnk-movie {
+    background-position: -51px 0;
+}
+.anony-nav .top-nav-items li .lnk-music {
+    background-position: -101px 0;
+}
+.anony-nav .top-nav-items li .lnk-events {
+    background-position: -150px 0;
+}
+.anony-nav .top-nav-items li .lnk-fm {
+    background-position: -201px 0;
+    height: 21px;
+    width: 80px;
+}
+.anony-nav .top-nav-items li .lnk-9 {
+    background-position: -281px 0;
+    width: 45px;
+}
+.anony-nav fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+.anony-nav legend {
+    display: none;
+}
+.anony-nav .reg {
+    background-color: #E9EEF2;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 134px;
+    line-height: 1.6;
+    overflow: hidden;
+    position: relative;
+}
+.anony-nav .reg .nb-info {
+    padding: 22px 0 18px;
+}
+.anony-nav .reg strong {
+    float: left;
+    font-size: 24px;
+    height: 80px;
+    padding-top: 46px;
+    text-align: center;
+    width: 180px;
+}
+.anony-nav .reg em {
+    color: #666666;
+    font-size: 12px;
+    font-style: normal;
+    margin-right: 4px;
+}
+.anony-nav .reg b {
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.anony-nav .reg .lnk-reg {
+    display: inline-block;
+    height: 27px;
+    line-height: 28px;
+    text-align: left;
+    width: 130px;
+}
+.anony-nav .reg .lnk-reg:active, .anony-nav .reg .lnk-reg:hover, .anony-nav .reg .lnk-reg:link, .anony-nav .reg .lnk-reg:visited {
+    background: url("http://img3.douban.com/pics/nav/ui_nav_logo_5.png") no-repeat scroll -120px -48px transparent;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.anony-nav .reg .lnk-reg strong {
+    color: #FFFFFF;
+    float: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 10px 0 16px;
+    padding: 0;
+}
+.anony-nav .login {
+    background: none repeat scroll 0 0 #E9EEF2;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    float: right;
+    height: 134px;
+    margin-left: 4px;
+    width: 356px;
+}
+.anony-nav .login form {
+    padding: 23px 0 0 20px;
+    position: relative;
+}
+.anony-nav .item label {
+    color: #333333;
+    float: left;
+    letter-spacing: 10px;
+    padding: 3px;
+}
+.anony-nav .item input {
+    border: 1px solid #CCCCCC;
+    padding: 3px 2px;
+    width: 200px;
+}
+.anony-nav .login .item {
+    margin-bottom: 10px;
+}
+.anony-nav .login .item a {
+    font-size: 12px;
+}
+.anony-nav .login .item1 {
+    color: #666666;
+    float: left;
+    font-size: 12px;
+    margin: 0 20px 10px 0;
+}
+.anony-nav .login .item1 label {
+    display: inline-block;
+    margin-left: 4.5em;
+    margin-top: 4px;
+}
+.anony-nav .login .item1 label input {
+}
+.anony-nav .bn-submit {
+    background: url("http://img3.douban.com/pics/nav/ui_nav_logo_5.png") no-repeat scroll -23px -48px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding-bottom: 3px;
+    width: 80px;
+}
+#db-sidesrh {
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+#db-sidesrh form {
+    float: right;
+    width: 100%;
+}
+#db-sidesrh input {
+    border: 1px solid #C3C3C3;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+#db-sidesrh .inp input {
+    padding: 0 2px;
+    vertical-align: baseline;
+    width: 180px;
+}
+#db-sidesrh .bn-srh {
+    background: url("http://t.douban.com/pics/nav/ui_ns_sbg3.png") no-repeat scroll -360px -100px transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 26px;
+    letter-spacing: 3px;
+    margin: 0 0 0 2px;
+    padding-bottom: 2px;
+    padding-left: 1px;
+    width: 50px;
+}
+#db-sidesrh .submenu .menu {
+    width: 60px;
+}
+#db-sidesrh .submenu .selected span {
+    background-image: url("http://t.douban.com/pics/nav/ui_ns_sbg3.png");
+    background-position: -450px -124px;
+}
+#db-sidesrh .submenu .open span {
+    background-position: -450px -100px;
+}
+#db-sidesrh .submenu .line {
+    border-bottom: 1px solid #C3C3C3;
+    font-size: 0;
+    height: 1px;
+    line-height: 0;
+    margin-bottom: 1px;
+    overflow: hidden;
+}
+#db-sidesrh .submenu, #db-sidesrh .submenu .menu, #db-sidesrh .submenu .selected {
+    border-color: #C3C3C3;
+}
+#db-sidesrh:after, .anony-nav .bd:after, .anony-nav .hd:after, .anony-nav .login .item:after {
+    clear: both;
+    display: block;
+}
+#dale_anonymous_home_page_top_middle {
+    font-size: 0;
+    margin-bottom: 20px;
+}
+.mobile-app-entrance {
+    overflow: hidden;
+}
+.mobile-app-entrance .entrance-link {
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+}
+.mobile-app-entrance .entrance-link.first-link {
+    margin-top: 0;
+}
+.mobile-app-entrance .entrance-link, .mobile-app-entrance .entrance-link:link, .mobile-app-entrance .entrance-link:visited, .mobile-app-entrance .entrance-link:active, .mobile-app-entrance .entrance-link:hover {
+    background: url("http://img3.douban.com/pics/app/arrw.png") no-repeat scroll 97% 50% #F1F1F1;
+    color: #4E4E4E;
+    outline: medium none;
+}
+.mobile-app-entrance .app-icon {
+    background: url("http://img3.douban.com/pics/app/app_icons_50.2.png") no-repeat scroll 0 0 transparent;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 1px 2px #999999;
+    float: left;
+    height: 50px;
+    margin-right: 13px;
+    width: 50px;
+}
+.mobile-app-entrance .main-title, .mobile-app-entrance .sub-title {
+    display: block;
+}
+.mobile-app-entrance .main-title {
+    color: #204D92;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding-top: 9px;
+}
+.mobile-app-entrance .app-list {
+    background: none repeat scroll 0 0 #F1F1F1;
+    font-size: 0;
+    padding: 14px 21px 8px;
+}
+.mobile-app-entrance .app-list .app-item {
+    display: inline-block;
+    margin-right: 25px;
+    width: 50px;
+}
+.mobile-app-entrance .app-item .app-link {
+    color: #4E4E4E;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+.mobile-app-entrance .app-item .app-link:hover {
+    background: none repeat scroll 0 0 transparent;
+    color: #4E4E4E;
+}
+.mobile-app-entrance .app-item .app-icon {
+    display: block;
+    float: none;
+    margin: 0 0 8px;
+}
+.mobile-app-entrance.app-main .entrance-link {
+    background-image: none;
+    border-radius: 0 0 0 0;
+    height: 57px;
+    padding: 15px 15px 15px 21px;
+}
+.mobile-app-entrance.app-main .main-title {
+    font-size: 18px;
+    padding-top: 10px;
+}
+.mobile-app-entrance.app-main .sub-title {
+    font-size: 14px;
+}
+.mobile-app-entrance.app-main .app-icon {
+    background: url("http://img3.douban.com/pics/app/mobile_app_icon.png") no-repeat scroll 0 0 transparent;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    float: right;
+    height: 58px;
+    width: 72px;
+}
+.mobile-app-entrance.app-update {
+    margin-top: 20px;
+}
+.mobile-app-entrance.app-movie {
+    margin-top: 20px;
+}
+.mobile-app-entrance .app-icon.icon-read {
+    background-position: 0 0;
+}
+.mobile-app-entrance .app-icon.icon-update {
+    background-position: 0 -150px;
+}
+.mobile-app-entrance .app-icon.icon-fm {
+    background-position: 0 -250px;
+}
+.mobile-app-entrance .app-icon.icon-fm-ipad {
+    background-position: 0 -300px;
+}
+.mobile-app-entrance .app-icon.icon-movie {
+    background-position: 0 -350px;
+}
+.mobile-app-entrance .app-icon.icon-artists {
+    background-position: 0 -50px;
+}
+.mobile-app-entrance .app-icon.icon-cart {
+    background-position: 0 -200px;
+}
+.mobile-app-entrance .app-icon.icon-location {
+    background-position: 0 -100px;
+}
+.mobile-app-entrance .app-icon.icon-read-notes {
+    background-position: 0 -400px;
+}
+.mobile-app-entrance .app-icon.icon-online {
+    background-position: 0 -450px;
+}
+.mobile-app-entrance .app-icon.icon-group {
+    background-position: 0 -500px;
+}

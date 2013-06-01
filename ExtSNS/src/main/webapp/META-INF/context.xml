@@ -16,5 +16,5 @@ implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<Context path="/ExtSNS" docBase="ExtSNS" crossContext="true">
+<Context path="/ExtSNS" docBase="ExtSNS" crossContext="true" privileged="true" antiResourceLocking="false" antiJARLocking="false">
 </Context>

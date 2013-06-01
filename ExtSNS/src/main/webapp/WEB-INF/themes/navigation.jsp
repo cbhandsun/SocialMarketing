@@ -20,8 +20,8 @@ limitations under the License.
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>   
 <%@ taglib uri="http://portals.apache.org/pluto" prefix="pluto" %>
 
-<div id="nav">
-    <ul id="navigation" >
+
+    <ul  >
         <c:forEach var="page" items="${driverConfig.pages}">
             <c:choose>
                 <c:when test="${page == currentPage}">
@@ -39,4 +39,4 @@ limitations under the License.
             </c:choose>
         </c:forEach>
     </ul>
-</div>
+

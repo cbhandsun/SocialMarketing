@@ -1,0 +1,12 @@
+Ext.define('SNS.store.master.${modelID}', {
+    extend: 'Ext.data.Store',
+    model: "SNS.model.master.${modelID}",
+    autoLoad: {params:{masterID:"${modelID}"}},
+    remoteSort: false,
+    pageSize : 30,
+    storeId: '${modelID}',
+    sorters: [ {
+        property: 'ID',
+        direction: 'ASC'
+    }]
+});

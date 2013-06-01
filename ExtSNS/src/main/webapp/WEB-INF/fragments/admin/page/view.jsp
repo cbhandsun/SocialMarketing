@@ -22,7 +22,7 @@ limitations under the License.
 <%@taglib prefix="portlet"  uri="http://java.sun.com/portlet" %>
 <%@taglib prefix="portlet-el"  uri="http://portals.apache.org/pluto/portlet-el_2_0" %>
 
-<portlet:defineObjects/>
+<portlet:defineObjects/> 
 
 <portlet:actionURL var="formActionUrl"/>
 <form name="adminForm" action="<c:out value="${formActionUrl}"/>" method="POST">
@@ -102,7 +102,7 @@ limitations under the License.
           <c:forEach items="${app.portletApplicationDefinition.portlets}" var="portlet" varStatus="loopStatus">
             <portlet:namespace/>portlets['<c:out value="${app.applicationName}"/>'][<c:out value="${loopStatus.index + 1}"/>] = '<c:out value="${portlet.portletName}"/>';
           </c:forEach>
-        </c:forEach>
+         </c:forEach>
 
         function <portlet:namespace/>doSwitch(select) {
             var portletsSelectBox = document.forms['adminForm'].elements['availablePortlets'];

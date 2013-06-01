@@ -1,0 +1,12 @@
+Ext.define('SNS.store.Master', {
+    extend: 'Ext.data.Store',
+    model: 'SNS.model.'+SNS.getApplication( ).funcID,
+    autoLoad: {params:{masterID:SNS.getApplication( ).funcID.split(".").pop()}},
+    remoteSort: false,
+    pageSize : 30,
+    storeId: SNS.getApplication( ).funcID,
+    sorters: [ {
+        property: 'ID',
+        direction: 'ASC'
+    }]
+});

@@ -1,0 +1,63 @@
+Ext.define('SNS.view.master.Edit', {
+	extend : 'Ext.window.Window',
+	alias : 'widget.${modelID}edit',
+
+	title : '业务主数据',
+	layout : 'fit',
+	autoShow : true,
+	resizable : false,
+	modal: true,
+
+	initComponent : function() {
+		this.items = [ {
+			xtype : 'form',
+			padding : '5 5 0 5',
+			border : false,
+			style : 'background-color: #fff;',
+			defaults : {
+				width: 400,
+				msgTarget: 'side'
+			},
+			items : [ {
+				xtype : 'textfield',
+				name : 'compCode',
+				fieldLabel : '公司代码',
+				allowBlank: false
+			}, {
+				xtype : 'textfield',
+				name : 'compName',
+				fieldLabel : '公司名称',
+				allowBlank: false
+			}, {
+				xtype : 'textfield',
+				name : 'createUsername',
+				fieldLabel : '创建人',
+				allowBlank: false
+			}, {
+				xtype : 'datefield',
+				name : 'createTime',
+				fieldLabel : '创建日期'
+			},{
+				xtype : 'textfield',
+				name : 'lastUpdateUsername',
+				fieldLabel : '修改人',
+				allowBlank: false
+			}, {
+				xtype : 'datefield',
+				name : 'lastUpdateTime',
+				fieldLabel : '修改日期'
+			} ]
+		} ];
+
+		this.buttons = [ {
+			text : 'Save',
+			action : 'save'
+		}, {
+			text : 'Cancel',
+			scope : this,
+			handler : this.close
+		} ];
+
+		this.callParent(arguments);
+	}
+});

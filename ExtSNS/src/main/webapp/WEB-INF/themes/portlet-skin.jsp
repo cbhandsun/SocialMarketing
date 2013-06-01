@@ -25,13 +25,13 @@ limitations under the License.
 
   <!-- Assemble the rendering result -->
   <div class="portlet">
-    <table class="header" width="100%">
+    <table  width="100%" style="background-color: #F7F7F7;border: 1px">
     	<tr>
-    	<td class="header" align="left">
+    	<td  align="left">
 	      <!-- Portlet Title -->
 	      <h2 class="title"><pluto:title/></h2>
 	</td>
-        <td class="header" align="right">
+        <td  align="right" >
 	      <!-- Portlet Mode Controls -->
 	      <pluto:modeDropDown />
 	
