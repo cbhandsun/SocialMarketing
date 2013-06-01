@@ -9,6 +9,7 @@
 		<hibernate.version>4.1.9.Final</hibernate.version>
 		<spring-version>3.2.2.RELEASE</spring-version>
 		<pluto.version>2.0.3</pluto.version>
+		<jackson.version>2.1.4</jackson.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<repositories>
@@ -117,6 +118,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
 		<!-- spring 环境配置结束-->
 		<!-- hibernate 环境配置开始-->
 		
@@ -149,6 +155,11 @@
 					<groupId>org.jboss.logging</groupId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.1.Final</version>
 		</dependency>
 		
 		<!-- hibernate 环境配置结束-->
@@ -216,9 +227,24 @@
 		<dependency>
 			<groupId>org.krysalis</groupId>
 			<artifactId>barcode4j</artifactId>
-			<version>2.2.0</version>
+			<version>2.2.0</version> 
 		</dependency>
 		<!-- barcode配置结束-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
