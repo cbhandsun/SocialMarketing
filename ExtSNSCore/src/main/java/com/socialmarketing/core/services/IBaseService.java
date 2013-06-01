@@ -14,9 +14,13 @@ public interface IBaseService<M extends EntityBase> {
     
     public void update(M model);
     
+    public void updateModels(Collection<M> models);
+    
     public <PK extends java.io.Serializable> void delete(PK id);
 
     public void deleteModel(M model);
+    
+    public void deleteModels(Collection<M> models);
 
     public <PK extends java.io.Serializable> M get(PK id); 
     

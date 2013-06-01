@@ -32,7 +32,10 @@ public abstract class BaseService<T extends EntityBase> implements IBaseService<
 	public void update(T model) {
 		dao.update(model);
 	}
-
+	@Override
+	public void updateModels(Collection<T> models) {
+		dao.updateObjects(models);
+	}
 	@Override
 	public <PK extends java.io.Serializable> void delete(PK id) {
 		dao.removeById(id);
@@ -44,7 +47,11 @@ public abstract class BaseService<T extends EntityBase> implements IBaseService<
 		dao.remove(model);
 		
 	}
-
+	@Override
+	public void deleteModels(Collection<T> models) {
+		dao.removeObjects(models);
+		
+	}
 	@Override
 	public<PK extends java.io.Serializable>T get(PK id) {
 		// TODO Auto-generated method stub

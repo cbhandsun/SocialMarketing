@@ -15,9 +15,6 @@ package com.socialmarketing.core.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 /**
  * 这个是所有entity的基类，该类描述了获取用户id，设置用户id，判断是否删除标记。
  * 
@@ -33,7 +30,7 @@ public abstract class EntityBase implements Serializable {
 	 * @return id.
 	 */
 	 
-	public abstract String getUuid();
+	public abstract Long getID();
 
 	/**
 	 * set entity id.
@@ -41,7 +38,7 @@ public abstract class EntityBase implements Serializable {
 	 * @param id
 	 *            entity id.
 	 */
-	public abstract void setUuid(String uuid);
+	public abstract void setID(Long id);
 
 	/** flag indicates whether data is tend to be deleted physically. */
 	private boolean deleted;
@@ -72,7 +69,7 @@ public abstract class EntityBase implements Serializable {
 	 */
 	@Override
 	public int hashCode() {
-		return this.getUuid() == null ? super.hashCode() : this.getUuid().hashCode();
+		return this.getID() == null ? super.hashCode() : this.getID().hashCode();
 	}
 
 	/*
@@ -84,8 +81,8 @@ public abstract class EntityBase implements Serializable {
 	public boolean equals(Object obj) {
 		// TODO: CAUSION,DONT REMOVE THIS OVERRIDE METHOD.
 		if (obj instanceof EntityBase)
-			return this.getUuid() == null ? super.equals(obj) : this.getUuid()
-					.equals(((EntityBase) obj).getUuid());
+			return this.getID() == null ? super.equals(obj) : this.getID()
+					.equals(((EntityBase) obj).getID());
 		return super.equals(obj);
 	}
 }

@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 import org.apache.commons.lang3.StringUtils;
@@ -34,6 +33,8 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.type.Type;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.util.Assert;
@@ -58,7 +59,9 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * 实体对象类
 	 */
 	private Class<T> entityClass;
-	@Resource(name = "hibernateUtil")
+	
+	@Autowired  
+	@Qualifier("hibernateUtil")
 	HibernateUtil util;
 
 	/**
@@ -458,10 +461,10 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * @seesolution.auto.framework.dao.IDao#findSpecFieldsValueByIds(java.util.
 	 * Collection, java.util.Collection, java.util.Map)
 	 */
-	public Map<String, T> findSpecFieldsValueByIds(
+	public Map<Long, T> findSpecFieldsValueByIds( 
 			Collection<String> fieldsNames, Collection<Long> ids,
 			Map<String, Object> params) {
-		Map<String, T> result = new HashMap<String, T>();
+		Map<Long, T> result = new HashMap<Long, T>();
 		if ((fieldsNames == null) || (fieldsNames.size() == 0) || (ids == null)
 				|| (ids.size() == 0)) {
 			return result;
@@ -500,7 +503,7 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 			return result;
 		}
 		for (T ent : entities) {
-			result.put(ent.getUuid(), ent);
+			result.put(ent.getID(), ent);
 		}
 		return result;
 	}
@@ -1239,7 +1242,15 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            要删除的集体
 	 */
 	public void removeObjects(Collection<T> objs) {
-		util.getSession().delete(objs);
+		int count=0;
+		for (T obj : objs) {
+			EntityBase base = (EntityBase)obj;
+			util.getSession().delete(base);
+			 if ( ++count % 20 == 0 ) { //20, same as the JDBC batch size  
+				 util.getSession().flush();    
+				 util.getSession().clear();    
+			   }    
+			}
 	}
 
 	/*
@@ -1251,7 +1262,19 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		util.getSession().save(o);
 
 	}
-
+	public void saveorupdateObjects(Collection<T> objs) {
+		int count=0;
+		for (T obj : objs) {
+			EntityBase base = (EntityBase)obj;
+			if (base.getID()==0)
+				base.setID(null);
+			util.getSession().saveOrUpdate(base);
+			 if ( ++count % 20 == 0 ) { //20, same as the JDBC batch size  
+				 util.getSession().flush();    
+				 util.getSession().clear();    
+			   }    
+			}
+	}
 	/**
 	 * 插入操作
 	 * 
@@ -1259,7 +1282,7 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            数据集
 	 */
 	public void saveObjects(Collection<T> objs) {
-		util.getSession().saveOrUpdate(objs);
+		saveorupdateObjects(objs);
 	}
 
 	/**
@@ -1323,7 +1346,7 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	}
 
 	/**
-	 * 删除所有符合条件的数据
+	 * 修改所有符合条件的数据
 	 * 
 	 * @param hql
 	 *            删除语句
@@ -1397,7 +1420,7 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            a collection of objects to be updated.
 	 */
 	public void updateObjects(Collection<T> objs) {
-		util.getSession().saveOrUpdate(objs);
+		saveorupdateObjects(objs);
 	}
 
 	public Object queryOracleFunction(String sql, Map<String, Object> params,

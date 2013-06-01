@@ -21,6 +21,7 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.event.internal.DefaultSaveOrUpdateEventListener;
 import org.hibernate.event.spi.SaveOrUpdateEvent;
+import org.springframework.stereotype.Service;
 
 import com.socialmarketing.core.model.DataAuditEntityBase;
 import com.socialmarketing.util.LoginUserUtil;
@@ -30,9 +31,10 @@ import com.socialmarketing.util.LoginUserUtil;
  * 该类是hibernate对象的save或者update方法的监听器
  * <p>
  * 当实体对象进行update或者save方法时触发onSaveOrUpdate方法
- * 
- * @author xiaoxiao
+ *  暂未使用
+ * @author hongtao
  */
+@Service
 public class HibernateOnSaveorUpdateEventListener extends
 		DefaultSaveOrUpdateEventListener {
 	/**
@@ -57,15 +59,17 @@ public class HibernateOnSaveorUpdateEventListener extends
 			throws HibernateException {
 		Object object = event.getObject();
 		if ((object instanceof DataAuditEntityBase)) {
-			Date currentDate = new Date();
+			//Date currentDate = new Date();
 			DataAuditEntityBase auditEntityBase = (DataAuditEntityBase) object;
-			/*Integer id = auditEntityBase.getUuid();
+			
+			Long id = auditEntityBase.getID();
 			if (id != null && id.longValue() <= 0) {
 				// 修正Entity中id值为0时存在的问题(id值):
-				auditEntityBase.setId(null);
-			}*/
-			auditEntityBase.setLastUpdateTime(currentDate);
-			auditEntityBase.setLastUpdateUsername(LoginUserUtil.getLoginUser());
+				
+				auditEntityBase.setID(null);
+			}
+			//auditEntityBase.setLastUpdateTime(currentDate);
+			//auditEntityBase.setLastUpdateUsername(LoginUserUtil.getLoginUser());
 		}
 		super.onSaveOrUpdate(event);
 	}
