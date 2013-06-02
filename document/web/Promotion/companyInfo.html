@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-mac ua-webkit"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>
+公司门户
+</title>
+    
+
+    
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <script id="seajsnode" src="./companyInfo_files/sea.js"></script>
+
+<script>
+;(function (w,p) {
+var py;py=w[p]=(w[p]||{});py.LoadTimes = py.LoadTimes || {};py.LoadTimes.startLoad=(+new Date());
+py.LoadTimes.serverStart = 1362191885797.2;
+})(window,'PY');
+</script>
+
+    <script type="text/javascript" src="./companyInfo_files/packed_ad3738113870.js" async></script><script type="text/javascript" src="./companyInfo_files/packed_ad3738113870(1).js" async></script><script>var _head_start = new Date();</script>
+    <script src="./companyInfo_files/packed_jquery.min6301986802.js"></script>
+    <script src="./companyInfo_files/packed_douban2310601091.js"></script>
+    <link href="./companyInfo_files/packed_douban7781657537.css" rel="stylesheet" type="text/css">
+        <link href="./companyInfo_files/packed_base5322238844.css" rel="stylesheet" type="text/css">
+<link id="J_StyleGb" rel="stylesheet" href="./companyInfo_files/gb.css">
+		<link rel="stylesheet" href="./companyInfo_files/school.css">
+		
+<link charset="utf-8" rel="stylesheet" href="./companyInfo_files/py-pop.css"><link charset="utf-8" rel="stylesheet" href="./companyInfo_files/mini-card.css">
+<link charset="utf-8" rel="stylesheet" href="./companyInfo_files/chat-pop.css"><link charset="utf-8" rel="stylesheet" href="./companyInfo_files/fm_player.css">
+<link charset="utf-8" rel="stylesheet" href="./companyInfo_files/py-pop.css">
+    
+    <style type="text/css">
+    
+        a:link { color: #259; }
+        a:visited { color: #769; }
+        a:hover { color: #fff; }
+        a:active { color: #fff; }
+        
+h1{display:none}.mod-search{position:relative;overflow:hidden;zoom:1;margin-bottom:28px;background-color:#f7f7f8;padding:7px}.mod-search input{-webkit-appearance:none;border:0;background:transparent}.mod-search label{position:absolute;left:12px;top:10px;line-height:30px;cursor:text;color:#bbb}.mod-search legend{display:none}.mod-search fieldset{border:0;padding:0;margin:0}.mod-search .inp{height:30px;cursor:text;border:1px solid #dcdcdc;background-color:#fff}.mod-search .inp input{background:#fff;width:94%;margin:0;text-align:left;height:30px;padding-left:6px;height:28px\9;line-height:28px\9;outline:0}.mod-search .inp-btn{position:absolute;top:6px;right:6px;width:30px;height:30px;zoom:1;overflow:hidden}.mod-search .inp-btn input{width:100%;height:100%;font-size:0;padding:35px 0 0 0;overflow:hidden;background:url(http://img3.douban.com/pics/icon/bn_srh_1.png) no-repeat 45% 45%;color:transparent;cursor:pointer}.search-cate{float:left;margin-right:35px;width:65px;font-size:0}.search-cate li{width:65px;display:inline-block;*display:inline;zoom:1;margin-bottom:12px;line-height:1.2;font-size:12px}.search-cate li a{display:block;padding:3px 0;text-align:center}.search-cate li a:link,.search-cate li a:visited{color:#111}.search-cate li a:hover{color:#fff;background-color:#8cd379;border-radius:3px}.search-cate .on a:active,.search-cate .on a:hover,.search-cate .on a:link,.search-cate .on a:visited{background:#7fc06e;color:#fff;border-radius:3px}.search-result{overflow:hidden;zoom:1}.search-result .no-result{font-size:12px}.no-result{margin-bottom:40px;font-size:14px;color:#999}.frm-find{margin-bottom:30px}.frm-find .item{position:relative;margin-bottom:10px;color:#666}.frm-find .item label{position:absolute;top:2px;left:2px;line-height:20px;color:#999;cursor:text}.frm-find .item input{padding:5px;border:1px solid #ccc}.frm-find .item-accounts{border:1px solid #ccc}.frm-find .item-accounts input{width:60%;border:0}.frm-find .item-accounts .mail-domain{position:absolute;top:0;right:2px}.frm-find .item-accounts .mail-domain select{padding:2px;border:0;font-size:13px;background:transparent;-webkit-appearance:none}.frm-find .item-password input{width:98%}
+.search_report { float:right; margin-top:15px; margin-right:10px;}
+.search_report a:link,
+.search_report a:hover,
+.search_report a:visited,
+.search_report a:active { color:#bbb; }
+.search_report a:hover { color:#fff; background-color:#bbb; }
+.search-list-item a{color:#666} 
+.search-list-item a:hover{color:#fff}
+
+    </style>
+    
+    <link rel="stylesheet" href="./Resource/5a772723b481eecf.css">
+    <script>
+var o={},PEOPLE_ID="",currTagId="",totallen=16,newGroupNum=0,groupNameArr=[],isDuplicate=false,mlist=$(".menu-list"),olist=$(".group-opts-list"),sglist=$(".set-group-list"),sgarrow=$(".user-group-arrow"),addGroup=$("#add-new-group"),TEMPL_NEW_TAG='<li><a href="?tag={ID}">{NAME}</a></li>',TEMPL_MENU_LIST='<li><a href="?tag=0">全部</a></li>{CUSTOM_TAGS}<li class="last"><a href="?tag=2">未分组</a></li>',TEMPL_NEW_GROUP_ITEM='<li><input type="checkbox" id="{GID}" value="{GID}" {CHECKED}><label for="{GID}">{GNAME}</label></li>',TEMPL_SET_LIST_ITEMS='{CUSTOM_ITEMS}<li class="last"><span class="create-new">新分组</span></li>',TEMPL_GROUP_OPTS='<ul class="group-opts-list"><li id="del-group">删除分组</li><li id="rename-group">改组名</li></ul>',TEMPL_FRIEND_TIPS='<span class="tips">(可看仅朋友可见内容)</span>',TEMPL_EDIT_ICON='&nbsp;<em class="icon-edit"></em>',TEMPL_TIPS='<span class="tips tlimit">{TIPS}</span>',CSS_LAST_ITEM=".set-group-list .last",CSS_INPUT_CREATE=".input-create",CSS_ARROW_SELECT="arrow-select",CSS_LOADER=".gray-loader",CSS_SET_GROUP_LIST=".set-group-list",CSS_EM_TIPS=".tlimit",TXT_DUP_NAME="已有同名分组",TXT_NULL_NAME="请输入分组名",TXT_BAN_WORDS="分组名称含有被禁止的内容",isIE6=($.browser.msie&&$.browser.version==="6.0")?true:false,collectGroupName=function(){var a=$("#db-timeline-hd a").toArray();$.each(a,function(c,b){groupNameArr[c]=$.trim($(b).text())})},countNum=function(){var a=$("input[type=checkbox]:checked").length;if(a>0){$(".sel-wrapper .user-rs").html("加入"+a+"个分组")}else{$(".sel-wrapper .user-rs").html("加入分组")}},changeGroupShow=function(f){var c=f.parents(".user-group-arrow").prev(".user-rs"),b=f.closest(CSS_SET_GROUP_LIST).children().children(":checked"),a=b.length,e=b.toArray(),d=$.map(e,function(g){return $(g).next().text().escapeHTML()});if(a>0){c.html(d.join(", ").substring(0,totallen)).show();if(d.join(", ").length>=totallen){c.append("...")}}else{c.text("未分组")}},createNewGroup=function(d,b,c,a){$.each(groupNameArr,function(f,e){if(c===e||c==="全部"||c==="未分组"){isDuplicate=true;if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_DUP_NAME))}else{$(CSS_EM_TIPS,d).text(TXT_DUP_NAME)}return false}else{isDuplicate=false}});if(c&&!isDuplicate){$(CSS_EM_TIPS).remove();$.post_withck("/j/contact/newtag",{name:c,people:b},function(k){if(k.result){var h=[],i=[],m="",g="",l="",j=k.data.newtag.id,f=k.data.newtag.name;if(mlist.length){$.each(k.data.all,function(p,n){h[p]=TEMPL_NEW_TAG.replace("{ID}",n.id).replace("{NAME}",n.name.escapeHTML())});mlist.html(TEMPL_MENU_LIST.replace("{CUSTOM_TAGS}",h.join("")));m=$(".menu-list a:contains("+currGroupName+")");m.parent().addClass("on");if(currGroupName!=="全部"&&currGroupName!=="朋友"&&currGroupName!=="未分组"){m.append(TEMPL_EDIT_ICON).after(TEMPL_GROUP_OPTS)}}$.each(k.data.all,function(p,n){i[p]=TEMPL_NEW_GROUP_ITEM.replace(/{GID}/g,n.id).replace("{GNAME}",n.name.escapeHTML()).replace("{CHECKED}",n.status?'checked="checked"':"")});$(CSS_SET_GROUP_LIST,d).html(TEMPL_SET_LIST_ITEMS.replace("{CUSTOM_ITEMS}",i.join("")));$(CSS_SET_GROUP_LIST+" li:first",d).append(TEMPL_FRIEND_TIPS);if($(CSS_SET_GROUP_LIST).length>1){l=$("#"+j).parent().next().children("label").text()||"";g=TEMPL_NEW_GROUP_ITEM.replace(/{GID}/g,j).replace(/{GNAME}/g,f.escapeHTML()).replace("{CHECKED}","");if(l){$(CSS_SET_GROUP_LIST+' li:contains("'+l+'")').before(g)}else{$(CSS_LAST_ITEM).before(g)}$(CSS_SET_GROUP_LIST+" input[id="+j+"]",d).eq(1).parent().remove()}newGroupNum=$(CSS_SET_GROUP_LIST+" input[type=checkbox]",d).length;if(newGroupNum>=a){$(CSS_LAST_ITEM).remove()}var e=$(d).children().children("li:first");if($(".custom-popwin").length){countNum(e)}else{changeGroupShow(e)}collectGroupName()}else{if(k.msg==="ban"){if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_BAN_WORDS))}else{$(CSS_EM_TIPS,d).text(TXT_BAN_WORDS)}}}},"json")}else{if(!c){if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_NULL_NAME))}else{$(CSS_EM_TIPS,d).text(TXT_NULL_NAME)}}}};collectGroupName();if(isIE6){$(CSS_SET_GROUP_LIST+' li:not(".last")').hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")})};
+
+</script>
+<script src="./companyInfo_files/ga.js" async></script><script src="./companyInfo_files/ga(1).js" async></script></head>
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav global-nav-a">
+  <div class="bd">
+    
+
+
+
+
+
+
+<div class="top-nav-info">
+    
+    <a href="http://www.douban.com/accounts/login" rel="nofollow">登录</a>
+    <a href="http://www.douban.com/accounts/register">注册</a>
+</div>
+
+
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+            <li class="on">
+              <a href="./companyInfo_files/companyInfo.html">促销</a>
+            </li>
+          
+            
+            
+            <li>
+              <a href="../Event/hosts_explore.html">活动</a>
+            </li>
+          
+            
+            <li>
+              <a href="../Group/MygroupTopic.html">小组</a>
+            </li>
+          
+            
+            <li>
+              <a href="../attention/hosts_explore.html">关注企业</a>
+            </li>
+          
+            
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+    
+
+
+
+
+
+
+
+<div id="db-nav-sns" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+
+    <div class="nav-search">
+      <form action="http://www.douban.com/search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query" style="display: none;">书籍、电影、音乐、小组、小站、成员</label>
+          <div class="inp"><input id="inp-query" name="q" size="22" title="搜索书、电影、音乐、小组、小站、成员" maxlength="60" value="乔布斯"></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="nav-logo">
+      <a href="./companyInfo_files/companyInfo.html">积分平台</a>
+    </div>
+
+    <div class="nav-items">
+    <ul>
+      <li><a href="HomePage.html">首页</a></li>
+          <li><a href="MyPage.html">信息管理</a></li>
+          <li><a href="companyinfo.html">公司门户</a></li>
+     </ul>
+     </div>
+
+  </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    <h1>搜索: 乔布斯</h1>
+
+    <div>
+        
+        
+        <div class="article">
+	  
+
+
+<script>
+    Do(function(){
+        if ($.browser.msie && ($.browser.version|0) === 6) {
+            return;
+        }
+        $(window).scroll((function(){var g=$(document);var d=$(".search-cate");var f=d.find("ul");var e=parseInt($("body").css("padding-top"))+5;var c=d.offset().top-e;var b=d.width();var a;return function(h){if(a){window.clearTimeout(a)}a=window.setTimeout(function(){if(g.scrollTop()>=c){d.css({height:1});f.css({position:"fixed",width:b,top:e})}else{d.css({height:"auto"});f.css({position:"static",width:"auto"})}},0)}})());
+    });
+</script>
+
+    
+
+
+        
+    
+
+
+			
+                    
+<div >
+<body><iframe style="position: absolute; top: -999px; height: 0px;" tabindex="-1" src="./companyInfo_files/p.html"></iframe>
+<script>
+;(function () {var py;py = window.PY = window.PY||{};py.LoadTimes = py.LoadTimes||{};py.LoadTimes.startRender = +new Date();})();
+</script>
+<div class="top-tips none" id="J_ClinicBar"><div class="top-tips-inner"><i class="icon icon-info"></i>您的网速过慢，建议您使用&nbsp;<a style="text-decoration: underline;font-weight:bold;" href="http://www.pengyou.com/clinic/" target="_blank" title="朋友网小诊所">小诊所</a>&nbsp;进行诊断</div></div>
+	<div id="J_CSSCheck" class="none"></div>
+<script>
+;(function (win,doc,seajs,mod,tmp,retry) {
+	if(win[seajs]) {return ;}
+	function fn(n,t) {return function () {mod.push(n,arguments);};}
+	retry = 0;
+	function cre(el,head,tit,wap) {
+		retry = retry+1;
+		var done;
+		el = doc.getElementById(seajs+'node');
+		el && el.parentNode.removeChild(el);
+		el = doc.createElement('script');
+		el.id = seajs+'node';
+		
+		el.src = './companyInfo_files/sea.js';
+		
+		el.onerror = el.onreadystatechange = function () {
+			if(!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+				done=true;
+				if(!(win[seajs] && win[seajs].version)) {
+					if(retry<=2) {cre();}
+				}
+				el.onerror = el.onreadystatechange = null;
+			}
+		};
+		head = doc.getElementsByTagName('head')[0];
+		tit = head && head.getElementsByTagName('title');
+		wap = (tit && tit[0]) || head.firstChild;
+		head.insertBefore(el,wap);
+	}
+	win[seajs] = tmp = {args:(mod=[]),config:fn(0,tmp),use:fn(1,tmp)};
+	win.define = fn(2);
+	cre();
+})(window,document,'seajs');
+seajs.config({
+	base:'http://qzonestyle.gtimg.cn/campus/v4/js/',charset:'utf-8',timeout:5*60*1000,debug:0
+	,alias:{
+		'cssBase':'http://qzonestyle.gtimg.cn/'
+	}
+	,map:[
+	['/lib/pengyou.js','/lib/pengyou.js?max_age=2592000.js']
+	,[/^.+\/lib\/jquery\.js/,'http://qzonestyle.gtimg.cn/ac/lib/jquery/1.8.3/jquery.js']
+	
+	]
+});
+</script>
+<script>
+document.domain = "pengyou.com";
+;(function (w,p) {
+	var wp;
+	wp = w[p] = w[p] || {};
+	
+	wp._CUSER = {
+	"qq":1280804893
+	,"name":"胡山泉"
+	,"hash":"523f808094cf57e21e1007ac62e56188fa763429e4a5b335"
+	,"flag":2
+	,"sex":1
+	,"logo":"http://py.qlogo.cn/friend/523f808094cf57e21e1007ac62e56188fa763429e4a5b335/noaudit/60?1362191602"
+	,"birth_year":1979
+	,"bits":32768
+	};
+	
+	wp._Domains={"pt":"pengyou.com","cookie":"pengyou.com","root":"pengyou.com","main":"www.pengyou.com","passport":"passport.pengyou.com","app":"app.pengyou.com","appd":"appd.pengyou.com","apps":"apps.pengyou.com","api":"api.pengyou.com","reg":"reg.pengyou.com","appmng":"appmng.xiaoyou.qq.com","imgcache":"qzonestyle.gtimg.cn","home":"home.pengyou.com","office":"pengyou.com","office_home":"home.pengyou.com","office_profile":"profile.pengyou.com","wap":"f.qq.com","share":"share.pengyou.com","profile":"profile.pengyou.com","search":"search.pengyou.com","friend":"friend.pengyou.com","mix":"mix.pengyou.com","msg":"msg.pengyou.com","feed_attach":"feedattach.pengyou.com","feed":"feed.pengyou.com"};
+	wp._Domains.js = 'http://qzonestyle.gtimg.cn/campus/v4/js/';	
+})(window,'PY');
+</script>
+<script>
+;(function (w,p) {
+	var py,
+		loca = w.location,
+		cu;
+	py = w[p] = w[p] || {};
+	cu = py._CUSER;
+	if(
+		cu && cu.qq && cu.name
+		&& loca.hostname !== py._Domains.apps
+		&& loca.hostname !== 'baseapp.' + py._Domains.root
+		&& !(py.page && py.page === 'bigcard')
+	){
+		py.allowTopAcrossColumn = true;
+
+		document.write('<style>'+
+		'html .py-foot{border-top: none;width: auto;}'+
+		'html .py-foot .foot-inner{width: 960px;margin: 0 auto;border-top: 1px solid #D6D6D6;}'+
+		'</style>');
+
+		if(document.documentElement.offsetWidth >= 1160){
+		
+		}
+	}
+})(window,'PY');
+</script><style>html .py-foot{border-top: none;width: auto;}html .py-foot .foot-inner{width: 960px;margin: 0 auto;border-top: 1px solid #D6D6D6;}</style>
+<script>
+var G_FLOWER_DATA = [{"final_total":"35885","eventid":"bdc4a561d355f7ef5d1e155ae69571aa","schoolname":"\u6b66\u6c49\u5927\u5b66","name":"\u7941\u5f69\u4e91"},{"final_total":"4319","eventid":"4c55939ce4115d3bb9463cd178a44d79","schoolname":"\u6b66\u6c49\u5927\u5b66","name":"\u6c6a\u96ea\u83f2"}];
+</script>
+<div class="py-body school school-admin" style="margin-left: 0px;">
+	<div class="py-inner">
+		
+
+<!-- 学校封面 -->
+<div class="school-cover" id="J_pagerCover">
+	<div class="school-cover-inner">
+		
+		<a href="javascript:void(0);" onclick="return false;" class="cover-img-wrap j-cover-wrap"><img class="cover-img j-cover" src="./companyInfo_files/psb" alt="学校封面" style="left:0px; top:-41px"></a>					
+		<div class="school-logo" id="J_pagerHeaderLogo">
+	<div class="xpy-media">
+		<div class="img logo-wrap hover j-logo">
+			<a href="javascript:void(0);" class="pic-thumb">
+				<div class="pic-thumb-inner j-logo-inner">
+					<img src="./companyInfo_files/psb(1)" alt="武汉大学" width="120" height="120">
+				</div>
+			</a>
+			
+		</div>
+		<div class="img-txt">
+			<h2>
+				<span class="school-name">武汉大学</span>				
+			</h2>
+			<div class="line">
+				粉丝<span class="num j-follow-num">361854</span>
+				
+				<i class="sperator">|</i>访问量<span class="num">56643</span>
+				
+			</div>
+			<div class="line mt-16">
+				
+				<a href="" class="btn btn-green follow-it j-add-follow"><b class="button"><i class="icon"></i><span class="b-txt">+关注</span></b></a>
+				<span class="j-follow-success" style="display:none">
+					<i class="ico-suc"></i>
+					<span class="followed">已关注</span></span><a href="http://search.pengyou.com/index.php?mod=search&act=findperson&schooltype=3&schoolid=10409&schoolname=%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6&adtag=pager_view_member" class="check-member" target="_blank">查看成员</a>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<div class="school-abstract clearfix">
+	
+	<div class="school-info" id="J_pagerHeaderDes">
+	<div class="school-info-txt j-view-box">
+		
+		<p class="j-des">武汉大学的历史溯源于1893年清末湖广总督张之洞奏请清政府创办的自强学堂，历经传承，1928年定名为国立武汉大学，是近代第一批国立综合性大学</p>
+		
+	</div>
+	<!-- 编辑学校信息 -->
+	<div class="in-place-edit j-edit-box" style="display:none">
+		<b class="fluid-input"><b class="fluid-input-inner"><textarea value="" class="text j-des"></textarea></b></b>
+		<div class="save-line clearfix">
+			<div class="act"><span class="txt-num"><i class="mark j-count-cur">0</i>/<span class="j-count-max">80</span></span><a role="button" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="btn btn-small btn-green j-save"><b class="button"><span class="b-txt">保存</span></b></a></div>
+		</div>
+	</div>
+</div>
+<div class="school-photos" id="J_pagerPhotoWall">
+	<ul class="clearfix">
+		
+		<li class="j-photo-li"><a href="./companyInfo_files/psb(2)" class="j-viewer" target="_blank"><img src="./companyInfo_files/psb(2)" class="j-photo" alt=""></a></li>
+		
+		<li class="j-photo-li"><a href="./companyInfo_files/psb(3)" class="j-viewer" target="_blank"><img src="./companyInfo_files/psb(3)" class="j-photo" alt=""></a></li>
+		
+		<li class="j-photo-li"><a href="./companyInfo_files/psb(4)" class="j-viewer" target="_blank"><img src="./companyInfo_files/psb(4)" class="j-photo" alt=""></a></li>
+		
+		<li class="j-photo-li"><a href="./companyInfo_files/psb(5)" class="j-viewer" target="_blank"><img src="./companyInfo_files/psb(5)" class="j-photo" alt=""></a></li>
+		
+		<li class="more-btn"><a href="http://baseapp.pengyou.com/ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf/photo" class="more-photos" role="button" target="_blank" title="查看更多照片"><i class="ie-center"></i><span class="more-txt">更多</span></a></li>
+			
+	</ul>
+</div>
+</div>
+		<div class="py-grid">
+			<div class="py-right">
+				<div class="right-wrap">
+				  <div class="py-mod py-first-mod">
+				    <div class="inner">
+		<div class="hd">
+			<h3>近期活动</h3>
+			
+		</div>
+		<div class="bd">
+			<ul class="event-list">
+				
+				<li>
+					<div class="xpy-media">
+						<div class="img">
+							<div class="calendar"> <span class="month">11.2012</span> <strong class="day">14</strong> </div>
+						</div>
+						<div class="ext"><i class="ie-center"></i><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=44e95a0a451d458b10fe7e508cfb9608" class="check-link" target="_blank">去看看</a></div>
+						<div class="img-txt">
+							<h4 class="ellipsis"><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=44e95a0a451d458b10fe7e508cfb9608" target="_blank">经管院“企业文化月”正式启动——经管实习就业中心</a></h4>
+							<div class="event-detail ellipsis"></div>
+							<div class="event-detail ellipsis">地点：武汉大学</div>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="xpy-media">
+						<div class="img">
+							<div class="calendar"> <span class="month">04.2012</span> <strong class="day">10</strong> </div>
+						</div>
+						<div class="ext"><i class="ie-center"></i><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=0d6c388fa3b737a2e0d01d99e35c95f9" class="check-link" target="_blank">去看看</a></div>
+						<div class="img-txt">
+							<h4 class="ellipsis"><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=0d6c388fa3b737a2e0d01d99e35c95f9" target="_blank">腾讯宣讲会【武汉大学】</a></h4>
+							<div class="event-detail ellipsis"></div>
+							<div class="event-detail ellipsis">地点：武汉大学人文馆</div>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="xpy-media">
+						<div class="img">
+							<div class="calendar"> <span class="month"></span> <strong class="day"></strong> </div>
+						</div>
+						<div class="ext"><i class="ie-center"></i><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=e26a1906c3561b2fb8a3a7737c538a08" class="check-link" target="_blank">去看看</a></div>
+						<div class="img-txt">
+							<h4 class="ellipsis"><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=e26a1906c3561b2fb8a3a7737c538a08" target="_blank">腾讯大讲堂</a></h4>
+							<div class="event-detail ellipsis"></div>
+							<div class="event-detail ellipsis">地点：武汉大学人文馆主厅</div>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="xpy-media">
+						<div class="img">
+							<div class="calendar"> <span class="month">03.2012</span> <strong class="day">30</strong> </div>
+						</div>
+						<div class="ext"><i class="ie-center"></i><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=82841263d386e11abd9d5051b54ea4c5" class="check-link" target="_blank">去看看</a></div>
+						<div class="img-txt">
+							<h4 class="ellipsis"><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=82841263d386e11abd9d5051b54ea4c5" target="_blank">邀您一起去武汉大学看樱花</a></h4>
+							<div class="event-detail ellipsis"></div>
+							<div class="event-detail ellipsis">地点：武汉大学樱花大道</div>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="xpy-media">
+						<div class="img">
+							<div class="calendar"> <span class="month">03.2012</span> <strong class="day">25</strong> </div>
+						</div>
+						<div class="ext"><i class="ie-center"></i><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=1ff5e0c40213913ea5c5be3742a45366" class="check-link" target="_blank">去看看</a></div>
+						<div class="img-txt">
+							<h4 class="ellipsis"><a href="http://www.pengyou.com/index.php?mod=event&act=detail&id=1ff5e0c40213913ea5c5be3742a45366" target="_blank">我们苍白的青春——大学生之惑点解析</a></h4>
+							<div class="event-detail ellipsis"></div>
+							<div class="event-detail ellipsis">地点：教五多功能报告厅</div>
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="py-mod" id="J_pagerAlbum" style="">
+	<div class="inner">
+		<div class="hd">
+			<h3>公司相册</h3>
+			<a href="http://baseapp.pengyou.com/ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf/photo" class="act" target="_blank">更多</a>
+		</div>
+		<div class="bd">
+			<div class="school-album">
+				<ul class="carousel-content clearfix j-ul" style="position: relative;">    <li style="position: absolute; top: 0px; left: 0px; display: block; opacity: 0; z-index: 1;">     <a href="./companyInfo_files/psb(6)" class="j-viewer" target="_blank"><i class="ie-center"></i><img src="./companyInfo_files/psb(6)" alt="phpgrwHUI"></a>    </li>        <li style="position: absolute; top: 0px; left: 0px; display: block; opacity: 0; z-index: 1;">     <a href="./companyInfo_files/psb(7)" class="j-viewer" target="_blank"><i class="ie-center"></i><img src="./companyInfo_files/psb(7)" alt="phpSwOyNy"></a>    </li>        <li style="position: absolute; top: 0px; left: 0px; display: block; opacity: 0; z-index: 1;">     <a href="./companyInfo_files/psb(8)" class="j-viewer" target="_blank"><i class="ie-center"></i><img src="./companyInfo_files/psb(8)" alt="phpiphp6p"></a>    </li>        <li style="position: absolute; top: 0px; left: 0px; display: block; opacity: 0; z-index: 1;">     <a href="./companyInfo_files/psb(9)" class="j-viewer" target="_blank"><i class="ie-center"></i><img src="./companyInfo_files/psb(9)" alt="phpHetKQi"></a>    </li>        <li style="position: absolute; top: 0px; left: 0px; display: block; opacity: 0; z-index: 1;">     <a href="./companyInfo_files/psb(10)" class="j-viewer" target="_blank"><i class="ie-center"></i><img src="./companyInfo_files/psb(10)" alt="phpmnKuu1"></a>    </li>        <li style="position: absolute; top: 0px; left: 0px; display: block; opacity: 1; z-index: 2;">     <a href="./companyInfo_files/psb(11)" class="j-viewer" target="_blank"><i class="ie-center"></i><img src="./companyInfo_files/psb(11)" alt="phppI220z"></a>    </li>    </ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="py-mod">
+	<div class="inner">
+		<div class="hd"><h3>管理员(5)</h3></div>
+		<div class="bd">
+			<ul class="mod-pmk clearfix">
+				
+				<li>
+					<div class="figure">
+						<div class="fig-img">
+							<a href="http://profile.pengyou.com/index.php?mod=profile&u=523f808094cf57e28c7de2338554bf92b6f8a689ed1dde71" target="_blank"><img src="./companyInfo_files/60" alt="尚文宾"></a>
+							
+						</div>
+						<div class="figcaption"><a href="http://profile.pengyou.com/index.php?mod=profile&u=523f808094cf57e28c7de2338554bf92b6f8a689ed1dde71" target="_blank">尚文宾</a></div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="figure">
+						<div class="fig-img">
+							<a href="http://profile.pengyou.com/index.php?mod=profile&u=523f808094cf57e2b8457333791a3b3230506bf3f1b0c6be" target="_blank"><img src="./companyInfo_files/60(1)" alt="管理员小叶"></a>
+							
+						</div>
+						<div class="figcaption"><a href="http://profile.pengyou.com/index.php?mod=profile&u=523f808094cf57e2b8457333791a3b3230506bf3f1b0c6be" target="_blank">管理员小叶</a></div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="figure">
+						<div class="fig-img">
+							<a href="http://profile.pengyou.com/index.php?mod=profile&u=523f808094cf57e2eaac553bdde3c25b780ed76915ba899d" target="_blank"><img src="./companyInfo_files/60(2)" alt="祝羽"></a>
+							
+						</div>
+						<div class="figcaption"><a href="http://profile.pengyou.com/index.php?mod=profile&u=523f808094cf57e2eaac553bdde3c25b780ed76915ba899d" target="_blank">祝羽</a></div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="figure">
+						<div class="fig-img">
+							<a href="http://profile.pengyou.com/index.php?mod=profile&u=c265e4bd629300c50ec2a9748ff454254a434a52b884af99" target="_blank"><img src="./companyInfo_files/60(3)" alt="赵子靖"></a>
+							
+						</div>
+						<div class="figcaption"><a href="http://profile.pengyou.com/index.php?mod=profile&u=c265e4bd629300c50ec2a9748ff454254a434a52b884af99" target="_blank">赵子靖</a></div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="figure">
+						<div class="fig-img">
+							<a href="http://profile.pengyou.com/index.php?mod=profile&u=c265e4bd629300c573623d590984b2f119195edbe5c51738" target="_blank"><img src="./companyInfo_files/60(4)" alt="张黄平"></a>
+							
+						</div>
+						<div class="figcaption"><a href="http://profile.pengyou.com/index.php?mod=profile&u=c265e4bd629300c573623d590984b2f119195edbe5c51738" target="_blank">张黄平</a></div>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</div><div class="py-mod" id="J_pagerDftSchool">
+	<div class="inner"></div>
+</div>
+				</div>
+			</div>
+			<div class="py-main" role="main">
+				<div class="main-wrap">
+					<!-- 发表框:复用首页的发表框 -->
+					
+					<!-- feeds:复用feeds模块 -->
+					<div class="mod-feeds" id="J_pagerFeedBox">
+	<div class="mod-feeds-hd">
+		<h3><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="strong j-tab" data-type="initiative">最近动态</a><i class="separator">|</i><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="j-tab" data-type="twitter">正在促销</a><i class="separator">|</i><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="j-tab" data-type="photo">相册</a><i class="separator">|</i><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="j-tab" data-type="event">活动</a><!--<i class="separator">|</i><a href="#" class="j-tab" data-type="info">学校信息</a>--></h3>	
+	</div>
+	<div class="j-feed-cont" style="display: block;">
+		<div class="mod-feeds-bd" id="J_InitiativeContainer" style="">
+			
+		<div data-feed="twitter_post" id="J_initiative_6bbd77e20164eeb06df20aa81819581587def3f5aa833bc946cb6f95a513650fbedae0f43aafd198e30bab471d6df5e4278ea8b5ca87251b9492cc16b2ffce824ff284e20bbf84afb06389f1cfe2ad910e763bd92302772f" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h4 class="feed-title c_tx2"><a class="j-feed-name" href="http://www.pengyou.com/index.php?mod=twitterv2&act=topic#key=武汉大学樱花开放期间校园参观管理公告" target="_blank">#武汉大学樱花开放期间校园参观管理公告#</a>教学、科研、办公场所，学生宿舍、食堂等不对游人开放；参观车辆谢绝入校；20人以上的旅游团体需预约；参观人员凭票入校，票价为20元；樱花开放期间，向社会各界和中小学生提供赠票2万张；校友、65岁以上老人、军人、残疾人等免票。（来源<a class="j-feed-name" href="http://www.whu.edu.cn/notice/newswin.php?id=2740" target="_blank">http://www.whu.edu.cn/notice/newswin.php?id=2740</a> ）</h4><div class="feed-media  j-feed-media"><div class="pic-box big-pic"><a href="./companyInfo_files/psb(12)" target="_blank" data-hook="feed:g.photo.popup" data-sn="0"><img width="400" height="175.50111358574608" src="./companyInfo_files/psb(12)"></a></div></div><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">29</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:twitter.forward">转发<span class="j-forward-times">(263)</span></a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>73</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">前天 12:29</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><span class="arrow-up bor2"></span><span class="arrow-up arrow-up-in bor_bg"></span><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div><div data-feed="twitter_post" id="J_initiative_6bbd77e20164eeb06df20aa818195815ae4002584b09c834b654553708b4d733bc05360cf05983710a66be9012e9339c0b37bdfab3fcc72ebbe1f58a6184593fdece8f8a63baa3348bd79974f21571e40e723afc56dd6e33" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h4 class="feed-title c_tx2"><a class="j-feed-name" href="http://www.pengyou.com/index.php?mod=twitterv2&act=topic#key=你看不到的武大梅林" target="_blank">#你看不到的武大梅林#</a>一场雨，将它煞得满地零落，方知落红果真不是那无情物，零落亦不免成泥碾作尘。（via武汉大学百度百科俱乐部）</h4><div class="feed-media  j-feed-media"><div class="pic-box big-pic"><a href="./companyInfo_files/psb(13)" target="_blank" data-hook="feed:g.photo.popup" data-sn="0"><img data-lazysrc="http://a3.qpic.cn/psb?/V14OLSLp2aeX2q/ipZKdMrXJFvM5PpWvYhHVTU6aIFme9wFwbYjicWf9fY!/c/dOtOGok8EQAA" data-lazyresize="c" data-scaletype="0" data-size="400x300" data-lazyresize-done="true" src="./companyInfo_files/psb(13)" style="display: inline-block; width: 171px; height: 300px;"></a><a href="http://a3.qpic.cn/psb?/V14OLSLp2aeX2q/ipZKdMrXJFvM5PpWvYhHVTU6aIFme9wFwbYjicWf9fY!/b/dOtOGok8EQAA" target="_blank" class="feed-pic-view" data-hook="feed:g.photo.popup" data-sn="0" style="text-decoration:none;font-size:12px;"><i class="icon i-feed-view"></i>查看完整图片</a></div></div><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">15</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:twitter.forward">转发<span class="j-forward-times">(38)</span></a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>11</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">2月27日12:06</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div><div data-feed="upload_photo" id="J_initiative_cc868a7342aa72b90c88d48d07ae3668d11c76dabf3f650de8ec357edea93345552fcab68afcc5e667e298d86864dbf287576b1012abdafc7d4ffc61be57bb01a81e5b7a98b4b873bc0c9ba0bd9a175258f0547cef614fa396d28d8754508c52" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h3 class="feed-title c_tx2">上传照片</h3><div class="feed-media  j-feed-media"><div class="pic-box big-pic"><a href="http://baseapp.pengyou.com/ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf/photo/V14OLSLp2aeX2q/NDJ0ABWmnBuGLVFgaHMo604aiTwRAAA!" target="_blank" data-hook="feed:g.photo.popup" data-sn="0"><img width="171.42857142857144" height="300" src="./companyInfo_files/psb(14)"></a></div></div><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">16</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:share.add">分享</a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>11</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">2月27日12:05</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div><div data-feed="upload_photo" id="J_initiative_cc868a7342aa72b90c88d48d07ae36684898e11046fa5ada488bad7ce67604ce875bc813da3a92121e3b70289244fa35e8fafc065b2ff5acae7694e787c1465f28b6f9da9a89db396611b92a9d3ba5ed22e378e3ff9c4b7a53f4557f1b078310" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h3 class="feed-title c_tx2">上传照片</h3><div class="feed-media  j-feed-media"><div class="pic-box big-pic"><a href="http://baseapp.pengyou.com/ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf/photo/V14OLSLp2aeX2q/NDJ0ABWmnE1SK1FwlqsbAA.RnhwUAAA!" target="_blank" data-hook="feed:g.photo.popup" data-sn="0"><img width="389.61038961038963" height="300" src="./companyInfo_files/psb(15)"></a></div></div><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">1</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:share.add">分享</a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>2</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">2月25日20:00</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div><div data-feed="twitter_post" id="J_initiative_6bbd77e20164eeb06df20aa8181958151b0d8b2a1436dd48d0ca23e4b5d288de3f2de0a63df9892241002c0ccb8602687acf90f5e2aa234ccd31511464f060ab4e1b7de80bc88a92aa9dd6f09c5cc88eb8dd915ee8dc0689" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h4 class="feed-title c_tx2">腾讯校园:各种逆天卷，老师学生配合要不要那么默契啊！<img width="24" height="24" style="vertical-align:middle  !important" src="./companyInfo_files/e141.gif"><wbr></h4><div class="feed-media  j-feed-media overflow" style="height: auto;"><div class="pic-box big-pic"><a href="./companyInfo_files/psb(16)" target="_blank" data-hook="feed:g.photo.popup" data-sn="0" style="display: block; overflow: hidden; width: 400px; height: 300px;"><img data-lazysrc="http://a4.qpic.cn/psb?/V14OLSLp2aeX2q/Lg20da5089OQRZ*Kub9PbQRflMFpxH5ZqJtEu9ORDTE!/c/dCTMyJz.JAAA" data-lazyresize="c" data-size="400x300" data-lazyresize-done="true" src="./companyInfo_files/psb(16)" style="display: inline-block; width: 400px; height: 2574px; margin-top: -1137px; margin-left: 0px;"></a><a href="http://a4.qpic.cn/psb?/V14OLSLp2aeX2q/Lg20da5089OQRZ*Kub9PbQRflMFpxH5ZqJtEu9ORDTE!/b/dCTMyJz.JAAA" target="_blank" class="feed-pic-view" data-hook="feed:g.photo.popup" data-sn="0" style="text-decoration:none;font-size:12px;"><i class="icon i-feed-view"></i>查看完整图片</a></div></div><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">12</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:twitter.forward">转发<span class="j-forward-times">(136)</span></a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>18</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">2月22日11:51</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div><div data-feed="upload_photo" id="J_initiative_cc868a7342aa72b90c88d48d07ae366816174f74e2e4545bb2d60183628c68ae891caa72977d5551a77d71bb916d3df5b99b96b6d4bd80ca2f31678fe58618d2e00c5bbe30f77ba75bccc66383232d0c279dc0b1637e82e4f8887d584c590237" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h3 class="feed-title c_tx2">上传照片</h3><div class="feed-media  j-feed-media"><div class="pic-box big-pic"><a href="http://baseapp.pengyou.com/ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf/photo/V14OLSLp2aeX2q/NDJ0ABWmnCHrJlE2KJM2JMzInP4kAAA!" target="_blank" data-hook="feed:g.photo.popup" data-sn="0" style="width:310px; height:300px; overflow:hidden;"><img width="310" height="2000" src="./companyInfo_files/psb(17)" style="margin-top:-850px;"></a><a href="http://a4.qpic.cn/psb?/V14OLSLp2aeX2q/Lg20da5089OQRZ*Kub9PbQRflMFpxH5ZqJtEu9ORDTE!/b/dCTMyJz.JAAA&bo=uAEPC7gBuAEBAJo!" target="_blank" class="feed-pic-view" data-hook="feed:g.photo.popup" data-sn="0" style="text-decoration:none;font-size:12px;visibility: visible;"><i class="icon i-feed-view"></i>查看完整图片</a></div></div><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">7</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:share.add">分享</a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>19</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">2月22日11:50</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div><div data-feed="twitter_post" id="J_initiative_6bbd77e20164eeb06df20aa818195815218b9b876869bad3a08cf0b6e75db5308d42fe97275361039eaf5e4ea48eaa3ee13199c61a2b99573210e2acd98ece9a8e74b7b494609c96bcb502f69fd4ff131d7e95b9e5014dc8" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h4 class="feed-title c_tx2">武大公选课分为人文科学、社会科学、数学与自然科学、中华文明与外国文明和跨学科领域五大类。学生在每个领域至少选修两个学分，总共至少修满12学分，人文科学或社会科学的学生在数学与自然科学领域至少修满4个学分。选修与本专业重复或相近的课程不计入通识学分，跨学科领域的课程则均承认学分。</h4><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">4</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:twitter.forward">转发<span class="j-forward-times">(10)</span></a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>6</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">2月22日10:33</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div><div data-feed="twitter_post" id="J_initiative_6bbd77e20164eeb06df20aa818195815c1b39309197ccb988b91ce8e9a820766b1f4f1c3986db77e59a0a8dd1cadd6d1681173ba17ef0353183679c3cac93baccf3cb04b1630e2bb7d9fbdf115bbab0ce7d3d6116d693d06" class="feed-item bor2 c_tx3 j-feed-item"><div class="feed-avatar"><a class="j-feed-avatar" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" tabindex="-1" target="_blank"><img src="./companyInfo_files/60(5)" alt="武汉大学的头像"></a></div><div class="feed-box j-feed-box"><div class="feed-meta"><a class="c-name c_tx j-feed-name" href="http://profile.pengyou.com/index.php?mod=profile&u=ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf&adtag=ZD_from_feed" target="_blank">武汉大学</a></div><h4 class="feed-title c_tx2"><a class="j-feed-name" href="http://www.pengyou.com/index.php?mod=twitterv2&act=topic#key=武大部分樱花开放 真正赏樱期在3月中旬" target="_blank">#武大部分樱花开放 真正赏樱期在3月中旬#</a>从正月初七开始，武大校医院旁边已有数株樱花开放，花骨朵挂满枝头。目前开的是云南早樱和福建山樱花，总共不到30株，要想赏樱最好等到3月中旬。武大共有5种樱花，包括日本樱花、云南樱花、垂枝樱花、福建山樱花和山樱花。（via武汉晚报<a class="j-feed-name" href="http://news.cnhubei.com/xw/wuhan/201302/t2461846.shtml" target="_blank">http://news.cnhubei.com/xw/wuhan/201302/t2461846.shtml</a> ）</h4><div class="feed-info"><div class="feed-acts j-feed-acts"><a class="c_tx j-comment-link" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:comment.mopen">评论(<span class="j-comment-times">5</span>)</a><span class="s-feed c_tx">-</span><a class="c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" data-hook="feed:twitter.forward">转发<span class="j-forward-times">(25)</span></a><span class="s-feed c_tx">-</span><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409###" class="j-like" data-hook="feed:like.add">赞(<span>2</span>)</a></div><span class="s-feed c_tx">-</span><span class="feed-time">2月19日22:39</span><span class="s-feed c_tx">-</span><span title="公开" data-tip="true"><i class="icon i-feed-unlock"></i></span></div><div class="feed-discuss j-discuss-cont"><div class="discuss-inner bor2 j-discuss-inner"><ul class="feed-comments j-feed-comments" style="display:none;"></ul><div class="feeds-reply-box j-feed-reply-ori"><div class="master-avatar"><img src="./companyInfo_files/60(6)" width="30" height="30"></div><div class="py-post-form"><div class="pf-inner"><div class="pf-bd textinput"><b class="fluid-input"><b class="fluid-input-inner"><textarea class="text textarea" data-hook="feed:comment">我也说一句...</textarea></b></b></div></div></div></div></div></div>    </div></div></div>
+		<div class="feeds-ft">
+			<div class="feeds-ft-inner bg4" id="J_InitiativeMore" style="cursor: pointer;">
+				<a class="more c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" style=""><span class="j-names">更多动静</span><i class="icon i-arrow-expand"></i></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="j-feed-cont" style="display: none;">
+		<div class="mod-feeds-bd" id="J_InitiativeTwitterContainer">
+			<div class="feed-loading">
+				<p>
+					<i class="icon i-loading-b"></i>
+					<span>加载中...</span>
+				</p>
+			</div>
+		</div>
+		<div class="feeds-ft">
+			<div class="feeds-ft-inner bg4" id="J_InitiativeTwitterMore">
+				<a class="more c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" style="display:none;"><span class="j-names">更多动静</span><i class="icon i-arrow-expand"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="j-feed-cont" style="display: none;">
+		<div class="mod-feeds-bd" id="J_InitiativePhotoContainer">
+			<div class="feed-loading">
+				<p>
+					<i class="icon i-loading-b"></i>
+					<span>加载中...</span>
+				</p>
+			</div>
+		</div>
+		<div class="feeds-ft">
+			<div class="feeds-ft-inner bg4" id="J_InitiativePhotoMore">
+				<a class="more c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" style="display:none;"><span class="j-names">更多动静</span><i class="icon i-arrow-expand"></i></a>
+			</div>
+		</div>
+	</div>	
+	<div class="j-feed-cont" style="display: none;">	
+		<div class="mod-feeds-bd" id="J_InitiativeEventContainer">
+			<div class="feed-loading">
+				<p>
+					<i class="icon i-loading-b"></i>
+					<span>加载中...</span>
+				</p>
+			</div>
+		</div>
+		<div class="feeds-ft">
+			<div class="feeds-ft-inner bg4" id="J_InitiativeEventMore">
+				<a class="more c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" style="display:none;"><span class="j-names">更多动静</span><i class="icon i-arrow-expand"></i></a>
+			</div>
+		</div>
+	</div>	
+	<div class="j-feed-cont" style="display: none;">	
+		<div class="mod-feeds-bd" id="J_PassiveContainer">
+			<div class="feed-loading">
+				<p>
+					<i class="icon i-loading-b"></i>
+					<span>加载中...</span>
+				</p>
+			</div>
+		</div>
+		<div class="feeds-ft">
+			<div class="feeds-ft-inner bg4" id="J_PassiveMore">
+				<a class="more c_tx" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" style="display:none;"><span class="j-names">更多动静</span><i class="icon i-arrow-expand"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="mod-feeds-bd j-feed-cont j-info-cont" style="display: none;">
+		<div class="school-info-details">
+			
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+		
+
+	</div>
+</div>
+<script type="text/javascript">
+	//取消pv默认上报
+	window.nopv = true;
+	seajs.use('module/pager/index', function(Pager){
+		seajs.use('module/pager/init', function(Pager){
+			Pager.init({
+				pagerId: 'school_10409',
+				hash: 'ef6d3c79c83953a5cd277eb4a41af3d3c22f6db5f6813edf',
+				isCA: '',
+				name: '武汉大学',
+				logo: 'http://b260.photo.store.qq.com/psb?/V14OLSLp0EUUpd/v8bjd5Tsm3OLbw6DB*7sxpmbkPgUQ.mGTx6LgZNh.qY!/b/YaGXA5u.GwAAYpibA5uvGwAA'
+			});
+		});
+	});
+</script>
+<script type="text/javascript">
+seajs.use('module/home/publisher', function(publisher){
+	var twitter_operation_json = null;
+	
+	publisher.setup(twitter_operation_json);
+});
+</script><script>
+	
+	;(function () {try {
+		var elem = document.getElementById('J_ClinicBar');
+		if(PY.LoadTimes.startRender - PY.LoadTimes.startLoad >=3500 ) {
+			elem.style.display= 'block';
+		}
+	}catch(e) {}})();
+	setTimeout(function () {
+		seajs.use(['lib/jquery','lib/pengyou'],function () {
+			seajs.use('module/common/footer',function (Foot) {Foot.init();});
+		});
+	},1000);
+	;(function () {PY.LoadTimes = PY.LoadTimes||{};PY.LoadTimes.domReady = +new Date();})();
+</script>
+<!-- @success@ -->
+
+
+<div style="width: 128px; z-index: 999; top: 44px; left: 877px; display: none;" class="drop-menu py-setting-menu">   <div class="inner">    <div class="hd"></div>    <div class="bd j-drop-menu">     <div class="list first">      <ul>       <li><a href="http://www.pengyou.com/index.php?mod=user&adtag=top_useredit">编辑资料</a></li>       <li><a href="http://profile.pengyou.com/index.php?mod=profile&view_type=card&adtag=top_cardsetting">设置名片</a></li>       <li><a href="http://www.pengyou.com/index.php?mod=usereditpri&adtag=top_privacysettings">设置隐私</a></li>      </ul>     </div>     <div class="list">      <ul>       <li><a href="http://service.qq.com/special_auto/pengyou.html?adtag=top_helpcenter" target="_blank" onclick="PY.OZ.pingpv(&#39;/top/helplink&#39;)">帮助中心</a></li>      </ul>     </div>    </div>    <div class="ft"></div>   </div>     </div><div class="fun-top-home" id="fun_top" style="bottom: 200px;"><div class="fun-top"><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" title="回到顶部" class="ico-top-home ico-gotop" style="visibility: hidden;" onclick="javascript: window.scrollTo(0 , 0); PY.OZ.pingpv(&#39;top_home&#39;); return false;"><i class="hide-clip">返回顶部</i></a></div><div class="fun-home"><a href="http://home.pengyou.com/index.php?mod=home&ADTAG=return_home" class="ico-top-home ico-gohome"><i class="hide-clip">返回首页</i></a></div></div><div id="image-lazy-load-box" style="position:absolute; width: 0;height: 0; overflow:hidden"></div><div id="J_SysmsgBox" style="display:none;zoom:1;z-index:200;" class="v4-pop-sys v4-pop-sys2"><div class="ps-inner"><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="ps-close j-close"><span class="hide-clip">关闭</span></a><span class="no-bor"></span><ul class="ps-list" id="J_SysmsgContainer"><li class="ps-item"><a href="http://www.pengyou.com/index.php?mod=notice&act=friend&adtag=friendrequest"><span class="ps-txt">好友请求</span></a></li><li class="ps-item"><a href="http://www.pengyou.com/index.php?mod=notice&act=friendconfirm&adtag=agreerequest"><span class="ps-txt">同意好友申请</span></a></li><li class="ps-item"><a href="http://www.pengyou.com/index.php?mod=notice&act=system&adtag=systemnotice"><span class="ps-txt">系统消息</span></a></li><li class="ps-item"><a href="http://www.pengyou.com/index.php?mod=notice&act=appmsg&adtag=appnocite"><span class="ps-txt">应用消息</span></a></li></ul></div></div><style>
+html{width: 100%; height: 100%;}
+.none{display: none;}
+#chat-panel{position: fixed;  bottom: 0; left: 0; margin-left: 0; width: 100%; height: 0; background: #000; z-index: 5000;}
+#chat_box .chat_box .chat_box_main .chat_box_cont .chat_box_msg{font-family: "宋体";}
+#chat_box .chat_box .chat_box_main .chat_box_cont .chat_txt_pic img{cursor: url("http://qzonestyle.gtimg.cn/qzonestyle/xiaoyou_portal_v2/css/absolute/zoom.cur?max_age=19830211&d=1014153716"), auto;}
+#chat_box .chat_box .chat_box_post_img .chat_item_pic img{cursor: url("http://qzonestyle.gtimg.cn/qzonestyle/xiaoyou_portal_v2/css/absolute/zoom.cur?max_age=19830211&d=1014153716"), auto;}
+#chat_box .chat_box .chat_box_main .chat_box_cont .chat_box_post .chat_box_post_ta{cursor: text; overflow-y: auto; overflow-x: hidden;}
+#chat_face{position: absolute; z-index: 99; overflow: hidden; border: 1px solid #666666; background-color: #FFF; width: 446px; height: 281px; margin-top: -301px; margin-left: -190px; left: 3px;}
+#chat_box #chat_baseface .face-list{overflow: hidden; padding: 5px; width: 436px; height: 204px;
+ background: #FFF url(http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/face.gif) 5px 5px no-repeat;}
+#chat_box #chat_baseface .face-list a{float: left; height: 28px; padding: 0; width: 28px; margin: 1px 0 0 1px; overflow: hidden; cursor: default;}
+#chat_box #chat_baseface .face-list a:hover{border: 1px solid blue; width: 27px; height: 27px;}
+#chat_box input.chat-file{position: absolute; display: block; height: 40px; right: -3px; top: -3px; cursor:pointer; opacity: 0; filter:alpha(opacity=0);  z-index: 0;}
+#chat_box div.chat_ico_pimg_name a{text-decoration: none;}
+#chat_box div.rich_in{overflow-x: hidden; overflow-y: auto; font-size: 12px;}
+#chat_box div.chat_box_side_tool{height: 15px; overflow: hidden;}
+#chat_face div.face_preview{background-color: #FFFFFF; border: 1px solid #999;width: 57px; height: 57px;overflow: hidden; position: absolute; left: 5px; top: 35px;}
+#chat_face div.face_preview img{display: block; width: 24px; height: 24px; margin: 8px 0 8px 18px;}
+#chat_face div.face_preview span{background-color: #ECECEC;display: block; color: #414141; padding: 1px;text-align: center;}
+#chat_box .chat_box .chat_box_main .chat_box_side .chat_list_s .item{cursor:pointer;}
+#chat_list2 .chat_scrollbar,
+#chat_list2 .chat_list_box_s .chat_scrollbar{right: 0; top: 0; width: 3px; overflow: hidden; background-color:#DEDFE0;}
+#chat_list2 .chat_scrollbar .chat_scrolling{left: 0; width: 100%; background-color: #6E737B; border-radius: 0;}
+html #chat_list2 .chat_list_box .chat_searching .chat_list_one_o{display:none;}
+html #chat_list2 .chat_list_box .chat_searching .chat_list_one_f{display:none;}
+#chat_list2 .chat_list_box .chat_list_one .item .i-gavatar{position: absolute; top: 0; left: 19px;}
+#chat_list2 .chat_list_box_s .chat_scrollbox{width: 62px;}
+#chat_list2 .chat_list_box_s .chat_list_one .chat_list_one_f .item .i-gavatar{left: 16px;}
+#chat_list2 .chat_list_box_s .chat_list_one .chat_list_one_f .item .chat_user_pic{left: 16px;}
+html body #chat_list2 .chat_list_box_s{width: 64px;}
+#chat_list2 .chat_list_box_s .chat_tit .chat_sbar .chat_sbar_l,
+#chat_list2 .chat_list_box_s .chat_tit .chat_sbar .chat_sbar_l2{left: 22px;}
+#chat_list2 .chat_list_box_s .chat_list_one .chat_list_one_f .item .chat_ico_online,
+#chat_list2 .chat_list_box_s .chat_list_one .chat_list_one_f .item .chat_ico_mobile,
+#chat_list2 .chat_list_box_s .chat_list_one .chat_list_one_f .item .chat_ico_q {left: 34px;}
+#chat_box div.chat_item_more{height: 32px; line-height: 32px; text-align: center; overflow: hidden; border-bottom: 1px solid #F1F1F1;}
+#chat_box div.chat_item_more a.chat_view_more{display: block; height: 32px; color: #777;}
+#chat_box div.chat_item_more a.chat_view_more:hover{text-decoration: none; color: #2F70A8;}
+
+#chat_box div.chat_box div.chat-border{position: absolute; z-index: 100; overflow: hidden; background-color: red; opacity: 0; filter:alpha(opacity=0);}
+#chat_box div.chat_box div.border-top{height: 5px; width: 100%; top: -2px; left: 0; cursor: n-resize; z-index: 1; }
+#chat_box div.chat_box div.border-right{width: 5px; height: 100%; right: -1px; top: 0; cursor: e-resize;}
+#chat_box div.chat_box div.border-bottom{height: 5px; width: 100%; bottom: -1px; left: 0; cursor: s-resize;}
+#chat_box div.chat_box div.border-left{width: 5px; height: 100%; left: -1px; top: 0; cursor: w-resize;}
+#chat_box div.chat_box div.border-left-top{width: 5px; height: 5px; left: -1px; top: -2px; cursor: nw-resize;}
+#chat_box div.chat_box div.border-left-bottom{width: 5px; height: 5px; left: -1px; bottom: -1px; cursor: sw-resize;}
+#chat_box div.chat_box div.border-right-top{width: 5px; height: 5px; right: -1px; top: -2px; cursor: ne-resize;}
+#chat_box div.chat_box div.border-right-bottom{width: 5px; height: 5px; right: -1px; bottom: -1px; cursor: se-resize;}
+</style><div id="chat-panel">
+  <div id="chat_box" style="top: 0px; width: 0px; z-index: 9; height: 0px; position: absolute; right: 200px;"></div><div id="chat_list2" style="z-index: 11; position: absolute; top: 0px; margin-top: -758px; right: 0px; height: 758px;">
+ <div class="chat_list_box chat_list_box_s" boxfor="min" style="display: none;">  <div class="chat_tit">
+   <h5 class="chat_tit_name">动态</h5>
+  </div>
+  <div class="chat_scrollbox" min-height="100" style="height:300px;">
+   <div class="chat_scrollbody">
+    <div class="chat_list_s chat_list_one" id="ticker_container_min">
+    <ul class="tk-avatars"><li class="j-ticker-miniitem" data-id="72793c1e494497564b1a88a5102aac60d00d85b11939020ed11a136306d07a873af1cf983f4fc317"><span class="avatar hand"><img src="./companyInfo_files/30" width="30" height="30" alt=""><i class="icon ticker-pic"></i></span></li><li class="j-ticker-miniitem" data-id="e021bf7c0868449526038f272b761cc592c2c25c755cd33aa23a0f3c6e41a50d8161801b6dc4e428"><span class="avatar hand"><img src="./companyInfo_files/30(1)" width="30" height="30" alt=""><i class="icon ticker-ico-add"></i></span></li><li class="j-ticker-miniitem" data-id="ae249f9d18c42f89b38cfb979288afecb5f621718e02fb3acf185358ca590a51990a3dbbdb8986d5"><span class="avatar hand"><img src="./companyInfo_files/30(2)" width="30" height="30" alt=""><i class="icon ticker-app"></i></span></li><li class="j-ticker-miniitem" data-id="cfcb5b4a02f80d67d17404a6f97b208defc678a80ad4fc34d89225f696ceadce70826a7f5ed73ca8"><span class="avatar hand"><img src="./companyInfo_files/30(3)" width="30" height="30" alt=""><i class="icon ticker-app"></i></span></li><li class="j-ticker-miniitem" data-id="ccbe74b813bbdd12a8c1522a3c7fe911c3c20e26b5eb8da68820877b1deea1331d8bb25f9c73a5bc"><span class="avatar hand"><img src="./companyInfo_files/30(4)" width="30" height="30" alt=""><i class="icon ticker-app"></i></span></li><li class="j-ticker-miniitem" data-id="558a4ef0478e43687586b0c3b69399b3aa0c5bac888b5b6eab90903ebeaaf8bf26ce3e09d2657134"><span class="avatar hand"><img src="./companyInfo_files/30(5)" width="30" height="30" alt=""><i class="icon ticker-ico-add"></i></span></li><li class="j-ticker-miniitem" data-id="336963facf0ca827190f6fac37dcf68227947ccf2df4b539de5dceeff63aac937057d0cd8d0f2508"><span class="avatar hand"><img src="./companyInfo_files/30(6)" width="30" height="30" alt=""><i class="icon ticker-ico-add"></i></span></li></ul></div>
+   </div>
+   <div style="height:100%;" class="chat_scrollbar">
+    <div style="height:34px; top:0;" class="chat_scrolling"></div>
+   </div>
+  </div>  <div class="chat_tit">
+   <h5 class="chat_tit_name">聊天</h5>   <div class="chat_sbar"><div class="chat_sbar_l"></div><div class="chat_sbar_l2"></div></div>  </div>
+  <div class="chat_scrollbox" id="chat_list_one_min_scrollbox" min-height="100" style="height:300px;">
+   <div class="chat_scrollbody">
+    <div class="chat_list_s chat_list_one">
+     <div class="chat_list_one_f" id="chat_list_one_min"><div class="item" hash="48a5beee9d1bd4e7be5d772939bbf0ba57b3d97b1a30fbd2" chat_type="one">     <span class="tips-count-gray" style="display: none;">99+</span></div></div>
+    </div>
+   </div>
+   <div style="height:100%;" class="chat_scrollbar">
+    <div style="height:34px; top:0;" class="chat_scrolling"></div>
+   </div>
+  </div>
+
+  <div class="chat_tool">
+   <div class="chat_search">
+    <input type="text" value="搜索" class="chat_search_ipt">
+    <button class="chat_ico_search" type="button"><span class="none">搜索</span></button>
+   </div>
+  </div>
+  <a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="chat_oc"><span class="chat_ico_ocl"></span></a>
+ </div>
+ <div class="chat_list_box" boxfor="list" style="display: none;">  <div class="chat_tit">
+   <h3 class="section-hd"><i class="icon tk-ico"></i><span class="tk-title">动态</span><span class="tk-act"><i class="icon ticker-refresh" id="ticker_refresh_btn"></i></span></h3>
+  </div>
+  <div class="chat_scrollbox" min-height="100" style="height:300px;">
+   <div class="chat_scrollbody ticker-scrollbody">
+    <div class="chat_list_s chat_list_one" id="ticker_container"><ul class="tk-storylist" id="J_TrickerList_main" style="display: block;"><li class="py-media j-ticker-item" id="J_TickerItem_main_72793c1e494497564b1a88a5102aac60d00d85b11939020ed11a136306d07a873af1cf983f4fc317" data-id="72793c1e494497564b1a88a5102aac60d00d85b11939020ed11a136306d07a873af1cf983f4fc317" data-action="" style=""><span class="py-img avatar"><a href="http://profile.pengyou.com/index.php?mod=profile&u=620d7826244dd107760f51c01b44a27f6c39e40e6073dcb1" target="_blank" class="c-name"><img src="./companyInfo_files/30" width="30" height="30" alt=""></a></span><div class="py-main content"> <div class="story-cont"><a href="http://profile.pengyou.com/index.php?mod=profile&u=620d7826244dd107760f51c01b44a27f6c39e40e6073dcb1" target="_blank" class="c-name" title="点击进入胡山泉的个人主页">胡山泉</a><div class="story-detail">&nbsp;照片<a href="http://baseapp.pengyou.com/523f808094cf57e21e1007ac62e56188fa763429e4a5b335/photo/V135iatd3qMpOp/NDJ0HYhXTMdkMVFuj0YH.WOZRIELAAA!" target="_blank" title="朋友网头像照片">朋友网头像照...</a> 有了新评论</div></div> <p class="story-time">今天 10:32</p></div></li><li class="py-media j-ticker-item" id="J_TickerItem_main_e021bf7c0868449526038f272b761cc592c2c25c755cd33aa23a0f3c6e41a50d8161801b6dc4e428" data-id="e021bf7c0868449526038f272b761cc592c2c25c755cd33aa23a0f3c6e41a50d8161801b6dc4e428" data-action="vcard" style=""><span class="py-img avatar"><a href="http://profile.pengyou.com/index.php?mod=profile&u=24c80d02e1cbddf7263977dc04672f498a4020b65ced6664" target="_blank" class="c-name"><img src="./companyInfo_files/30(1)" width="30" height="30" alt=""></a></span><div class="py-main content"> <div class="story-cont"><a href="http://profile.pengyou.com/index.php?mod=profile&u=24c80d02e1cbddf7263977dc04672f498a4020b65ced6664" target="_blank" class="c-name" title="点击进入韩建军的个人主页">韩建军</a><div class="story-detail"> 和&nbsp;<a href="http://profile.pengyou.com/index.php?mod=profile&u=c265e4bd629300c53092fee3005f38b31df20cd51835c803" title="进入沈迎兵的个人主页" target="_blank">沈迎兵</a>&nbsp;成为好友</div></div> <p class="story-time">今天 10:20</p></div></li><li class="py-media j-ticker-item" id="J_TickerItem_main_ae249f9d18c42f89b38cfb979288afecb5f621718e02fb3acf185358ca590a51990a3dbbdb8986d5" data-id="ae249f9d18c42f89b38cfb979288afecb5f621718e02fb3acf185358ca590a51990a3dbbdb8986d5" data-action="" style=""><span class="py-img avatar"><a href="http://profile.pengyou.com/index.php?mod=profile&u=2438ff8646181002a2c748e45c9110124050828800986e0a" target="_blank" class="c-name"><img src="./companyInfo_files/30(2)" width="30" height="30" alt=""></a></span><div class="py-main content"> <div class="story-cont"><a href="http://profile.pengyou.com/index.php?mod=profile&u=2438ff8646181002a2c748e45c9110124050828800986e0a" target="_blank" class="c-name" title="点击进入钱义的个人主页">钱义</a><div class="story-detail">&nbsp;在玩<a href="http://www.pengyou.com/index.php?mod=appmanager&act=openapp&type=qzone&appid=363&via=PY.TICKER&islite=1" target="_blank" title="欢乐斗地主"> 欢乐斗地主</a></div></div> <p class="story-time">今天 08:03</p></div></li><li class="py-media j-ticker-item" id="J_TickerItem_main_cfcb5b4a02f80d67d17404a6f97b208defc678a80ad4fc34d89225f696ceadce70826a7f5ed73ca8" data-id="cfcb5b4a02f80d67d17404a6f97b208defc678a80ad4fc34d89225f696ceadce70826a7f5ed73ca8" data-action="" style=""><span class="py-img avatar"><a href="http://profile.pengyou.com/index.php?mod=profile&u=1e85bcb056f55d2d0f82af7e8c1439d2b2fcc323422a64f5" target="_blank" class="c-name"><img src="./companyInfo_files/30(3)" width="30" height="30" alt=""></a></span><div class="py-main content"> <div class="story-cont"><a href="http://profile.pengyou.com/index.php?mod=profile&u=1e85bcb056f55d2d0f82af7e8c1439d2b2fcc323422a64f5" target="_blank" class="c-name" title="点击进入谢蔚铭的个人主页">谢蔚铭</a><div class="story-detail">&nbsp;在玩<a href="http://www.pengyou.com/index.php?mod=appmanager&act=openapp&type=qzone&appid=100625763&via=PY.TICKER&islite=1" target="_blank" title="开心十三张"> 开心十三张</a></div></div> <p class="story-time">今天 04:31</p></div></li><li class="py-media j-ticker-item" id="J_TickerItem_main_ccbe74b813bbdd12a8c1522a3c7fe911c3c20e26b5eb8da68820877b1deea1331d8bb25f9c73a5bc" data-id="ccbe74b813bbdd12a8c1522a3c7fe911c3c20e26b5eb8da68820877b1deea1331d8bb25f9c73a5bc" data-action="" style=""><span class="py-img avatar"><a href="http://profile.pengyou.com/index.php?mod=profile&u=217aa36e588223c65b21b1a9d158b15615a879041bd1f4f3" target="_blank" class="c-name"><img src="./companyInfo_files/30(4)" width="30" height="30" alt=""></a></span><div class="py-main content"> <div class="story-cont"><a href="http://profile.pengyou.com/index.php?mod=profile&u=217aa36e588223c65b21b1a9d158b15615a879041bd1f4f3" target="_blank" class="c-name" title="点击进入钱义的个人主页">钱义</a><div class="story-detail">&nbsp;在玩<a href="http://www.pengyou.com/index.php?mod=appmanager&act=openapp&type=qzone&appid=100649689&via=PY.TICKER&islite=1" target="_blank" title="听歌达人"> 听歌达人</a></div></div> <p class="story-time">今天 00:05</p></div></li><li class="py-media j-ticker-item" id="J_TickerItem_main_558a4ef0478e43687586b0c3b69399b3aa0c5bac888b5b6eab90903ebeaaf8bf26ce3e09d2657134" data-id="558a4ef0478e43687586b0c3b69399b3aa0c5bac888b5b6eab90903ebeaaf8bf26ce3e09d2657134" data-action="vcard" style=""><span class="py-img avatar"><a href="http://profile.pengyou.com/index.php?mod=profile&u=c94742113dd868e3d0e0bb6e029c356ed6c764c595327246" target="_blank" class="c-name"><img src="./companyInfo_files/30(5)" width="30" height="30" alt=""></a></span><div class="py-main content"> <div class="story-cont"><a href="http://profile.pengyou.com/index.php?mod=profile&u=c94742113dd868e3d0e0bb6e029c356ed6c764c595327246" target="_blank" class="c-name" title="点击进入之歌的个人主页">之歌</a><div class="story-detail"> 和&nbsp;<a href="http://profile.pengyou.com/index.php?mod=profile&u=c265e4bd629300c526e6107a49750cbee5c68c3bdf034afb" title="进入肖庆凯的个人主页" target="_blank">肖庆凯</a>&nbsp;成为好友</div></div> <p class="story-time">昨天 22:43</p></div></li><li class="py-media j-ticker-item" id="J_TickerItem_main_336963facf0ca827190f6fac37dcf68227947ccf2df4b539de5dceeff63aac937057d0cd8d0f2508" data-id="336963facf0ca827190f6fac37dcf68227947ccf2df4b539de5dceeff63aac937057d0cd8d0f2508" data-action="vcard" style=""><span class="py-img avatar"><a href="http://profile.pengyou.com/index.php?mod=profile&u=687e824fc3f99fbed851d425c8f34b0d3139a8cc3e138592" target="_blank" class="c-name"><img src="./companyInfo_files/30(6)" width="30" height="30" alt=""></a></span><div class="py-main content"> <div class="story-cont"><a href="http://profile.pengyou.com/index.php?mod=profile&u=687e824fc3f99fbed851d425c8f34b0d3139a8cc3e138592" target="_blank" class="c-name" title="点击进入鞠清华的个人主页">鞠清华</a><div class="story-detail"> 和&nbsp;<a href="http://profile.pengyou.com/index.php?mod=profile&u=c265e4bd629300c58480d65e8fae51839c8d7ce846564b41" title="进入肖平利的个人主页" target="_blank">肖平利</a>&nbsp;成为好友</div></div> <p class="story-time">昨天 21:56</p></div></li></ul></div>
+   </div>
+   <div style="height: 100%; display: none;" class="chat_scrollbar">
+    <div style="height:34px; top:0;" class="chat_scrolling"></div>
+   </div>
+  </div>  <div class="chat_tit">
+   <div class="chat_tit_ico"></div>
+   <h5 class="chat_tit_name">聊天</h5>
+   <div class="chat_tit_ot" style="display: none;"><span class="chat_tit_num"><strong><span class="chat_num_online">0</span>/</strong><span class="chat_num_total">0</span></span></div>
+   <div class="chat_tit_ot"><a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="chat_create">创建群聊</a></div>   <div class="chat_sbar"><div class="chat_sbar_l"></div><div class="chat_sbar_l2"></div></div>  </div>
+  <div class="chat_scrollbox" id="chat_list_one_scrollbox" min-height="100" style="height:300px;">
+   <div class="chat_scrollbody">
+    <div id="chat_list_one" class="chat_list_s chat_list_one" style="padding-bottom: 7px;">
+     <div class="chat_list_one_o" boxfor="group">群聊[<span class="count_total">0</span>]<span class="chat_ico_a_r"></span></div>
+     <div class="chat_list_one_f" id="chat_list_group" style="display: none;"><p class="chat_empty" style="padding: 20px 0; text-align: center;">没有群聊，<a class="list_group_empty" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#">创建群聊</a></p></div>
+
+     <div class="chat_list_one_o" boxfor="recent">最近联系人[<span class="count_online">0</span>/<span class="count_total">1</span>]<span class="chat_ico_a_d"></span></div>
+     <div class="chat_list_one_f" id="chat_list_one_recent"><div class="item" hash="48a5beee9d1bd4e7be5d772939bbf0ba57b3d97b1a30fbd2" chat_type="one">   <img logo="http://py6.qlogo.cn/friend/48a5beee9d1bd4e7be5d772939bbf0ba57b3d97b1a30fbd2/audited/30" alt="刘洋" title="刘洋" class="chat_user_pic" style="visibility:hidden">  <p class="chat_user_name"><span class="name">刘洋</span></p>
+  <a onclick="this.blur()" href="http://profile.pengyou.com/index.php?mod=profile&u=48a5beee9d1bd4e7be5d772939bbf0ba57b3d97b1a30fbd2&adtag=webim" title="个人主页" target="_blank" class="chat_ico_home"></a> <span class="tips-count-gray" style="display: none;">99+</span></div></div>
+
+     <div class="chat_list_one_o" boxfor="online">在线好友[<span class="count_online">12</span>/<span class="count_total">12</span>]<span class="chat_ico_a_d"></span></div>
+     <div class="chat_list_one_f" id="chat_list_one_online"><div class="item" hash="c265e4bd629300c5bd20ca76acdf9e34b985ab18d7ec5e83" chat_type="one">   <img logo="http://py5.qlogo.cn/friend/c265e4bd629300c5bd20ca76acdf9e34b985ab18d7ec5e83/audited/30" alt="韩建军" title="韩建军" class="chat_user_pic" style="visibility:hidden">  <p class="chat_user_name"><span class="name">韩建军</span></p>
+   <a onclick="this.blur()" href="http://profile.pengyou.com/index.php?mod=profile&u=523f808094cf57e2a524b37504200ea0da0744636db22916&adtag=webim" title="个人主页" target="_blank" class="chat_ico_home"></a> <span class="tips-count-gray" style="display: none;">99+</span></div></div>
+
+     <div id="chat_list_search" style="display: none;"></div>
+    </div>
+   </div>
+   <div class="chat_scrollbar" style="height:100%;">
+    <div style="height:34px; top:0;" class="chat_scrolling"></div>
+   </div>
+  </div>
+
+  <div class="chat_tool">
+   <div class="chat_search">
+    <input type="text" class="chat_search_ipt" default="支持首字母查找" value="支持首字母查找">
+    <button type="button" class="chat_ico_search"><span class="none">搜索</span></button>
+   </div>
+   <a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="chat_setting chat_setting_hover"><span class="chat_ico_set"></span></a>
+   <a href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#" class="chat_list_close" title="收起"><span class="chat_ico_shrink"></span></a>
+   <div class="chat_setting_box" style="display: none;"></div>
+  </div>
+
+  <a class="chat_oc" href="http://www.pengyou.com/index.php?mod=pager&id=school_10409#"><span class="chat_ico_ocr"></span></a>
+ </div>
+</div></div><div class="fun-top-home" id="fun_top"><div class="fun-top"><a href="file://localhost/work/Project/%E7%A7%AF%E5%88%86%E9%A1%B9%E7%9B%AE/Web%20%E8%AE%BE%E8%AE%A1/Reference/%E7%9F%A5%E5%90%8D%E4%BC%81%E4%B8%9A/Chrome/QQ/pengyou/%E6%9C%8B%E5%8F%8B%E7%BD%91%EF%BC%88%E8%85%BE%E8%AE%AF%E6%9C%8B%E5%8F%8B%EF%BC%89%20-%20%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6.html#" title="回到顶部" class="ico-top-home ico-gotop" style="visibility:hidden;" onclick="javascript: window.scrollTo(0 , 0); PY.OZ.pingpv(&#39;top_home&#39;); return false;"><i class="hide-clip">返回顶部</i></a></div><div class="fun-home"><a href="http://undefined/index.php?mod=home&ADTAG=return_home" class="ico-top-home ico-gohome"><i class="hide-clip">返回首页</i></a></div></div></body>   
+</div>
+
+<script>
+Do(function() {
+$("html").delegate(".a_search_more","click",function(c){c.preventDefault();var b=$(this);if(b.hasClass("processing")){return}var a=b.data();b.attr("title",b.text()).text("加载中...");b.addClass("processing");$.get("/j/search",a,function(d){if(d.r){b.text("加载失败...");return}b.removeClass("processing");b.text(b.attr("title"));b.data("start",parseInt(b.data("start"),10)+d.limit);$(d.items.join("")).insertBefore(b.parent());if(!d.more){b.hide()}})});
+(function(){var h=$(window);var k=$(document);var l;var a=$(".back-to-top");var b=$("#content").find(".article");var g;var i=$("#content").find(".search-result");var d=$.browser.msie&&$.browser.version==="6.0";var f=function(n){if(!f.cache){f.cache=[]}if(f.cache[n]){return}var m=new Date;(new Image()).src="/stat.html?source=group&action=back_top&iden="+n+"&month="+(m.getMonth()+1)+"&day="+m.getDate()+"&timestamp="+(+new Date);f.cache[n]=1};var e=function(){return i.offset().top+i.outerHeight()};var c=function(m){if(m+g>=e()){a.css({position:"absolute",bottom:"",top:e()-a.outerHeight()})}else{if(!d){a.css({position:"fixed",top:"",bottom:0})}}a.show().find("a").stop().animate({top:0})};var j=function(){a.hide().find("a").css("top",40)};h.resize(function(){g=h.height();a.css("left",b.offset().left+b.width()+80);l=k.height()/g>3?Math.max(2*g,$(".side").height()):0});h.trigger("resize");h.scroll((function(){var m;return function(){if(m){clearTimeout(m)}setTimeout(function(){if(l===0){return}var n=k.scrollTop();if(n>l){c(n)}else{j()}},100)}})());a.find("a").click(function(m){m.preventDefault();k.scrollTop(0)});if(d){h.scroll(function(){if(k.scrollTop()+g>=e()){return}a.css("top",k.scrollTop()+g-a.height())})}})();
+});
+</script>
+
+	
+    </div>
+
+        
+    <div id="footer">
+      
+<span id="icp" class="fleft gray-link">
+    © 2013－2013 point.com, all rights reserved
+</span>
+
+<span class="fright">
+    <a href="http://www.douban.com/about">关于积分平台</a>
+    · <a href="http://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="http://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="http://www.douban.com/help/">帮助中心</a>
+</span>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="./companyInfo_files/d9e01b81ced4783.js"></script>
+    
+<!-- douban ad begin -->
+
+
+
+
+
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = 'http://erebor.douban.com/',
+            userId = '',
+            browserId = '7Lrqcr6MMPs',
+            ipAddress = '116.76.5.67',
+            criteria = '3:/search?q=%E4%B9%94%E5%B8%83%E6%96%AF',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_subject_search_top_right'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, ip: ipAddress, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', 'http://img3.douban.com/js/packed_ad3738113870.js');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+<script type="text/javascript">
+$(function () {
+$("div.result div h3 a:contains('反GUCCI')").parent().parent().parent().remove();
+});
+</script>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+    <!-- dis9-->
+
+<script>var _check_hijack = function () {
+            var _sig = "7Lrqcr6M", _login = false, bid = get_cookie('bid');
+            if (location.protocol != "file:" && (typeof(bid) != "string" && _login || typeof(bid) == "string" && bid.substring(0,8) != _sig)) {
+                location.href+=(/\?/.test(location.href)?"&":"?") + "_r=" + Math.random().toString(16).substring(2);
+            }};
+            if (typeof(Do) != 'undefined') Do(_check_hijack);
+            else if (typeof(get_cookie) != 'undefined') _check_hijack();
+            </script>
+
+
+</body></html>

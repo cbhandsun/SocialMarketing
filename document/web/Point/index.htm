@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta content="记录生产企业与消费者之间的消费积分,并基于积分提供商业服务" name="description">
+<title>积分平台</title>
+<script type="text/javascript" src="./Resource/packed_ad3738113870.js" async></script><script>
+	window.Douban=window.Douban||{};
+	var Do=function()
+		{
+			Do.actions.push([].slice.call(arguments))
+			};
+		Do.ready=function()
+		{
+			Do.actions.push([].slice.call(arguments))};
+			Do.add=Do.define=function(a,b){Do.mods[a]=b};
+			Do.global=function()
+		{
+			Do.global.mods=Array.prototype.concat(Do.global.mods,[].slice.call(arguments))};
+			Do.global.mods=[];
+			Do.mods={};
+			Do.actions=[];
+			function set_cookie(g,f,d,e){var b=new Date(),a,c;b.setTime(b.getTime()+((f||30)*24*60*60*1000));
+			a="; expires="+b.toGMTString();
+			for(c in g){document.cookie=c+"="+g[c]+a+"; domain="+(d||"douban.com")+"; path="+(e||"/")}}
+			function get_cookie(b)
+		{
+			var e=b+"=",a=document.cookie.split(";"),d,f;
+			for(d=0;d<a.length;d++)
+		{
+			f=a[d];
+			while(f.charAt(0)==" ")
+				{
+					f=f.substring(1,f.length)
+					}
+					if(f.indexOf(e)===0)
+					{return f.substring(e.length,f.length).replace(/\"/g,"")}
+		}
+			return null
+		}
+			Douban.init_show_login=function(a)
+			{
+				Do("dialog",function(){var b="/j/misc/login_form";
+				dui.Dialog({title:"登录",url:b,width:/device-mobile/i.test(document.documentElement.className)?document.documentElement.offsetWidth*0.9:350,cache:true,callback:function(c,d){d.node.addClass("dialog-login");d.node.find("h2").css("display","none");d.node.find(".hd h3").replaceWith(d.node.find(".bd h3"));d.node.find("form").css({border:"none",width:"auto",padding:"0"});d.update()}}).open()})};Do(function(){$.ajax_withck=function(a){if(a.type=="POST"){a.data=$.extend(a.data||{},{ck:get_cookie("ck")})}return $.ajax(a)};$.postJSON_withck=function(a,b,c){$.post_withck(a,b,c,"json")};$.post_withck=function(a,c,d,b){if($.isFunction(c)){b=d;d=c;c={}}return $.ajax({type:"POST",url:a,data:$.extend(c,{ck:get_cookie("ck")}),success:d,dataType:b||"text"})};$("html").click(function(c){var a=$(c.target),b=a.attr("class");if(!b){return}$(b.match(/a_(\w+)/gi)).each($.proxy(function(d,f){var e=Douban[f.replace(/^a_/,"init_")];if(typeof e==="function"){c.preventDefault();e.call(this,c)}},a[0]))})});
+	Do.add('dialog', {path: './Resource/packed_dialog8321689615.js', type: 'js', requires: ['./Resource/packed_dialog4563741467.css']});
+	Do.global('./Resource/packed_base6505908882.js', 'dialog');
+</script>
+<link rel="stylesheet" href="css/packed__init_6312190557.css">
+<link rel="stylesheet" href="css/packed_old5891147418.css">
+<link rel="stylesheet" href="css/4bf2965b204d0c2b.css">
+</head>
+
+<body>
+    
+
+    <div class="anony-nav">
+        <div class="hd-wrap">
+            <div class="hd">
+                <div class="logo">
+                    <h1><a href="./index.htm">积分平台</a></h1>
+                </div>
+                <div class="top-nav-items">
+                <ul>
+                <li> <a target="_blank" class="lnk-book" href="http://book.douban.com/">积分促销</a></li>
+                <li> <a target="_blank" class="lnk-movie" href="http://movie.douban.com/">豆瓣电影</a></li>
+                <li> <a target="_blank" class="lnk-music" href="http://music.douban.com/">豆瓣音乐</a></li>
+                <li> <a target="_blank" class="lnk-events" href="http://www.douban.com/location/">豆瓣同城</a></li>
+                <li> <a target="_blank" class="lnk-fm" href="http://douban.fm/">豆瓣FM</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bd">
+            
+<div class="login">
+    <form id="lzform" name="lzform" method="post" action="./login">
+        <fieldset>
+            <legend>登录</legend>
+            <input type="hidden" value="index_nav" name="source">
+            <div class="item">
+                <label for="form_email">帐号</label>
+                <input type="text" name="form_email" id="form_email" value="邮箱/手机号" tabindex="1" style="color: rgb(204, 204, 204);">
+            </div>
+            <div class="item">
+                <label for="form_password">密码</label>
+                <input name="form_password" id="form_password" class="text" type="password" tabindex="2">
+                <a href="./resetpassword">忘记密码</a>
+            </div>
+            <div class="item1">
+                <label for="form_remember"><input name="remember" type="checkbox" id="form_remember" tabindex="3">
+                记住我</label>
+            </div>
+            <div class="item1">
+                <input value="登   录" type="submit" class="bn-submit" tabindex="4">
+            </div>
+        </fieldset>
+    </form>
+    <div style="display:none;">
+        <img src="./Resource/blank.gif" onload="(function(url){document.getElementById(&#39;lzform&#39;).action=url;})(&#39;https://www.douban.com/accounts/login&#39;)">
+    </div>
+    
+</div>
+
+            <div class="reg">
+                
+                <strong>积分平台</strong>
+                <div class="nb-info">
+                <b>820个品牌商</b>
+                <b>6774万消费者</b>
+                <b>31万个讨论小组</b>
+                <br>
+                <em>102871个产品</em>
+                
+                </div>
+                <a href="http://www.douban.com/accounts/register" class="lnk-reg"><strong>加入我们</strong>注册</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="wrapper">
+        <div id="bd">
+            <div id="dale_anonymous_homepage_top_large"></div>
+            <h1>正在发布积分促销...</h1>
+            <div class="main">
+                
+    
+    <div class="guess-list">
+       
+
+
+
+
+    
+    
+<div class="section">
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/19762332/" class="item" target="_blank" onclick="moreurl(this,{fromguess:&#39;I_19762332-K_1026-T_U&#39;, row:0, index:0, random_key:&#39;1359945929fc488522&#39;})">
+      
+
+
+<div class="pic">
+    <img height="160" width="117" alt="结婚照这事儿" src="./Resource/p1860657197.jpg" data-src="http://img3.douban.com/view/photo/photo/public/p1860657197.jpg">
+</div>
+
+<div class="title">
+    <h3>结婚照这事儿</h3>
+<div class="source">
+        堂邦嘉真街拍哥 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/77230069/" class="item" target="_blank" onclick="moreurl(this,{fromguess:&#39;I_77230069-K_1026-T_U&#39;, row:0, index:1, random_key:&#39;1359945929fc488522&#39;})">
+      
+
+
+<div class="pic">
+    <img height="160" width="159" alt="拿走当表情无所谓，不要盗其他相册图好吗" src="./Resource/p1860188449.jpg" data-src="http://img5.douban.com/view/photo/photo/public/p1860188449.jpg">
+</div>
+
+<div class="title">
+    <h3>拿走当表情无所谓，不要盗其他相册图好吗</h3>
+<div class="source">
+        肉食 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a></div>
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/20533025/" class="item" target="_blank" onclick="moreurl(this,{fromguess:&#39;I_20533025-K_1026-T_U&#39;, row:0, index:2, random_key:&#39;1359945929fc488522&#39;})">
+      
+
+
+<div class="pic">
+    <img height="160" width="266" alt="北京的寺庙祠堂" src="./Resource/p1522012582.jpg" data-src="http://img3.douban.com/view/photo/photo/public/p1522012582.jpg">
+</div>
+
+<div class="title">
+    <h3>北京的寺庙祠堂</h3>
+<div class="source">
+        空错 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+</div>
+
+</div>
+
+    
+    
+<div class="section with-group group-1a">
+  
+<script>
+Do(function(){
+    $('.guess-list img').each(function(){
+        this.src = this.getAttribute('data-src');
+    });
+});
+</script>
+
+    </div>
+
+            </div>
+        </div>
+
+        <div id="ft"></div>
+    </div>
+    
+    <script type="text/javascript" src="./Resource/packed_jquery.min6301986802.js" async></script><script type="text/javascript" src="./Resource/packed_base6505908882.js" async></script><link type="text/css" rel="stylesheet" href="./Resource/packed_dialog4563741467.css"><script type="text/javascript" src="./Resource/packed_dialog8321689615.js" async></script><script src="./Resource/packed__init_7701316160.js" data-cfg-corelib="http://img3.douban.com/js/packed_jquery.min6301986802.js"></script>
+    <script type="text/javascript">
+    var email_id='form_email';
+var pwd_id='form_password';
+Do(function(){var a=$("#"+email_id);var b="邮箱/手机号";a.focus(function(){var c=$(this);if(c.val()===b){c.val("").css("color","#000")}}).blur(function(){var c=$(this);if(!c.val()){c.val(b).css("color","#ccc")}});if(a.val()&&a.val()!=b){$("#"+pwd_id).focus()}else{a.css("color","#ccc")}});
+    
+    Do(function(){
+     $('#db-sidesrh form').prettyField(function(i, sel, frm){
+     });
+   });
+   
+    Do.ready(function(){
+        Do.preload(['http://img3.douban.com/js/separation/packed__all295341955.js','http://img3.douban.com/js/packed_douban2310601091.js']);
+        $('.guess-list', '#bd').find(".item").hover(function(){$(this).addClass("mover")},function(){$(this).removeClass("mover")})
+    });
+    </script>
+    
+    <!-- douban ad begin -->
+    
+
+
+
+
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = 'http://erebor.douban.com/',
+            userId = '',
+            browserId = 'B+84wffhBHs',
+            ipAddress = '116.76.1.63',
+            criteria = '3:/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_anonymous_homepage_top_large', 'dale_anonymous_home_page_top_middle', 'dale_anonymous_home_page_left_middle', 'dale_explore_home_right_bottom', 'dale_homepage_online_activity_promo_1', 'dale_homepage_online_activity_promo_2'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, ip: ipAddress, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', 'http://img3.douban.com/js/packed_ad3738113870.js');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+    <!-- douban ad end -->
+
+<script>var _check_hijack = function () {
+            var _sig = "B+84wffh", _login = false, bid = get_cookie('bid');
+            if (location.protocol != "file:" && (typeof(bid) != "string" && _login || typeof(bid) == "string" && bid.substring(0,8) != _sig)) {
+                location.href+=(/\?/.test(location.href)?"&":"?") + "_r=" + Math.random().toString(16).substring(2);
+            }};
+            if (typeof(Do) != 'undefined') Do(_check_hijack);
+            else if (typeof(get_cookie) != 'undefined') _check_hijack();
+            </script>
+
+
+
+
+
+
+
+
+
+<object data="http://img3.douban.com/js/separation/packed__all295341955.js" width="0" height="0"></object><object data="http://img3.douban.com/js/packed_douban2310601091.js" width="0" height="0"></object></body></html>

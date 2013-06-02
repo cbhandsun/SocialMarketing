@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://www.douban.com/online/create -->
+<html lang="zh-CN" class="ua-mac ua-webkit"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>
+    创建线上活动
+</title>
+    
+
+    
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <script>var _head_start = new Date();</script>
+    <script src="./Create_online_files/packed_jquery.min6301986802.js"></script>
+    <script src="./Create_online_files/packed_douban2310601091.js"></script>
+    <link href="./Create_online_files/packed_douban9859329871.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    
+        a:link { color: #259; }
+        a:visited { color: #769; }
+        a:hover { color: #fff; }
+        a:active { color: #fff; }
+        
+    </style>
+    
+<script src="./Create_online_files/calendar1.js" type="text/javascript"></script>
+<link href="./Create_online_files/calendar.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    .cc{text-align:center;}
+</style>
+<script type="text/javascript">/*<![CDATA[*/
+function check_form (form_id) {
+        form = $(form_id);
+        msg = '';
+        try {
+            bt = getDateTime('begin');
+            et = getDateTime('end');
+            if ($('#title').attr('value') == '') {
+                throw '请给活动起个名字吧';
+            }else if ($('#desc').attr('value') == '') {
+                throw '请详细介绍一下你的活动吧';
+            }else if (bt == '') {
+                throw '开始时间格式错误';
+            }else if (et == '') {
+                throw '结束时间格式错误';
+            }else if (bt == et) {
+                throw '请填写活动的开始结束时间';
+            }else if (bt > et) {
+                throw '结束时间不能早于开始时间';
+            }else if (check_duration(bt,et)) {
+                throw '活动的持续时间不能超过三个月';
+            }else if (et < (new Date())) {
+                throw '这个活动已经结束了，请检查你填写的活动结束时间';
+            }else{
+                tags = $('#tags').attr('value');
+                if (tags){
+                    tags = tags.replace(/^\s*|\s*$/g,'');
+                    tags = tags.split(' ');
+                    if (tags.length>4){
+                        throw '标签数不能超过4个';
+                    }
+                    for (i=0;i<tags.length;i++){
+                        if (tags[i].length > 6){
+                            throw '试试简单些？单个标签不能超过6个字';
+                        }
+                    }
+                }
+            }
+            return true;
+        } catch(errormsg) {
+            $("#errordiv").html(errormsg);
+            window.location.href = "#";
+            return false;
+        }
+
+    }
+    function getDateTime(name) {
+        ds = $('#'+name+'_day').attr('value').split('-')
+        year = ds[0]
+        yi = parseInt(year);
+        if (yi<1900) {
+            return '';
+        }
+        month = ds[1] - 1
+        day = ds[2]
+        hour = $('#'+name+'_hour').attr('value')
+        minute = $('#'+name+'_minute').attr('value')
+        return new Date(year,month,day,hour,minute)
+    }
+    function check_duration(begin_time,end_time) {
+        m = (begin_time.getMonth() + 3);
+        if (m >= 12) {
+            m = m - 12;
+            y = begin_time.getFullYear() + 1;
+        } else {
+            y = begin_time.getFullYear();
+        }
+        t = new Date(y,m,begin_time.getDate(),begin_time.getHours(),begin_time.getMinutes());
+        t.setYear(y);
+        t.setMonth(m);
+        return (end_time > t);
+    }
+/*]]>*/</script>
+
+    <link rel="stylesheet" href="Create_online_files/style.css">
+    <script></script>
+
+    <link rel="shortcut icon" href="http://img3.douban.com/favicon.ico" type="image/x-icon">
+<script src="./Create_online_files/ga.js" async></script></head>
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+
+
+
+
+
+
+<div class="top-nav-info">
+    <span class="perf-metric"><!-- _performtips_ --></span>
+    
+     <ul>
+       <li class="nav-user-account">
+       <a target="_blank" href="http://www.douban.com/accounts/" class="bn-more"><span>Shanquan的帐号</span><span class="arrow"></span></a>
+       <div class="more-items">
+      <table cellpadding="0" cellspacing="0">
+            <tbody><tr><td><a href="http://www.douban.com/people/35665461/">我的豆瓣</a></td></tr>
+            <tr><td><a target="_blank" href="http://www.douban.com/accounts/">我的帐号</a></td></tr>
+            <tr><td><a href="http://www.douban.com/accounts/logout?ck=W7W3">退出</a></td></tr>
+         </tbody></table>
+       </div>
+       </li>
+     </ul>
+</div>
+
+
+    <div class="top-nav-reminder">
+        <a href="http://www.douban.com/notification/" class="lnk-remind">提醒
+        </a>
+    <div class="more-items">
+      <div class="bd">
+          <p style="display:none;" class="no-new-notis">最近没有收到新提醒...</p>
+        <ul>
+          
+  
+        
+            
+            <li>
+            <div id="reply_notify_449482656" class="item-req">
+                    <div class="content">
+                        你有 <a href="http://movie.douban.com/notifications">2条电影提醒</a>
+                    </div>
+                </div>
+            </li>
+        
+            
+            <li>
+        <div class="content">
+        <a href="http://site.douban.com/fmc/">老友影迷公社</a> 邀请你参加 
+        <a href="http://www.douban.com/event/18365081/">3.18【观音-交流-鉴赏】2013格莱美颁奖盛典音乐品鉴荟</a>
+        </div>
+    </li>
+
+        </ul>
+      </div>
+      <div class="ft">
+        <a href="http://www.douban.com/notification/">查看全部提醒
+        </a>
+      </div>
+    </div>
+    </div>
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+           <li class="on">
+              <a href="HomePage.html">积分</a>
+            </li>
+          
+            
+            
+            <li>
+              <a href="../Event/hosts_explore.html">活动</a>
+            </li>
+          
+            
+            <li>
+              <a href="../Group/MygroupTopic.html">小组</a>
+            </li>
+          
+            
+            <li>
+              <a href="../attention/hosts_explore.html">关注企业</a>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+    
+
+
+
+
+
+
+
+<div id="db-nav-sns" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+
+    <div class="nav-search">
+      <form action="http://www.douban.com/search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="i np-query">促销、小组、活动、成员</label>
+          <div class="inp"><input id="inp-query" name="q" size="22" title="搜索促销、小组、活动、成员" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="nav-logo">
+      <a href="HomePage.html">积分平台</a>
+    </div>
+
+    <div class="nav-items">
+     <ul>
+       <li><a href="HomePage.html">首页</a></li>
+          <li><a href="MyPage.html">我的帐户</a></li>
+          <li><a href="online_List.html">线上生活</a></li>
+     </ul>
+     </ul>
+     </div>
+
+  </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    <h1>创建线上活动</h1>
+
+    <div class="grid-16-8 clearfix">
+        
+        
+        <div class="article">
+	  
+<form id="oform" name="online_form" method="post" onsubmit="return check_form(&#39;#oform&#39;)"><div style="display:none;"><input type="hidden" name="ck" value="W7W3"></div>
+<input name="kind" type="hidden" value="">
+<input name="site_id" type="hidden" value="">
+<input name="widget_id" type="hidden" value="">
+<div class="attn" id="errordiv">
+</div>
+
+<fieldset class="detail site">
+    <legend>创建线上活动</legend>
+    <div class="fsct clearfix">
+        <label for="title">标题：<br><span class="pl">(必填)</span></label>
+        <div class="fsctm"><input type="text" id="title" value="" max_length="200" class="w" size="37" name="title"></div>
+    </div>
+    <div class="fsct clearfix">
+        <label for="desc">内容描述:<br><span class="pl">(必填)</span></label>
+        <div class="fsctm"><textarea name="desc" cols="45" rows="10" class="w" id="desc"></textarea><br><br></div>
+    </div>
+    <div class="fsct clearfix">
+        <label>赠送积分：<br><span class="pl"></span></label>
+        <div class="fsctm"><input type="text" title="" class="w j a_search_text greyinput" value="" max_length="200" size="37" name="related_url">
+            <br><span class="pl">参加活动赠送的奖励积分，积分可兑换赠品</span><br><br></div>
+    </div>
+    <div class="fsct clearfix">
+        <label>相关网址：<br><span class="pl"></span></label>
+        <div class="fsctm"><input type="text" title="http://" class="w j a_search_text greyinput" value="" max_length="200" size="37" name="related_url">
+            <br><span class="pl">若添加小组/小站网址，相应的小组/小站会出现在活动首页</span><br><br></div>
+    </div>
+    <div class="fsct clearfix">
+        <label>时间：<br><span class="pl">(必填)</span></label>
+	<div class="fsctm">
+        
+
+<input name="begin_day" type="text" size="10" max_length="10" value="2013-03-16" id="begin_day" class="calendarSelectDate">
+<select name="begin_hour" id="begin_hour">
+
+    
+    <option value="7">07</option>
+    
+    <option value="8">08</option>
+    
+    <option value="9">09</option>
+    
+    <option value="10">10</option>
+    
+    <option value="11">11</option>
+    
+    <option value="12" selected="&quot;true&quot;">12</option>
+    
+    <option value="13">13</option>
+    
+    <option value="14">14</option>
+    
+    <option value="15">15</option>
+    
+    <option value="16">16</option>
+    
+    <option value="17">17</option>
+    
+    <option value="18">18</option>
+    
+    <option value="19">19</option>
+    
+    <option value="20">20</option>
+    
+    <option value="21">21</option>
+    
+    <option value="22">22</option>
+    
+    <option value="23">23</option>
+    
+    <option value="0">00</option>
+    
+    <option value="1">01</option>
+    
+    <option value="2">02</option>
+    
+    <option value="3">03</option>
+    
+    <option value="4">04</option>
+    
+    <option value="5">05</option>
+    
+    <option value="6">06</option>
+</select>:
+
+<select name="begin_minute" id="begin_minute">
+    
+    <option value="0">00</option>
+    
+    <option value="5">05</option>
+    
+    <option value="10">10</option>
+    
+    <option value="15">15</option>
+    
+    <option value="20">20</option>
+    
+    <option value="25">25</option>
+    
+    <option value="30">30</option>
+    
+    <option value="35">35</option>
+    
+    <option value="40">40</option>
+    
+    <option value="45">45</option>
+    
+    <option value="50">50</option>
+    
+    <option value="55">55</option>
+</select>
+
+        到
+        
+
+<input name="end_day" type="text" size="10" max_length="10" value="2013-04-15" id="end_day" class="calendarSelectDate">
+<select name="end_hour" id="end_hour">
+
+    
+    <option value="7">07</option>
+    
+    <option value="8">08</option>
+    
+    <option value="9">09</option>
+    
+    <option value="10">10</option>
+    
+    <option value="11">11</option>
+    
+    <option value="12" selected="&quot;true&quot;">12</option>
+    
+    <option value="13">13</option>
+    
+    <option value="14">14</option>
+    
+    <option value="15">15</option>
+    
+    <option value="16">16</option>
+    
+    <option value="17">17</option>
+    
+    <option value="18">18</option>
+    
+    <option value="19">19</option>
+    
+    <option value="20">20</option>
+    
+    <option value="21">21</option>
+    
+    <option value="22">22</option>
+    
+    <option value="23">23</option>
+    
+    <option value="0">00</option>
+    
+    <option value="1">01</option>
+    
+    <option value="2">02</option>
+    
+    <option value="3">03</option>
+    
+    <option value="4">04</option>
+    
+    <option value="5">05</option>
+    
+    <option value="6">06</option>
+</select>:
+
+<select name="end_minute" id="end_minute">
+    
+    <option value="0">00</option>
+    
+    <option value="5">05</option>
+    
+    <option value="10">10</option>
+    
+    <option value="15">15</option>
+    
+    <option value="20">20</option>
+    
+    <option value="25">25</option>
+    
+    <option value="30">30</option>
+    
+    <option value="35">35</option>
+    
+    <option value="40">40</option>
+    
+    <option value="45">45</option>
+    
+    <option value="50">50</option>
+    
+    <option value="55">55</option>
+</select>
+
+        <br><span class="pl">活动时间不能超过3个月</span><br><br></div>
+    </div>
+    <div class="fsct clearfix">
+        <label>类型标签：<br></label>
+        <div class="fsctm"><input type="text" id="tags" value="" max_length="200" class="w" size="37" name="tags">
+            <br><span class="pl">用标签描述活动的特点，不超过4个，用空格分开</span><br><br></div>
+    </div>
+    <div class="fsct clearfix">
+        <label for="another">其他：<br></label>
+        <div class="fsctm"><input id="another" type="checkbox" name="cascade_invite" checked="checked">允许所有参与活动的成员邀请自己的朋友来参加<br></div>
+    </div>
+</fieldset>
+
+<br>
+<p align="center">
+<input name="submit" type="submit" value="确定"> &nbsp;&nbsp; <input name="cancel" type="button" onclick="javascript:history.go(-1)" value="取消">
+</p>
+<div id="calendarDiv"></div>
+</form>
+
+	</div>
+        <div class="aside">
+            
+<h2>什么是合适的线上活动？</h2>
+<div>
+<p class="pl">线上活动是</p>
+<ol class="pl">
+<li>有明确的开始和结束时间（需要长期进行的，小组的方式更适合你）</li>
+<li>有明确集中的主题和可做之事，是一个真正的"活动"</li>
+<li>是多人在网上进行的集体活动（一个人的行为不算）</li>
+</ol>
+</div>
+
+        </div>
+        <div class="extra">
+            
+        </div>
+    </div>
+    </div>
+
+        
+    <div id="footer">
+        
+
+<span id="icp" class="fleft gray-link">
+    © 2013－2013 point.com, all rights reserved
+</span>
+
+<span class="fright">
+    <a href="http://www.douban.com/about">关于积分平台</a>
+    · <a href="http://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="http://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="http://www.douban.com/help/">帮助中心</a>
+</span>
+
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="./Create_online_files/2d6438d4685406d8.js"></script>
+    
+    
+    
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7019765-1']);
+_gaq.push(['_addOrganic', 'baidu', 'word']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', '3721', 'name']);
+_gaq.push(['_addOrganic', 'youdao', 'q']);
+_gaq.push(['_addOrganic', 'so.360.cn', 'q']);
+_gaq.push(['_addOrganic', 'vnet', 'kw']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣']);
+_gaq.push(['_addIgnoredOrganic', 'douban']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣网']);
+_gaq.push(['_addIgnoredOrganic', 'www.douban.com']);
+_gaq.push(['_setDomainName', '.douban.com']);
+
+
+    _gaq.push(['_setCustomVar', 1, 'responsive_view_mode', 'desktop', 3]); 
+
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+    _gaq.push(['_setVar', '3566']);
+
+
+window._ga_init = function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+};
+if (window.addEventListener) {
+    window.addEventListener('load', _ga_init, false);
+} else {
+    window.attachEvent('onload', _ga_init);
+}
+</script>
+
+
+
+
+
+
+
+
+    <!-- dis18-->
+
+<script>var _check_hijack = function () {
+            var _sig = "90TrwV7Y", _login = true, bid = get_cookie('bid');
+            if (location.protocol != "file:" && (typeof(bid) != "string" && _login || typeof(bid) == "string" && bid.substring(0,8) != _sig)) {
+                location.href+=(/\?/.test(location.href)?"&":"?") + "_r=" + Math.random().toString(16).substring(2);
+            }};
+            if (typeof(Do) != 'undefined') Do(_check_hijack);
+            else if (typeof(get_cookie) != 'undefined') _check_hijack();
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,180 @@
+.app_fm_player,.app_fm_player div,.app_fm_player p,.app_fm_player ul,.app_fm_player ol,.app_fm_player li,.app_fm_player h4{margin:0;padding:0}
+.app_fm_player{color:#8B8B8B;background-color:#FFF;font-size:12px;font-family:Arial,Tahoma,"hiragino sans gb",Helvetica}
+.app_fm_player li{list-style:none}
+.app_fm_player img{border:0 none;-ms-interpolation-mode:bicubic}
+.app_fm_player a{color:#515151;text-decoration:none}
+.app_fm_player a:hover{color:#333;text-decoration:none}
+.app_fm_player .app_fm_bar{width:188px;height:32px;border:solid 1px #a6aaad;background:url(img/icon_sprite.png) repeat-x 0 0;position:relative;*z-index:3}
+.app_fm_player .app_qmusic_logo{display:block;width:16px;height:16px;background:url(img/icon_sprite.png) no-repeat -54px -80px;position:absolute;left:11px;top:7px;z-index:3}
+.app_fm_player .app_fm_bar ul{position:absolute;left:42px;top:8px;z-index:3}
+.app_fm_player .app_fm_bar li{float:left;width:18px;height:18px;margin:0 10px 0 0}
+.app_fm_player .app_fm_bar li a{display:block;width:18px;height:18px;text-indent:-999em;overflow:hidden;background-image:url(img/icon_sprite.png);background-repeat:no-repeat}
+.app_fm_player .app_fm_bar .bar_btn_like a{background-position:1px -38px}
+.app_fm_player .app_fm_bar .bar_btn_like a.current,.app_fm_player .app_fm_bar .bar_btn_like a:hover{background-position:1px -58px}
+.app_fm_player .app_fm_bar .bar_btn_play a{background-position:-17px -39px}
+.app_fm_player .app_fm_bar .bar_btn_play a.current,.app_fm_player .app_fm_bar .bar_btn_play a:hover{background-position:-17px -59px}
+.app_fm_player .app_fm_bar .bar_btn_pause a{background-position:-37px -39px}
+.app_fm_player .app_fm_bar .bar_btn_pause a.current,.app_fm_player .app_fm_bar .bar_btn_pause a:hover{background-position:-37px -59px}
+.app_fm_player .app_fm_bar .bar_btn_next a{background-position:-59px -38px}
+.app_fm_player .app_fm_bar .bar_btn_next a.current,.app_fm_player .app_fm_bar .bar_btn_next a:hover{background-position:-59px -58px}
+.app_fm_player .app_fm_bar .bar_btn_volume{position:relative;z-index:3}
+.app_fm_player .app_fm_bar .bar_btn_volume a{background-position:-79px -40px;position:relative;z-index:2}
+.app_fm_player .app_fm_bar .bar_btn_volume a.current,.app_fm_player .app_fm_bar .bar_btn_volume a:hover{background-position:-79px -60px}
+.app_fm_player .volume_bar{width:22px;height:106px;border:solid 1px #e5e5e5;background:#f5f5f5;position:absolute;z-index:1;left:-3px;bottom:-2px;display:none;_zoom:1}
+.app_fm_player .volume_bar .volume_line{width:3px;height:70px;font-size:0;position:absolute;left:10px;top:10px;background:#aeaeae}
+.app_fm_player .volume_bar .volume_line .volume_size{width:3px;background:#5ca530;font-size:0;overflow:hidden;position:absolute;bottom:0}
+.app_fm_player .volume_bar .volume_point{display:block;width:9px;height:9px;background:url(img/icon_sprite.png) no-repeat -108px -80px;cursor:pointer;position:absolute;left:-3px}
+.app_fm_player .bar_btn_volume .hover{display:block}
+.app_fm_player .bar_btn_fm,.app_fm_player .bar_btn_mlist{display:block;width:20px;height:16px;text-indent:-999em;overflow:hidden;background-image:url(img/icon_sprite.png);background-repeat:no-repeat;position:absolute;right:14px;top:-1px;z-index:3}
+.app_fm_player .bar_btn_fm{background-position:-100px -40px}
+.app_fm_player .bar_btn_mlist{background-position:-140px -40px}
+.app_fm_player .bar_btn_fm:hover{background-position:-100px -60px}
+.app_fm_player .bar_btn_mlist:hover{background-position:-140px -60px}
+.app_fm_player .progress_bar{margin:-2px 0 0;width:190px;height:2px;font-size:0;position:absolute;z-index:3}
+.app_fm_player .progress_bar .time_line{height:2px;background:#5ba630;font-size:0;overflow:hidden}
+.app_fm_player .time_point{display:block;width:9px;height:10px;background:url(img/progress_control.png) no-repeat 0 0;position:absolute;top:-4px;cursor:pointer}
+.app_fm_player .album_cover{width:190px;height:190px;position:absolute;top:-192px;display:none;z-index:3}
+.app_fm_player .album_cover .app_cover,.app_fm_player .album_cover .app_cover img{display:block;width:190px;height:190px}
+.app_fm_player .album_cover .music_info{position:absolute;width:190px;height:30px;bottom:0}
+.app_fm_player .album_cover .music_info .mask{width:190px;height:30px;background:#5ba630;opacity:.9;position:absolute;z-index:1}
+.app_fm_player .album_cover .music_info .album_op,.app_fm_player .album_cover .music_info p{position:absolute;z-index:2}
+.app_fm_player .album_cover .music_info p{left:10px;width:170px;line-height:30px;color:#fff;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.app_fm_player .album_cover .music_info p strong{font-size:14px;font-weight:500;margin:0 3px 0 0}
+.app_fm_player .album_cover .music_info p span{margin:0 0 0 3px}
+.app_fm_player .album_cover .music_info .album_op{right:0}
+.app_fm_player .album_cover .album_op{position:absolute;right:0;top:8px;display:none}
+.app_fm_player .album_cover .album_op a{display:inline-block;*display:inline;*zoom:1;width:12px;height:12px;margin:0 10px 0 0;text-indent:-999em;overflow:hidden;background-image:url(img/icon_sprite.png);background-repeat:no-repeat}
+.app_fm_player .album_cover .album_op .btn_album_fav{background-position:0 -80px}
+.app_fm_player .album_cover .album_op .btn_album_fav:hover{background-position:0 -98px}
+.app_fm_player .album_cover .album_op .btn_album_share{background-position:-18px -80px}
+.app_fm_player .album_cover .album_op .btn_album_share:hover{background-position:-18px -98px}
+.app_fm_player .app_main{width:188px;height:258px;border:solid 1px #a6aaad;border-bottom:solid 1px #d2d5d8;position:absolute;top:-259px;z-index:2;background:#fff}
+.app_fm_player .app_tab{width:188px;height:29px;border:solid 1px #a6aaad;background:url(img/icon_sprite.png) repeat-x 0 0;position:absolute;left:-1px;top:-1px;margin:0 0 1px}
+.app_fm_player .app_tab .close_app_main{position:absolute;top:12px;right:7px;width:12px;height:6px;font-size:0;text-indent:-999em;overflow:hidden;background:url(img/icon_sprite.png) no-repeat -36px -80px}
+.app_fm_player .app_tab .close_app_main:hover{background:url(img/icon_sprite.png) no-repeat -36px -98px}
+.app_fm_player .app_tab ul{position:absolute;top:-1px;left:-1px;_zoom:1;_width:150px}
+.app_fm_player .app_tab li{float:left;width:72px}
+.app_fm_player .app_tab li a{position:relative;display:block;width:72px;height:30px;line-height:28px;text-align:center;border-right:solid 1px #d2d5d8;color:#999}
+.app_fm_player .app_tab li .current{height:28px;background:#fff;border-top:solid 2px #3f4652;border-bottom:solid 1px #fff;color:#545454}
+.app_fm_player .app_tab .tab_fm{border-left:solid 1px #a6aaad;_margin-right:-1px}
+.app_fm_player .app_tab .tab_fm .current{z-index:2}
+.app_fm_player .app_tab .tab_list a{border-left:solid 1px #d2d5d8;z-index:1}
+.app_fm_player .app_content{width:188px;height:220px;overflow:hidden;position:absolute;top:32px}
+.counts_tips{position:absolute;background:url(img/icon_sprite.png) no-repeat right -165px;padding:0 3px 0 0;z-index:10}
+.counts_tips p{margin:0;height:20px;line-height:20px;background:url(img/icon_sprite.png) no-repeat left -152px;color:#fff;padding:0 0 0 3px;font-size:10px;word-break:keep-all;white-space:nowrap}
+.app_fm_player .scroll_bar{width:7px;height:217px;position:absolute;right:1px;top:0}
+.app_fm_player .scroll_bar .scroll_current{position:absolute;width:7px;background:#e4e4e4;cursor:pointer}
+.app_fm_player .scroll_bar .scroll_current:hover{background:#b6b5b5}
+.app_fm_player .fm_fav{width:160px;height:222px;position:relative;margin:0 0 0 26px;padding:5px 0 0 3px;background:#fff url(img/dot_y.png) repeat-y left 0;z-index:2}
+.app_fm_player .fm_fav p{height:19px;line-height:19px;color:#5ba630;padding:0 0 2px}
+.app_fm_player .fm_fav p span{_display:block}
+.app_fm_player .fm_fav .counts_tips{display:none}
+.app_fm_player .fm_fav_hide{margin:0 0 0 167px;background:#fff}
+.app_fm_player .fm_fav_hide .icon_fm_fav_current,.app_fm_player .fm_fav_hide p span,.app_fm_player .fm_fav_hide .fm_list_content,.app_fm_player .fm_fav_hide .scroll_bar{display:none}
+.app_fm_player .fm_fav_hide .counts_tips{display:block;left:-1px}
+.app_fm_player .icon_fm_fav,.app_fm_player .icon_fm_fav_current{float:left;width:14px;height:14px;margin:4px 2px 0 0;font-size:0;text-indent:-999em;overflow:hidden;background:url(img/icon_sprite.png) no-repeat 0 -116px}
+.app_fm_player .icon_fm_fav_current,.app_fm_player .icon_fm_fav:hover{background:url(img/icon_sprite.png) no-repeat 0 -134px}
+.app_fm_player .fm_list_content{position:relative;height:190px;overflow:hidden}
+.app_fm_player .fm_list{position:absolute}
+.app_fm_player .fm_list li{width:150px;height:30px;*float:left;margin:0 0 2px;background:#f8f8f8;position:relative}
+.app_fm_player .fm_list li .radioisnull{padding:6px;background:#fff}
+.app_fm_player .fm_list li .radioisnull p{color:#333}
+.app_fm_player .fm_list .current{background:#e3f0dc}
+.app_fm_player .fm_list .current a{color:#5BA630}
+.app_fm_player .fm_list li a{display:block;width:100px;height:30px;line-height:30px;text-indent:13px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.app_fm_player .fm_list li .fm_op{display:none;width:48px;position:absolute;right:0;top:10px;overflow:hidden}
+.app_fm_player .fm_list .hover{background:#f0f0f0;position:relative;cursor:pointer}
+.app_fm_player .fm_list .hover .fm_op{display:block}
+.app_fm_player .fm_list .hover .fm_op a{width:14px;height:14px;font-size:0;text-indent:-999em;overflow:hidden;background-image:url(img/icon_sprite.png);background-repeat:no-repeat;float:left;margin:0 10px 0 0}
+.app_fm_player .fm_list .hover .fm_op .btn_fm_fav{background-position:-71px -80px}
+.app_fm_player .fm_fav .fm_list .hover .fm_op .btn_fm_fav,.app_fm_player .fm_list .hover .fm_op .btn_fm_fav_current,.app_fm_player .fm_list .hover .fm_op .btn_fm_fav:hover{background-position:-71px -98px}
+.app_fm_player .fm_list .hover .fm_op .btn_fm_share{background-position:-90px -80px}
+.app_fm_player .fm_list .hover .fm_op .btn_fm_share:hover{background-position:-90px -98px}
+.app_fm_player .fm_all_list{width:164px;height:221px;_height:219px;position:relative;top:-222px;margin:0 0 222px 0;background:#fff url(img/dot_y.png) repeat-y right 0;overflow:hidden}
+.app_fm_player .fm_all_list .icon_fm_station{display:none}
+.app_fm_player .fm_all_list p{height:19px;line-height:19px;padding:0 0 0 5px;color:#5ba630}
+.app_fm_player .fm_all_list p span{_display:block}
+.app_fm_player .fm_all_list_hide{margin-left:0;z-index:1}
+.app_fm_player .fm_all_list_hide p span,.app_fm_player .fm_all_list_hide .fm_sort_content,.app_fm_player .fm_all_list_hide .icon_fm_station_current,.app_fm_player .fm_all_list_hide .scroll_bar{display:none}
+.app_fm_player .fm_all_list_hide .icon_fm_station{display:block}
+.app_fm_player .icon_fm_station,.app_fm_player .icon_fm_station_current{float:left;width:14px;height:14px;margin:2px 6px 0 0;width:14px;height:14px;font-size:0;text-indent:-999em;overflow:hidden;background:url(img/icon_sprite.png) no-repeat -18px -116px}
+.app_fm_player .icon_fm_station_current,.app_fm_player .icon_fm_station:hover{background:url(img/icon_sprite.png) no-repeat -18px -134px}
+.app_fm_player .fm_sort_content{position:relative;height:200px;overflow:hidden}
+.app_fm_player .fm_sort_content .fm_sort_list{position:absolute}
+.app_fm_player .fm_sort_list .fm_sort{*float:left;width:158px}
+.app_fm_player .fm_sort_list .fm_sort .fm_list{position:static;margin:1px 0 0}
+.app_fm_player .fm_sort_list .fm_sort .fm_sort_name{display:block;width:158px;height:30px;background:#fff url(img/dot_x.png) no-repeat left 15px;overflow:hidden;text-align:center}
+.app_fm_player .fm_sort_list .fm_sort .fm_sort_name:hover{background:#f8f8f8 url(img/dot_x.png) no-repeat left 15px;cursor:pointer}
+.app_fm_player .fm_sort_list .fm_sort .fm_sort_name span{float:left;height:30px;line-height:30px;padding:0 3px 0 5px;background:#fff}
+.app_fm_player .fm_sort_list .fm_sort .fm_sort_name:hover span{background:#f8f8f8}
+.app_fm_player .fm_sort_list .fm_sort .fm_list{display:none}
+.app_fm_player .fm_sort_list .fm_list .fm_sort_fav{position:relative}
+.app_fm_player .fm_list .fm_sort_fav .fm_op{display:block}
+.app_fm_player .fm_list .fm_sort_fav .fm_op a{width:14px;height:14px;font-size:0;text-indent:-999em;overflow:hidden;background-image:url(img/icon_sprite.png);background-repeat:no-repeat;float:left;margin:0 10px 0 0}
+.app_fm_player .fm_list .fm_sort_fav .fm_op .btn_fm_fav{background-position:-71px -80px}
+.app_fm_player .fm_fav .fm_list .hover .fm_op .btn_fm_fav,.app_fm_player .fm_list .fm_sort_fav .fm_op .btn_fm_fav_current,.app_fm_player .fm_list .fm_sort_fav .fm_op .btn_fm_fav:hover{background-position:-71px -98px}
+.app_fm_player .fm_list .fm_sort_fav .fm_op .btn_fm_share{background-position:-90px -80px}
+.app_fm_player .fm_list .fm_sort_fav .fm_op .btn_fm_share:hover{background-position:-90px -98px}
+.app_fm_player .fm_list .fm_sort_fav .fm_op .btn_fm_share{display:none}
+.app_fm_player .fm_list .hover .fm_op .btn_fm_share{display:block}
+.app_fm_player .fm_sort_list .current .fm_list{display:block;clear:both;margin:2px 0 0 5px}
+.app_fm_player .fm_sort_list .current .fm_list li{width:153px}
+.app_fm_player .music_content{padding:5px 0 0;display:none;_padding:0}
+.app_fm_player .music_list{position:relative;width:165px;height:209px;background:url(img/dot_y.png) repeat-y right 0}
+.app_fm_player .music_list p{height:19px;line-height:19px;padding:0 0 0 5px;color:#5ba630}
+.app_fm_player .music_list p span{_display:block}
+.app_fm_player .music_list .icon_music_list{display:none}
+.app_fm_player .music_list .scroll_bar{height:180px;top:19px}
+.app_fm_player .music_list_hide .icon_music_list_current,.app_fm_player .music_list_hide p span,.app_fm_player .music_list_hide .music_list_content,.app_fm_player .music_list_hide .scroll_bar{display:none}
+.app_fm_player .music_list_hide .icon_music_list{display:inline-block}
+.app_fm_player .icon_music_list,.app_fm_player .icon_music_list_current{float:left;width:14px;height:14px;margin:4px 2px 0;width:14px;height:14px;font-size:0;text-indent:-999em;overflow:hidden;background:url(img/icon_sprite.png) no-repeat -36px -116px}
+.app_fm_player .icon_music_list_current,.app_fm_player .icon_music_list:hover{background:url(img/icon_sprite.png) no-repeat -36px -134px}
+.app_fm_player .music_list_content{height:180px;margin:10px 0 0 10px;overflow:hidden;position:relative}
+.app_fm_player .music_list_content ul{*overflow:hidden;position:absolute}
+.app_fm_player .music_list_content li{width:140px;height:50px;*float:left;margin:0 0 10px 0}
+.app_fm_player .music_list_content li .poster_50{float:left;width:50px;height:50px;background:#ccc;margin:0 10px 0 0}
+.app_fm_player .music_list_content li .poster_50 img{display:block;width:50px;height:50px}
+.app_fm_player .music_list_content li h4{width:76px;height:36px;line-height:18px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}
+.app_fm_player .music_list_content li p{_padding:0;_width:76px}
+.app_fm_player .music_list_content li p a{float:left;width:12px;height:12px;font-size:0;text-indent:-999em;overflow:hidden;background-image:url(img/icon_sprite.png);background-repeat:no-repeat}
+.app_fm_player .music_list_content li p .btn_play_dir{background-position:-90px -116px}
+.app_fm_player .music_list_content li p .btn_play_dir:hover{background-position:-90px -134px}
+.app_fm_player .music_list_content li p .btn_add2list{background-position:-108px -116px}
+.app_fm_player .music_list_content li p .btn_add2list:hover{background-position:-108px -134px}
+.app_fm_player .play_list{width:167px;height:221px;position:relative;top:-209px;margin:0 0 209px 23px;background:#fff url(img/dot_y.png) repeat-y left 0;padding:0 0 0 1px;overflow:hidden}
+.app_fm_player .play_list p{height:19px;line-height:19px;padding:0 0 0 5px;color:#5ba630}
+.app_fm_player .play_list p span{_display:block}
+.app_fm_player .play_list .icon_play_list,.app_fm_player .play_list .counts_tips{display:none}
+.app_fm_player .play_list_hide{margin-left:165px;background:none;_top:-210px}
+.app_fm_player .play_list_hide .icon_play_list_current,.app_fm_player .play_list_hide p span,.app_fm_player .play_list_hide .play_list_content,.app_fm_player .play_list_hide .scroll_bar{display:none}
+.app_fm_player .play_list_hide p{padding:0}
+.app_fm_player .play_list_hide .counts_tips,.app_fm_player .play_list_hide .icon_play_list{display:block}
+.app_fm_player .play_list .scroll_bar{top:19px;height:180px}
+.app_fm_player .icon_play_list,.app_fm_player .icon_play_list_current{float:left;width:14px;height:14px;margin:4px 2px 0;width:14px;height:14px;font-size:0;text-indent:-999em;overflow:hidden;background:url(img/icon_sprite.png) no-repeat -54px -116px}
+.app_fm_player .icon_play_list_current,.app_fm_player .icon_play_list:hover{background:url(img/icon_sprite.png) no-repeat -54px -134px}
+.app_fm_player .play_list_content{position:relative;height:180px;overflow:hidden}
+.app_fm_player .play_list_content ul{position:absolute}
+.app_fm_player .play_list_content ul li{width:160px;height:30px;line-height:30px;text-indent:6px;cursor:pointer;position:relative;overflow:hidden;*float:left}
+.app_fm_player .play_list_content ul li a{margin:0 3px 0 0}
+.app_fm_player .play_list_content ul li span{margin:0 0 0 3px}
+.app_fm_player .play_list_content ul li .app_song_area{width:120px;height:30px;line-height:30px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.app_fm_player .play_list_content ul li .app_delete_song{display:none}
+.app_fm_player .play_list_content ul li.hover .app_delete_song{position:absolute;top:10px;right:2px;display:block;width:10px;height:10px;background:url(img/icon_sprite.png) no-repeat -108px -98px}
+.app_fm_player .play_list_content .hover,.app_fm_player .play_list_content .hover a,.app_fm_player .play_list_content .hover span{color:#5ba630}
+.app_fm_player .play_list_content .hover{_zoom:1;background:#f8f8f8}
+.app_fm_player .play_list_content .no_songs{padding:25px 10px 0 0}
+.app_fm_player .play_list_content .no_songs p{font-weight:600;color:#999;height:auto;line-height:26px}
+.app_fm_player .play_list_content .no_songs li{padding:0 0 0 5px;line-height:26px;color:#545454}
+.app_fm_player .play_list_content .no_songs li a{color:#5ba630;text-decoration:underline}
+.app_fm_player .app_mod_tips{position:absolute;padding:10px}
+.app_fm_player .app_mod_tips p{padding:20px;background:#fffae3;border:solid 1px #eacaa5;border-radius:4px;font-family:"Microsoft YaHei";color:#b3ad5d}
+.app_fm_player .app_mod_tips p a{color:#0f820c}
+.app_fm_player .app_mod_tips p a:hover{color:#05B600}
+.app_fm_player .app_mod_tips .close_tips{display:block;width:7px;height:7px;position:absolute;right:20px;top:20px;text-indent:-9999em;overflow:hidden;background:url(img/icon_sprite.png) no-repeat -54px -98px}
+.app_fm_player .app_mod_tips p strong{color:#c4824c;font-weight:normal}
+.app_fm_player .app_mod_tips i{display:block;width:24px;height:12px;position:absolute;font-size:0}
+.app_fm_player .app_mod_tips .icon_arrow_foot{left:17px;bottom:0;background:url(img/icon_sprite.png) no-repeat -127px -127px}
+.app_fm_player .app_mod_tips .icon_arrow_top{left:17px;top:0;background:url(img/icon_sprite.png) no-repeat -127px -116px}
+.app_fm_player .app_mod_tips .icon_arrow_left{width:12px;height:23px;left:0;top:20px;background:url(img/icon_sprite.png) no-repeat -127px -116px}
+.app_fm_player .app_mod_tips .icon_arrow_right{width:12px;height:23px;right:0;top:20px;background:url(img/icon_sprite.png) no-repeat -138px -116px}
+#GeneratedByCssGaga174{transform:rotate(20120330164551deg)}/*  |xGv00|5a28b2a8ad62a2a7d57b2b168195d75f */
