@@ -1,0 +1,20 @@
+#MyEclipse Hibernate Properties
+#Sat Jun 01 23:46:09 CST 2013
+genBasicCompId=false
+sessionFactoryName=
+profile=
+daoSFId=
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=identity
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=com.socialmarketing.core.model.DataAuditEntityBase
+genAnnotations=false
+reSettingsFile=/ExtSNSService/hibernate.reveng.xml
+configFile=/ExtSNSService/src/main/resources/hibernate-simple-mysql.cfg.xml
+createConfigFile=true

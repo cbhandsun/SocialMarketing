@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+<table name="enumtype" catalog="extsns">
+	<primary-key>
+
+
+		<key-column name="ID" property="ID" type="Long"/>
+	</primary-key>
+	<column name="CREATE_TIME" exclude="true"></column>
+	<column name="CREATE_USERNAME" exclude="true"></column>
+	<column name="LAST_UPDATE_TIME" exclude="true"></column>
+	<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+</table>
+<table name="enumitem" catalog="extsns">
+		<primary-key>
+			<key-column name="ID" property="ID" />
+		</primary-key>
+	</table>
+</hibernate-reverse-engineering>
