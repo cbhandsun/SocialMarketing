@@ -3,9 +3,10 @@
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>portlets-in-action</groupId>
-	<artifactId>ch8_BookCatalog</artifactId>
+	<artifactId>BookCatalog</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
+	<name>bookCatalog</name>
 	<repositories>
 		<repository>
 			<id>JBoss Repository</id>
@@ -28,7 +29,7 @@
 		</repository>
 	</repositories>
 	<properties>
-		<spring-version>3.2.1.RELEASE</spring-version>
+		<spring-version>3.2.2.RELEASE</spring-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -118,9 +119,12 @@
 			<version>1.0</version>
 			<scope>provided</scope>
 		</dependency>
+
 	</dependencies>
 	<build>
+		<finalName>${project.name}</finalName>
 		<plugins>
+
 			<!-- configure to use Java 6 to compile (change to your JDK) -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -129,14 +133,6 @@
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
-			</plugin>
-			<!-- configure maven-war-plugin to use updated web.xml -->
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<webXml>target/pluto-resources/web.xml</webXml>
-				</configuration>
-
 			</plugin>
 			<!-- bind 'pluto2:assemble' goal to 'generate-resources' lifecycle -->
 			<plugin>
@@ -149,6 +145,39 @@
 						<goals>
 							<goal>assemble</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- configure maven-war-plugin to use updated web.xml -->
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<version>2.3</version>
+					<webXml>target/pluto-resources/web.xml</webXml>
+				</configuration>
+
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<property environment="env" />
+								<property name="pluto.home" value="${environment.CATALINA_HOME}" />
+								<echo message="environment.CATALINA_HOME: ${environment.CATALINA_HOME}" />
+								<echo message="project.name: ${project.name}.war" />
+								<delete dir="D:/DevEnv/apache-tomcat-7.0.39/webapps/${project.name}" />
+								<delete
+									file="D:/DevEnv/apache-tomcat-7.0.39/webapps/${project.name}.war" />
+								<copy todir="D:/DevEnv/apache-tomcat-7.0.39/webapps" file="target/${project.name}.war" />
+							</target>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
