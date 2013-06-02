@@ -133,12 +133,9 @@
   </servlet>
  <!----> <servlet-mapping>
     <servlet-name>springMVC</servlet-name>
-    <url-pattern>*.do</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>springMVC</servlet-name>
-    <url-pattern>/js/</url-pattern>
-  </servlet-mapping>
+  
   <!-- spring mvc portlet 配置 -->
   <servlet>
 		<servlet-name>view-servlet</servlet-name>
