@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
-encoding//src/main/webapp/decorators/decorator.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/module/Promo/Promo.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/themes/promo-theme.jsp=UTF-8
+encoding//src/main/webapp/decorators/portal-decorator.jsp=UTF-8
+encoding//src/main/webapp/login1.jsp=UTF-8
 encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8
