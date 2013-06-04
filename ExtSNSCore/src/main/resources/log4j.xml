@@ -32,12 +32,12 @@
 	</logger>
 	 -->
 	 <logger name="org.apache.pluto">
-		<level value="debug" />
+		<level value="INFO" />
 	</logger>
 	<root>
 		<!-- root 整体设置过滤优先级，如果appender 没有设置filter或Threshold 默认采用该级别，定义的logger不在其中（即不会被过滤掉）。 -->
 		<priority value="INFO" />
 		<appender-ref ref="console" />
-		<appender-ref ref="file" />
+	<!-- 	<appender-ref ref="file" /> -->
 	</root>
 </log4j:configuration>  
