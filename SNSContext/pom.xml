@@ -256,6 +256,18 @@
 			<artifactId>c3p0</artifactId>
 			<version>0.9.2</version>
 		</dependency>
+		<!-- AOP支持AspectJ是一个面向切面的框架 -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjlib</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		
 	</dependencies>
 	
 	<build>
