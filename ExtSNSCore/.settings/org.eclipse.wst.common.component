@@ -3,5 +3,6 @@
     <wb-module deploy-name="ExtSNSCore">
         <wb-resource deploy-path="/" source-path="/src/main/java"/>
         <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/target/classes"/>
     </wb-module>
 </project-modules>

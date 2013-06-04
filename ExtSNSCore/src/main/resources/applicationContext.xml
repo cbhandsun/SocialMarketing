@@ -32,7 +32,7 @@
 		<property name="configLocation" value="classpath:hibernate.cfg.xml">
 		</property>
 		<property name="mappingLocations"
-			value="classpath:com/socialmarketing/web/modules/**/Query*.hbm.xml" />
+			value="classpath:com/socialmarketing/dao/**/Query*.hbm.xml" />
 		<property name="packagesToScan">
 			<list>
 				<value>com.socialmarketing.model</value>
