@@ -6,6 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>SNSService</artifactId>
+  <name>业务层</name>
   <build>
     <plugins>
       <plugin>

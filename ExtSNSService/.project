@@ -3,6 +3,7 @@
 	<name>ExtSNSService</name>
 	<comment></comment>
 	<projects>
+		<project>ExtSNSCore</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
