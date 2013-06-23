@@ -243,7 +243,7 @@ public interface IDao<T extends EntityBase> {
 	 * @return a list containing the result of the query execution.
 	 */
 	@SuppressWarnings("unchecked")
-	List<T> findByNamedQuery(String queryName, String paramName, Object value);
+	List findByNamedQuery(String queryName, String paramName, Object value);
 
 	/**
 	 * 返回指定字段值的VO的MAP集合 前提:相应实体类的字段组合作为参数(加上ID字段)的构造函数存在
@@ -709,6 +709,15 @@ public interface IDao<T extends EntityBase> {
 	public int queryCountByCriteria(final DetachedCriteria detachedCriteria,
 			String distinct);
 
-	public Object queryOracleFunction(String sql, Map<String, Object> params,
-			String alias, Type mappingType);
+	
+
+	List<T> findAllByField(String fieldName, String fieldValue);
+
+	List<T> findAllByField(String fieldName, String fieldValue,
+			LockMode lockMode);
+
+	List findByNamedQuery(String queryName, Map<String, Object> paramMap,
+			Class clz);
+
+	List findByNamedQuery(String queryName, Class clz);
 }

@@ -29,6 +29,8 @@ public class DateUtil {
 	public final static String FORMAT_DATE_DEFAULT = "yyyy-MM-dd";
 
 	public final static String FORMAT_DATE_YYYYMMDD = "yyyyMMdd";
+	
+	public final static String FORMAT_DATE_YYYYMM = "yyyyMM";
 
 	public final static String FORMAT_DATE_YYYY_MM_DD = "yyyy-MM-dd";
 
@@ -313,7 +315,29 @@ public class DateUtil {
 			return 7;
 		return SUN_FST_DAY_OF_WEEK - 1;
 	}
+	// 获取当月第一天
+	 public static String getFirstDayOfMonth() {
+	  String str = "";
+	  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
+	  Calendar lastDate = Calendar.getInstance();
+	  lastDate.set(Calendar.DATE, 1);// 设为当前月的1号
+	  str = sdf.format(lastDate.getTime());
+	  return str;
+	 }
+	 // 计算当月最后一天,返回字符串
+	 public static String getLastDayOfMonth() {
+	  String str = "";
+	  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+	  Calendar lastDate = Calendar.getInstance();
+	  lastDate.set(Calendar.DATE, 1);// 设为当前月的1号
+	  lastDate.add(Calendar.MONTH, 1);// 加一个月，变为下月的1号
+	  lastDate.add(Calendar.DATE, -1);// 减去一天，变为当月最后一天
+
+	  str = sdf.format(lastDate.getTime());
+	  return str;
+	 }
 	public static Timestamp parseTimestamp(String stringValue,
 			String formatPattern) {
 		return new Timestamp(parse(stringValue, formatPattern).getTime());

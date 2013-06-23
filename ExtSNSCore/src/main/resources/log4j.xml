@@ -31,6 +31,9 @@
 		<level value="debug" />
 	</logger>
 	 -->
+	 <logger name="org.springframework.web.portlet">
+		<level value="INFO" />
+	</logger>
 	 <logger name="org.apache.pluto">
 		<level value="INFO" />
 	</logger>

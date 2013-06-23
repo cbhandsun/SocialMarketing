@@ -19,7 +19,6 @@ import java.util.Set;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -35,7 +34,6 @@ import org.hibernate.criterion.Example;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.transform.Transformers;
 import org.hibernate.type.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -57,7 +55,8 @@ import com.socialmarketing.core.model.EntityBase;
  * 
  * @param <T>
  */
-public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
+
+public abstract class OracleBaseDaoImpl<T extends EntityBase> implements IDao<T> {
 
 	/**
 	 * 实体对象类
@@ -78,7 +77,7 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * the constructor of BaseDaoImpl.
 	 */
 	@SuppressWarnings("unchecked")
-	public BaseDaoImpl() {
+	public OracleBaseDaoImpl() {
 		if (ParameterizedType.class.isAssignableFrom(getClass()
 				.getGenericSuperclass().getClass())) {
 			entityClass = (Class<T>) ((ParameterizedType) getClass()
@@ -364,23 +363,20 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 		criteria.setLockMode(lockMode);
 		return (T) criteria.uniqueResult();
 	}
-
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<T> findAllByField(String fieldName, String fieldValue) {
 		Criteria criteria = util.getSession().createCriteria(this.entityClass);
 		criteria.add(Restrictions.eq(fieldName, fieldValue));
-		return (List<T>) criteria.list();
+		return (List<T>)criteria.list();
 	}
-
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<T> findAllByField(String fieldName, String fieldValue,
-			LockMode lockMode) {
+	public List<T> findAllByField(String fieldName, String fieldValue, LockMode lockMode) {
 		Criteria criteria = util.getSession().createCriteria(this.entityClass);
 		criteria.add(Restrictions.eq(fieldName, fieldValue));
 		criteria.setLockMode(lockMode);
-		return (List<T>) criteria.list();
+		return (List<T>)criteria.list();
 	}
 
 	/**
@@ -419,7 +415,6 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 * @see solution.auto.framework.dao.IDao#findById(java.lang.Long)
 	 */
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public <PK extends Serializable> T findById(PK id) {
 		Object entity = util.getSession().load(this.entityClass, id);
@@ -435,25 +430,8 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            the name of a Hibernate query in a mapping file
 	 * @return a List containing the results of the query execution
 	 */
-	@SuppressWarnings("rawtypes")
 	public List findByNamedQuery(String queryName) {
 		Query query = util.getSession().getNamedQuery(queryName);
-		return query.list();
-	}
-
-	/**
-	 * Execute a named query. A named query is defined in a Hibernate mapping
-	 * file.
-	 * 
-	 * @param queryName
-	 *            the name of a Hibernate query in a mapping file
-	 * @return a List containing the results of the query execution
-	 */
-	@SuppressWarnings("rawtypes")
-	@Override
-	public List findByNamedQuery(String queryName, Class clz) {
-		Query query = util.getSession().getNamedQuery(queryName)
-				.setResultTransformer(Transformers.aliasToBean(clz));
 		return query.list();
 	}
 
@@ -467,10 +445,10 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            the parameters is defined in Hibernate mapping file.
 	 * @return a list containing the result of the query execution.
 	 */
-	@SuppressWarnings({ "rawtypes"})
 	public List findByNamedQuery(String queryName, Map<String, Object> params) {
-
-		return findByNamedQuery(queryName, params, null);
+		Query query = util.getSession().getNamedQuery(queryName);
+		query.setProperties(params);
+		return query.list();
 	}
 
 	/**
@@ -485,30 +463,10 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            the value of parameter name.
 	 * @return a list containing the result of the query execution.
 	 */
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public List findByNamedQuery(String queryName, String paramName,
 			Object value) {
-		Map<String, Object> paramMap = new HashMap<String, Object>();
-		paramMap.put(paramName, value);
-		return findByNamedQuery(queryName, paramMap);
-	}
-
-	@SuppressWarnings("rawtypes")
-	@Override
-	public List findByNamedQuery(String queryName,
-			Map<String, Object> paramMap, Class clz) {
-		Assert.notNull(queryName,
-				"类 BaseDaoImpl::findByNamedQuery参数queryNameb不能为空");
-		if (paramMap == null)
-			return findByNamedQuery(queryName, clz);
-		Query query = null;
-		final Map<String, Object> queryMap = paramMap;
-		if (clz != null)
-			query = util.getSession().getNamedQuery(queryName)
-					.setResultTransformer(Transformers.aliasToBean(clz));
-		else
-			query = util.getSession().getNamedQuery(queryName);
-		wrapQueryParam(query, queryMap);
+		Query query = util.getSession().getNamedQuery(queryName);
+		query.setParameter(paramName, value);
 		return query.list();
 	}
 
@@ -1323,11 +1281,11 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 
 	}
 
-	public void SaveorUpdateObjects(Collection<T> objs) {
+	public void saveorupdateObjects(Collection<T> objs) {
 		int count = 0;
 		for (T obj : objs) {
 			EntityBase base = (EntityBase) obj;
-			if (base.getID() != null && base.getID() == 0)
+			if (base.getID()!=null && base.getID() == 0)
 				base.setID(null);
 			util.getSession().saveOrUpdate(base);
 			if (++count % 20 == 0) { // 20, same as the JDBC batch size
@@ -1344,7 +1302,7 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            数据集
 	 */
 	public void saveObjects(Collection<T> objs) {
-		SaveorUpdateObjects(objs);
+		saveorupdateObjects(objs);
 	}
 
 	/**
@@ -1451,49 +1409,10 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            The parameters is defined in a Hibernate mapping file.
 	 * @return the count of updated instance.
 	 */
-
-	public int updateByNamedQuery(String queryName, Map<String, Object> paramMap) {
-		Assert.notNull(queryName,
-				"类 BaseDaoImpl::updateByNamedQuery参数queryNameb不能为空");
-		if (paramMap == null)
-			return updateByNamedQuery(queryName);
-		if (paramMap.size() == 0)
-			return 0;
-		final Map<String, Object> queryMap = paramMap;
+	public int updateByNamedQuery(String queryName, Map<String, Object> params) {
 		Query query = util.getSession().getNamedQuery(queryName);
-		wrapQueryParam(query, queryMap);
+		query.setProperties(params);
 		return query.executeUpdate();
-	}
-
-	@SuppressWarnings("rawtypes")
-	private void wrapQueryParam(Query query, Map<String, Object> queryMap) {
-		String[] namedParam = query.getNamedParameters();
-		for (Iterator<String> iter = queryMap.keySet().iterator(); iter
-				.hasNext();) {
-			String key = iter.next();
-			if (ArrayUtils.contains(namedParam, key)) {
-				Object obj = queryMap.get(key);
-				if (obj == null) {
-					query.setParameter(key, null);
-				} else if (obj.getClass().isArray()) {
-					Object[] objArr = (Object[]) obj;
-					if (objArr.length > 0)
-						query.setParameterList(key, objArr);
-					else
-						query.setParameter(key, "");
-				} else if (obj instanceof Collection) {
-					Collection objColl = (Collection) obj;
-					if (objColl.size() > 0)
-						query.setParameterList(key, objColl);
-					else
-						query.setParameter(key, "");
-				} else if (obj instanceof Date) {
-					query.setTimestamp(key, (Date) obj);
-				} else {
-					query.setParameter(key, obj);
-				}
-			}
-		}
 	}
 
 	/**
@@ -1510,9 +1429,9 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 */
 	public int updateByNamedQuery(String queryName, String paramName,
 			Object value) {
-		final Map<String, Object> queryMap = new HashMap<String, Object>();
-		queryMap.put(paramName, value);
-		return updateByNamedQuery(queryName, queryMap);
+		Query query = util.getSession().getNamedQuery(queryName);
+		query.setParameter(paramName, value);
+		return query.executeUpdate();
 	}
 
 	/**
@@ -1523,7 +1442,16 @@ public abstract class BaseDaoImpl<T extends EntityBase> implements IDao<T> {
 	 *            a collection of objects to be updated.
 	 */
 	public void updateObjects(Collection<T> objs) {
-		SaveorUpdateObjects(objs);
+		saveorupdateObjects(objs);
+	}
+
+	public Object queryOracleFunction(String sql, Map<String, Object> params,
+			String alias, Type mappingType) {
+
+		SQLQuery q = util.getSession().createSQLQuery(sql);
+		q.setProperties(params);
+		q.addScalar(alias, mappingType);
+		return q.uniqueResult();
 	}
 
 }
