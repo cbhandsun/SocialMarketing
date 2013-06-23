@@ -1,6 +1,6 @@
 #MyEclipse Hibernate Properties
-#Sat Jun 01 23:46:09 CST 2013
-genBasicCompId=false
+#Fri Jun 14 18:53:55 CST 2013
+genBasicCompId=true
 sessionFactoryName=
 profile=
 daoSFId=
@@ -14,7 +14,7 @@ keyGenerator=identity
 genVersionTag=false
 sessionFactoryId=
 basePersistenceClass=com.socialmarketing.core.model.DataAuditEntityBase
-genAnnotations=false
+genAnnotations=true
 reSettingsFile=/ExtSNSService/hibernate.reveng.xml
 configFile=/ExtSNSService/src/main/resources/hibernate-simple-mysql.cfg.xml
 createConfigFile=true

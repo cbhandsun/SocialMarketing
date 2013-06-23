@@ -3,20 +3,103 @@
 
 <hibernate-reverse-engineering>
 
-<table name="enumtype" catalog="extsns">
-	<primary-key>
+	<table name="pho_album" catalog="extsns"
+		class="com.socialmarketing.model.Album">
+		<primary-key>
+			<generator class="identity"></generator>
 
-
-		<key-column name="ID" property="ID" type="Long"/>
-	</primary-key>
-	<column name="CREATE_TIME" exclude="true"></column>
-	<column name="CREATE_USERNAME" exclude="true"></column>
-	<column name="LAST_UPDATE_TIME" exclude="true"></column>
-	<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
-</table>
-<table name="enumitem" catalog="extsns">
+			<key-column name="ID" property="ID" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="pho_gallery" catalog="extsns"
+		class="com.socialmarketing.model.photark.Gallery">
 		<primary-key>
 			<key-column name="ID" property="ID" />
 		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="pho_image" catalog="extsns"
+		class="com.socialmarketing.model.photark.Image">
+		<primary-key>
+			<generator class="identity"></generator>
+
+			<key-column name="ID" property="ID" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="sys_num" catalog="extsns"
+		class="com.socialmarketing.model.NumResource">
+		<primary-key>
+			<generator class="identity"></generator>
+			<key-column name="id" property="ID" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="sys_param" catalog="extsns"
+		class="com.socialmarketing.model.SysParam">
+		<primary-key>
+			<generator class="identity"></generator>
+			<key-column name="ID" property="ID" type="Long" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="pro_brand" catalog="extsns"
+		class="com.socialmarketing.model.product.Brand">
+		<primary-key>
+			<generator class="identity"></generator>
+			<key-column name="ID" property="ID" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="pro_prodcatalog" catalog="extsns"
+		class="com.socialmarketing.model.product.ProdCatalog">
+		<primary-key>
+			<generator class="identity"></generator>
+			<key-column name="ID" property="ID" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="pro_product_image" catalog="extsns"
+		class="com.socialmarketing.model.product.ProductImage">
+		<primary-key>
+			<generator class="identity"></generator>
+			<key-column name="ID" property="ID" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
+	</table>
+	<table name="pro_product" catalog="extsns" class="com.socialmarketing.model.product.Product">
+		<primary-key>
+			<generator class="identity"></generator>
+			<key-column name="ID" property="ID" />
+		</primary-key>
+		<column name="CREATE_TIME" exclude="true"></column>
+		<column name="CREATE_USERNAME" exclude="true"></column>
+		<column name="LAST_UPDATE_TIME" exclude="true"></column>
+		<column name="LAST_UPDATE_USERNAME" exclude="true"></column>
 	</table>
 </hibernate-reverse-engineering>

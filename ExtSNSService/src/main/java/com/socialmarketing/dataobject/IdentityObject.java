@@ -1,16 +1,13 @@
 /**
  * 
  */
-package com.socialmarketing.dao.master;
+package com.socialmarketing.dataobject;
 
-import org.springframework.stereotype.Repository;
-
-import com.socialmarketing.core.dao.BaseDaoImpl;
-import com.socialmarketing.model.master.Product;
+import java.io.Serializable;
 
 /**********************************************************************
- * FILE : ProductDao.java
- * CREATE DATE : 2013-4-17
+ * FILE : IdentityVO.java
+ * CREATE DATE : 2013-5-9
  * DESCRIPTION :
  *		
  *      
@@ -18,10 +15,11 @@ import com.socialmarketing.model.master.Product;
  *---------------------------------------------------------------------
  * NO.|    DATE    |     NAME     |     REASON     | DESCRIPTION
  *---------------------------------------------------------------------
- * 1  | 2013-4-17 |  Administrator  |    创建草稿版本
+ * 1  | 2013-5-9    |  hongtao     |    创建草稿版本
  *---------------------------------------------------------------------              
  ******************************************************************************/
-@Repository(value="productDao")
-public class ProductDao extends BaseDaoImpl<Product> {
+public interface  IdentityObject extends Serializable{
+	public abstract Long getID();
 
+	public abstract void setID(Long id);
 }

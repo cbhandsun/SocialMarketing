@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.socialmarketing.service.promo;
+package com.socialmarketing.service.product;
 import java.util.List;
 
 import org.junit.Test;
@@ -9,11 +9,16 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import ch.ralscha.extdirectspring.util.JsonHandler;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.socialmarketing.model.promo.Promotions;
+import com.socialmarketing.service.master.Product.ProductServiceImpl;
 /**********************************************************************
  * FILE : PromoServiceTest.java
  * CREATE DATE : 2013-4-19
@@ -30,14 +35,23 @@ import com.socialmarketing.model.promo.Promotions;
 @ContextConfiguration("classpath:applicationContext.xml") 
 @RunWith(SpringJUnit4ClassRunner.class)  
 @Transactional  
-public class PromoServiceTest {
-	private static final Logger log = LoggerFactory.getLogger(PromoServiceTest.class);
+public class ProductServiceTest {
+	private static final Logger log = LoggerFactory.getLogger(ProductServiceImpl.class);
 	@Autowired  
-    private PromoService promoService;  
+	@Qualifier("productService")
+    private ProductServiceImpl productService;  
        
     @Test  
-    public void getPromotions() {  
-    	List<Promotions> list = promoService.getPromotions(1);
-    	log.info("dddd:P {}",list.size());
-    }  
+    public void getProductByCode() {  
+    	Object obj = productService.getProductByCode("1000001");
+    	JsonHandler jsonHandler = new JsonHandler();
+    	log.info("getProductByCode {}",jsonHandler.writeValueAsString(obj,true));
+    } 
+    @Test  
+    public void getProduct() {  
+    	Object obj = productService.getProduct();
+    	JsonHandler jsonHandler = new JsonHandler();
+    	log.info("getProduct {}",jsonHandler.writeValueAsString(obj,true));
+    } 
+    
 }
