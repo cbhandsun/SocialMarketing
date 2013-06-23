@@ -3,11 +3,11 @@
  */
 package com.socialmarketing.vo.master;
 
-import com.socialmarketing.web.portal.vo.VersionObject;
-
 import ch.ralscha.extdirectspring.generator.GridColumn;
 import ch.ralscha.extdirectspring.generator.Model;
 import ch.ralscha.extdirectspring.generator.ModelField;
+
+import com.socialmarketing.dataobject.VersionObject;
 
 /**********************************************************************
  * FILE : ProdCataVO.java

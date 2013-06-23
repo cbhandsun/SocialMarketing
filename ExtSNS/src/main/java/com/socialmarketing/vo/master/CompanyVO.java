@@ -7,7 +7,7 @@ import ch.ralscha.extdirectspring.generator.GridColumn;
 import ch.ralscha.extdirectspring.generator.Model;
 import ch.ralscha.extdirectspring.generator.ModelField;
 
-import com.socialmarketing.web.portal.vo.VersionObject;
+import com.socialmarketing.dataobject.VersionObject;
 
 /**********************************************************************
  * FILE : CompanyVO.java

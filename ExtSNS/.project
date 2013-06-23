@@ -3,9 +3,9 @@
 	<name>ExtSNSWeb</name>
 	<comment></comment>
 	<projects>
+		<project>ExtSNSService</project>
 		<project>ExtSNSCore</project>
 		<project>Ext.Direct Spring</project>
-		<project>ExtSNSService</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -13,7 +13,6 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-	
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
 			<arguments>
@@ -34,13 +33,11 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		
 		<buildCommand>
 			<name>org.jboss.tools.common.verification.verifybuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
-		
 		<buildCommand>
 			<name>com.genuitec.eclipse.springframework.springbuilder</name>
 			<arguments>
@@ -51,7 +48,6 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-	
 		<buildCommand>
 			<name>com.genuitec.eclipse.ast.deploy.core.DeploymentBuilder</name>
 			<arguments>

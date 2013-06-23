@@ -142,12 +142,11 @@
 		<servlet-class>org.springframework.web.servlet.ViewRendererServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
-
 	<servlet-mapping>
 		<servlet-name>view-servlet</servlet-name>
 		<url-pattern>/WEB-INF/servlet/view</url-pattern>
 	</servlet-mapping>
+	  <!-- utf-8 过滤器 配置 -->
   <filter>
     <filter-name>SpringCharacterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>

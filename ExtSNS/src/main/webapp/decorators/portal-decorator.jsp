@@ -12,15 +12,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <base href="<%=basePath%>">
 <title><sitemesh:write property='title' /></title>
-
-<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<meta http-equiv="description" content="this is my page">
+<link href="css/bootstrap/bootstrap.css" type="text/css"
+	rel="stylesheet" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
 <link rel="stylesheet" href="css/global-nav.css" type="text/css"></link>
-<link rel="stylesheet" href="css/base.css" type="text/css"></link>
-<link rel="stylesheet" href="css/test.css" type="text/css"></link>
+<link rel="stylesheet" href="css/foot.css" type="text/css"></link>
+
 </head>
 <sitemesh:write property='head' />
 <body>

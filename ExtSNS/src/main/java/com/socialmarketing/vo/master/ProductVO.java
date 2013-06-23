@@ -6,7 +6,7 @@ package com.socialmarketing.vo.master;
 import ch.ralscha.extdirectspring.generator.GridColumn;
 import ch.ralscha.extdirectspring.generator.Model;
 
-import com.socialmarketing.web.portal.vo.VersionObject;
+import com.socialmarketing.dataobject.VersionObject;
 
 /**********************************************************************
  * FILE : ProductVO.java

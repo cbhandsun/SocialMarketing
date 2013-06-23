@@ -6,13 +6,13 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/ExtSNSService/ExtSNSService">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="ExtSNSCore.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ExtSNSCore/ExtSNSCore">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="Ext.Direct Spring.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Ext.Direct Spring/Ext.Direct Spring">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/ExtSNSService/ExtSNSService">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/ExtSNSWeb/src/main/webapp/WEB-INF/classes"/>

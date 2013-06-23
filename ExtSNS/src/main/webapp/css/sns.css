@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+.search-result {
+    overflow: hidden;
+}
+
+.result-list {
+    margin-bottom: 27px;
+    overflow: hidden;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 950px;
+}
+.result:after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+.result {
+    border-top: 1px dashed #CCCCCC;
+    margin: -1px 0 17px;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.result .content {
+    overflow: hidden;
+}
+
+.result .content p {
+    color: #999999;
+    line-height: 1.5;
+    margin: 0;
+}
+.result .content .title {
+    color: #5D5D5D;
+    margin-bottom: 3px;
+}
+.result .pic {
+    float: right;
+    text-align: right;
+    width: 62px;
+}
+
+.result .pic img {
+    max-width: 62px;
+}

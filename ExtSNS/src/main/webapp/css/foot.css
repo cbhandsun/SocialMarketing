@@ -1,0 +1,42 @@
+
+
+.clearfix {
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.fleft {
+    float: left;
+}
+.fright {
+    float: right;
+}
+
+
+#footer {
+    border-top: 1px dashed #DDDDDD;
+    color: #999999;
+    margin: 40px 0 20px;
+    overflow: hidden;
+    padding-top: 6px;
+}
+#footer .gray-link a:link, #footer .gray-link a:visited, #footer .gray-link a:active {
+    background: none repeat scroll 0 center transparent;
+    color: #999999;
+}
+#footer .gray-link a:hover {
+    background: none repeat scroll 0 0 #999999;
+    color: #FFFFFF;
+}
+#footer .blue-link a:link, #footer .blue-link a:visited, #footer .blue-link a:active {
+    background: none repeat scroll 0 center transparent;
+    color: #336699;
+}
+#footer .blue-link a:hover {
+    background: none repeat scroll 0 0 #003399;
+    color: #FFFFFF;
+}
